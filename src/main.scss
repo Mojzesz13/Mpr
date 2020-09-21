@@ -1,0 +1,12 @@
+@import 'scss/reset';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  #root {
+    max-width: 190rem;
+    margin: 0 auto;
+  }
+}
