@@ -3,7 +3,12 @@ import './Fundraising.scss';
 
 class Fundraising extends Component {
   render() {
-    return <div className="fundraisingContainer"> Fundraising </div>;
+    return (
+      <div id="fundraising" className="fundraisingContainer">
+        {' '}
+        Fundraising{' '}
+      </div>
+    );
   }
 }
 export default Fundraising;

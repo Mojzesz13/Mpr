@@ -3,7 +3,12 @@ import './HumanResources.scss';
 
 class HumanResources extends Component {
   render() {
-    return <div className="humanResourcesContainer"> HumanResources </div>;
+    return (
+      <div id="humanResources" className="humanResourcesContainer">
+        {' '}
+        HumanResources{' '}
+      </div>
+    );
   }
 }
 export default HumanResources;

@@ -3,7 +3,12 @@ import './Sale.scss';
 
 class Sale extends Component {
   render() {
-    return <div className="saleContainer"> Sale </div>;
+    return (
+      <div id="sale" className="saleContainer">
+        {' '}
+        Sale{' '}
+      </div>
+    );
   }
 }
 export default Sale;

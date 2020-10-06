@@ -3,7 +3,12 @@ import './Contact.scss';
 
 class Contact extends Component {
   render() {
-    return <div className="contactContainer"> Contact </div>;
+    return (
+      <div id="contact" className="contactContainer">
+        {' '}
+        Contact{' '}
+      </div>
+    );
   }
 }
 export default Contact;
