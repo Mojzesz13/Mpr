@@ -1,8 +1,7 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+import './HamburgerMenu.scss';
 import { Link } from 'react-router-dom';
 import { scaleRotate as Menu } from 'react-burger-menu';
-import './HamburgerMenu.scss';
 
 class HamburgerMenu extends Component {
   showSettings(event) {
@@ -12,20 +11,40 @@ class HamburgerMenu extends Component {
   render() {
     return (
       <Menu right pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-        <Link to="/" className="bm-item" style={{ display: 'block' }}>
-          <span>#home</span>
+        <Link to="/" className="bm-item">
+          <span>Home</span>
         </Link>
-        <Link to="/howiworks" className="bm-item" style={{ display: 'block' }}>
-          <span>#howItWorks</span>
+        <Link to="/aboutUs" className="bm-item" style={{ display: 'block' }}>
+          <span>O nas</span>
         </Link>
-        <Link to="/groups" className="bm-item" style={{ display: 'block' }}>
-          <span>#showGroups</span>
+        <Link to="/sale" className="bm-item">
+          <span>Sprzedaż</span>
         </Link>
-        <Link to="/about" className="bm-item" style={{ display: 'block' }}>
-          <span>#aboutMe</span>
+        <Link to="/fundraising" className="bm-item">
+          <span>Zbieranie funduszy</span>
+        </Link>
+        <Link to="/coaching" className="bm-item">
+          <span>Treningi</span>
+        </Link>
+        <Link
+          to="/financialConsulting"
+          className="bm-item"
+          style={{ display: 'block' }}
+        >
+          <span>Konsultacje finansowe</span>
+        </Link>
+        <Link
+          to="/humanResources"
+          className="bm-item"
+          style={{ display: 'block' }}
+        >
+          <span>Zarządzanie zasobami ludzkimi</span>
+        </Link>
+        <Link to="/insurance" className="bm-item" style={{ display: 'block' }}>
+          <span>Ubezpieczenia</span>
         </Link>
         <Link to="/contact" className="bm-item" style={{ display: 'block' }}>
-          <span>#contactUs</span>
+          <span>Kontakt</span>
         </Link>
       </Menu>
     );

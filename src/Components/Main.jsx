@@ -5,13 +5,14 @@ import Home from './Home/Home';
 import HamburgerMenu from './HamburgeMenu/HamburgerMenu';
 import AboutUs from './AboutUs/AboutUs';
 import Sale from './Sale/Sale';
-import Fundraising from './Fundraising/Fundraising';
+
 import Coaching from './Coaching/Coaching';
 import FinancialConsulting from './FinancialConsulting/FinancialConsulting';
 import HumanResources from './HumanResources/HumanResources';
 import Insurance from './Insurance/Insurance';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
+import Fundraising from './Fundraising/Fundraising';
 
 class Main extends Component {
   render() {
@@ -19,12 +20,9 @@ class Main extends Component {
       <Router>
         <HamburgerMenu />
         <div id="outer-container">
-          <div id="header" display="flex">
+          <div>
             <Link to="/">
-              <div id="logoWrapper">
-                PracticeTogether
-                <div></div>
-              </div>
+              <div id="logoWrapper">MPR</div>
             </Link>
           </div>
           <div id="page-wrap">
@@ -32,7 +30,7 @@ class Main extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/aboutUs" component={AboutUs} />
               <Route path="/sale" component={Sale} />
-              <Route path="/fundraising " component={Fundraising} />
+              <Route path="/fundraising" component={Fundraising} />
               <Route path="/coaching" component={Coaching} />
               <Route
                 path="/financialConsulting"
@@ -42,9 +40,9 @@ class Main extends Component {
               <Route path="/insurance" component={Insurance} />
               <Route path="/contact" component={Contact} />
             </Switch>
-            <Footer />
           </div>
         </div>
+        <Footer />
       </Router>
     );
   }

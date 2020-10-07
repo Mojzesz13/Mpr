@@ -1,13 +1,13 @@
 @import 'scss/reset';
-
-html {
-  font-size: 10px;
-}
+@import './scss/settings/font';
+@import './scss/settings/colors';
 
 body {
   #root {
     max-width: 190rem;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: $fontBase;
+    background-color: $greenBase;
   }
 }

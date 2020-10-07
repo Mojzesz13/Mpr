@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './AboutUs.scss';
 
-class AboutUs extends Component {
+class Aboutus extends Component {
   render() {
-    return <div className="aboutUsContainer"> AboutUs </div>;
+    return (
+      <div className="aboutUsContainer" id="Aboutus">
+        Hometwo test
+      </div>
+    );
   }
 }
-export default AboutUs;
+export default Aboutus;

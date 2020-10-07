@@ -1,30 +1,27 @@
-/* Position and sizing of burger button */
-
-.bm-menu-wrap {
-  transition: 'fallDown' !important;
-}
+@import '../../scss/settings/colors';
+// @import '../../scss/settings/font';
 
 .bm-burger-button {
+  width: 6rem;
+  height: 4rem;
   position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
+  right: 3rem;
+  top: 3rem;
+  span {
+    background-color: $decorationColor;
+    border-radius: 30%;
+    height: 0.3rem !important;
+  }
 }
 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
+.bm-burger-button:hover {
+  span {
+    background-color: gray;
+  }
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
 }
 
 /* Color/shape of close button cross */
@@ -62,9 +59,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: $fontColor;
 }
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(50, 89, 62, 0.8);
 }
