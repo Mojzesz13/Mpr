@@ -2,11 +2,11 @@
 // @import '../../scss/settings/font';
 
 .bm-burger-button {
-  width: 6rem;
-  height: 4rem;
+  width: 4rem;
+  height: 3rem;
   position: fixed;
-  right: 3rem;
-  top: 3rem;
+  right: 1rem;
+  top: 1rem;
   span {
     background-color: $decorationColor;
     border-radius: 30%;
@@ -16,7 +16,7 @@
 
 .bm-burger-button:hover {
   span {
-    background-color: gray;
+    background-color: gold;
   }
 }
 

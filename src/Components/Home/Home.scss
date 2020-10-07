@@ -1,5 +1,76 @@
+@import '../../scss/settings/mixins';
+@import '../../scss/settings/fonts';
+
 .homeContainer {
-  background-color: darksalmon;
   width: 100%;
-  height: 100rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .section {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: green;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 3;
+    }
+    .textSetion {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 1;
+      background-color: $greenBase;
+      .letterHolder {
+        width: 25rem;
+        height: 25rem;
+        margin-left: 50%;
+        position: absolute;
+        top: 25rem;
+        transition: 1s;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+      .first {
+        background-image: url('../../assets/mLetterG.svg');
+      }
+      .second {
+        background-image: url('../../assets/pLetterG.svg');
+      }
+      .third {
+        background-image: url('../../assets/rLetterG.svg');
+      }
+      .forth {
+        background-image: url('../../assets/sectionForth.jpg');
+      }
+    }
+    &:hover {
+      z-index: 3;
+      .textSetion {
+        background-color: rgba(0s, 0s, 0s, 0);
+        .letterHolder {
+          transition: 1s;
+          top: 0;
+        }
+        .first {
+          background-image: url('../../assets/mLetter.svg');
+        }
+        .second {
+          background-image: url('../../assets/pLetter.svg');
+        }
+        .third {
+          background-image: url('../../assets/rLetter.svg');
+        }
+        .forth {
+          background-image: url('../../assets/sectionForth.jpg');
+        }
+      }
+    }
+  }
 }

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './Main.scss';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import HamburgerMenu from './HamburgeMenu/HamburgerMenu';
 import AboutUs from './AboutUs/AboutUs';
 import Sale from './Sale/Sale';
-
+import Fundraising from './Fundraising/Fundraising';
 import Coaching from './Coaching/Coaching';
 import FinancialConsulting from './FinancialConsulting/FinancialConsulting';
 import HumanResources from './HumanResources/HumanResources';
 import Insurance from './Insurance/Insurance';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-import Fundraising from './Fundraising/Fundraising';
+import Logo from './Logo/Logo';
 
 class Main extends Component {
   render() {
@@ -20,11 +20,7 @@ class Main extends Component {
       <Router>
         <HamburgerMenu />
         <div id="outer-container">
-          <div>
-            <Link to="/">
-              <div id="logoWrapper">MPR</div>
-            </Link>
-          </div>
+          <Logo />
           <div id="page-wrap">
             <Switch>
               <Route exact path="/" component={Home} />
