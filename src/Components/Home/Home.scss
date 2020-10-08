@@ -3,7 +3,7 @@
 
 .homeContainer {
   width: 100%;
-  height: 50rem;
+  height: 52rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -11,64 +11,92 @@
     width: 25%;
     height: 100%;
     position: relative;
-    z-index: 1;
     background-color: green;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 3;
     }
     .textSetion {
       width: 100%;
       position: absolute;
       top: 0;
       height: 100%;
-      z-index: 1;
-      background-color: $greenBase;
       .letterHolder {
-        width: 25rem;
-        height: 25rem;
-        margin-left: 50%;
+        width: 30rem;
+        height: 23rem;
+        left: 13rem;
         position: absolute;
-        top: 25rem;
-        transition: 1s;
+        top: 28rem;
         background-size: contain;
         background-repeat: no-repeat;
-        z-index: 2;
+        animation-fill-mode: forwards;
       }
-      .first {
+      .firstA {
         background-image: url('../../assets/mLetterG.svg');
+        left: 11rem;
       }
-      .second {
+      .firstB {
+        background-image: url('../../assets/mLetter.svg');
+        left: 11rem;
+        opacity: 0;
+      }
+      .secondA {
         background-image: url('../../assets/pLetterG.svg');
       }
-      .third {
+      .secondB {
+        background-image: url('../../assets/pLetter.svg');
+        opacity: 0;
+      }
+      .thirdA {
         background-image: url('../../assets/rLetterG.svg');
       }
-      .forth {
-        background-image: url('../../assets/sectionForth.jpg');
+      .thirdB {
+        background-image: url('../../assets/rLetter.svg');
+        opacity: 0;
+      }
+      .forthA {
+        display: none;
+      }
+      .forthB {
+        display: none;
       }
     }
     &:hover {
-      z-index: 3;
       .textSetion {
-        background-color: rgba(0s, 0s, 0s, 0);
-        .letterHolder {
-          transition: 1s;
-          top: 0;
+        .firstA,
+        & .secondA,
+        & .thirdA {
+          animation: greyLetterUp 2s forwards;
         }
-        .first {
-          background-image: url('../../assets/mLetter.svg');
+        .firstB,
+        & .secondB,
+        & .thirdB {
+          animation: goldLetterUp 2s forwards;
+          z-index: 2;
         }
-        .second {
-          background-image: url('../../assets/pLetter.svg');
+      }
+      @keyframes greyLetterUp {
+        0% {
+          top: 28rem;
+          opacity: 1;
         }
-        .third {
-          background-image: url('../../assets/rLetter.svg');
+        50% {
+          opacity: 1;
         }
-        .forth {
-          background-image: url('../../assets/sectionForth.jpg');
+        100% {
+          top: 2rem;
+          opacity: 0;
+        }
+      }
+      @keyframes goldLetterUp {
+        0% {
+          top: 28rem;
+          opacity: 0;
+        }
+        100% {
+          top: 2rem;
+          opacity: 1;
         }
       }
     }
