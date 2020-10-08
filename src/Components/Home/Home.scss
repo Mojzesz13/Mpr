@@ -11,22 +11,22 @@
     width: 25%;
     height: 100%;
     position: relative;
-    background-color: green;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: 3;
     }
-    .textSetion {
+    .letterSection {
       width: 100%;
+      height: 100%;
       position: absolute;
       top: 0;
-      height: 100%;
       .letterHolder {
-        width: 30rem;
+        width: 23rem;
         height: 23rem;
-        left: 13rem;
         position: absolute;
+        left: 13rem;
         top: 28rem;
         background-size: contain;
         background-repeat: no-repeat;
@@ -35,11 +35,13 @@
       .firstA {
         background-image: url('../../assets/mLetterG.svg');
         left: 11rem;
+        width: 29rem;
       }
       .firstB {
         background-image: url('../../assets/mLetter.svg');
         left: 11rem;
         opacity: 0;
+        width: 29rem;
       }
       .secondA {
         background-image: url('../../assets/pLetterG.svg');
@@ -56,23 +58,60 @@
         opacity: 0;
       }
       .forthA {
-        display: none;
+        background-image: url('../../assets/groupTextG.svg');
+        left: 3rem;
+        width: 20rem;
+        height: 6rem;
+        top: 45rem;
       }
       .forthB {
-        display: none;
+        background-image: url('../../assets/groupText.svg');
+        left: 3rem;
+        width: 20rem;
+        height: 6rem;
+        opacity: 0;
       }
     }
+    .textSection {
+      width: 80%;
+      height: 0;
+      position: absolute;
+      color: white;
+      top: 55%;
+      left: 10%;
+      opacity: 0;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .btnSection {
+      position: absolute;
+      top: 80%;
+      left: 30%;
+      opacity: 0;
+    }
     &:hover {
-      .textSetion {
+      .btnSection,
+      & .textSection {
+        animation: animationButton 1s forwards;
+        animation-delay: 1s;
+      }
+      .letterSection {
         .firstA,
         & .secondA,
         & .thirdA {
           animation: greyLetterUp 2s forwards;
         }
+        .forthA {
+          animation: greyGroup 2s forwards;
+        }
         .firstB,
         & .secondB,
         & .thirdB {
           animation: goldLetterUp 2s forwards;
+          z-index: 2;
+        }
+        .forthB {
+          animation: goldGroup 2s forwards;
           z-index: 2;
         }
       }
@@ -96,6 +135,37 @@
         }
         100% {
           top: 2rem;
+          opacity: 1;
+        }
+      }
+      @keyframes animationButton {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes greyGroup {
+        0% {
+          top: 45rem;
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          top: 20rem;
+          opacity: 0;
+        }
+      }
+      @keyframes goldGroup {
+        0% {
+          top: 45rem;
+          opacity: 0;
+        }
+        100% {
+          top: 20rem;
           opacity: 1;
         }
       }

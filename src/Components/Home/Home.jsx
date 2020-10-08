@@ -8,6 +8,7 @@ import thirdSectionImgA from '../../assets/sectionThirdA.jpg';
 import thirdSectionImgB from '../../assets/sectionThirdB.jpg';
 import forthSectionImgA from '../../assets/sectionForthA.jpg';
 import forthSectionImgB from '../../assets/sectionForthB.jpg';
+import Button from '../../common/button';
 
 const itemList = [
   {
@@ -100,21 +101,6 @@ class Home extends Component {
   render() {
     return (
       <div className="homeContainer" id="home">
-        {/* {itemList.map((obj) => (
-          <div
-            onMouseEnter={this.handleOnMouseEnter}
-            onMouseLeave={this.handleOnMouseLeave}
-            className="section"
-          >
-            <img
-              src={this.state.isHovered ? obj.srcA : obj.srcB}
-              alt={obj.alt}
-            />
-            <div className="textSetion">
-              <div className={obj.cName}></div>
-            </div>
-          </div>
-        ))} */}
         <div
           onMouseEnter={this.handleOnMouseEnterFirst}
           onMouseLeave={this.handleOnMouseLeaveFirst}
@@ -126,9 +112,22 @@ class Home extends Component {
             }
             alt="test"
           />
-          <div className="textSetion">
+
+          <div className="letterSection">
             <div className="letterHolder firstA"></div>
             <div className="letterHolder firstB"></div>
+          </div>
+          <div className="textSection">
+            <p className="test2">
+              Mpr to więcej niż marketing. To indywidualne podejście, dedykowana
+              strategia i innowacyjność w branży, która przekłada się na pewne
+              zyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy
+              Twoje produkty lub usługi do wybranej przez Ciebie grupy
+              docelowej.
+            </p>
+          </div>
+          <div className="btnSection">
+            <Button path="/contact" text="kontakt" />
           </div>
         </div>
 
@@ -143,9 +142,21 @@ class Home extends Component {
             }
             alt="test"
           />
-          <div className="textSetion">
+          <div className="letterSection">
             <div className="letterHolder secondA"></div>
             <div className="letterHolder secondB"></div>
+          </div>
+          <div className="textSection">
+            <p className="test2">
+              Profesjonalizm to coś, co nas wyróżnia. Oferujemy wsparcie
+              sprzedażowe firmom z każdego sektora gospodarki. Brandy działające
+              w ramach grupy to wachlarz kilku dywizji - od fotowoltaicznej po
+              interaktywną. Działalność naszej grupy daje realny potencjał
+              rozwoju każdej branży!
+            </p>
+          </div>
+          <div className="btnSection">
+            <Button path="/contact" text="kontakt" />
           </div>
         </div>
         <div
@@ -159,9 +170,19 @@ class Home extends Component {
             }
             alt="test"
           />
-          <div className="textSetion">
+          <div className="letterSection">
             <div className="letterHolder thirdA"></div>
             <div className="letterHolder thirdB"></div>
+          </div>
+          <div className="textSection">
+            <p className="test2">
+              Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie
+              wspierają naszych klientów w osiąganiu celów i każdego dnia z
+              entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.
+            </p>
+          </div>
+          <div className="btnSection">
+            <Button path="/contact" text="kontakt" />
           </div>
         </div>
         <div
@@ -175,9 +196,19 @@ class Home extends Component {
             }
             alt="test"
           />
-          <div className="textSetion">
+          <div className="letterSection">
             <div className="letterHolder forthA"></div>
             <div className="letterHolder forthB"></div>
+          </div>
+          <div className="textSection">
+            <p className="test2">
+              Działając w coraz większej ilości miast, dostarczymy Ci nie tylko
+              rezultaty, ale także będziemy Twoim partnerem w działaniach
+              związanych z budowaniem i rozwojem Twojej marki.
+            </p>
+          </div>
+          <div className="btnSection">
+            <Button path="/contact" text="kontakt" />
           </div>
         </div>
       </div>
