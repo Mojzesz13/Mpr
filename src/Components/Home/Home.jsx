@@ -10,53 +10,6 @@ import forthSectionImgA from '../../assets/sectionForthA.jpg';
 import forthSectionImgB from '../../assets/sectionForthB.jpg';
 import Button from '../../common/button';
 
-const itemList = [
-  {
-    index: 1,
-    srcA: firstSectionImgA,
-    srcB: firstSectionImgB,
-    alt: 'FirstSectionImg',
-    text: 'testowy',
-    letter: 'M',
-    buttonitle: 'O nas',
-    cName: 'letterHolder first',
-    state: 'isHoveredFirst',
-  },
-  {
-    index: 1,
-    srcA: secondSectionImgA,
-    srcB: secondSectionImgB,
-    alt: 'secondtSectionImg',
-    text: 'testowy',
-    letter: 'M',
-    buttonitle: 'O nas',
-    cName: 'letterHolder second',
-    state: 'isHoveredSecond',
-  },
-  {
-    index: 1,
-    srcA: thirdSectionImgA,
-    srcB: thirdSectionImgB,
-    alt: 'thirdSectionImg',
-    text: 'testowy',
-    letter: 'M',
-    buttonitle: 'O nas',
-    cName: 'letterHolder third',
-    state: 'isHoveredThird',
-  },
-  {
-    index: 1,
-    srcA: forthSectionImgA,
-    srcB: forthSectionImgB,
-    alt: 'forthSectionImg',
-    text: 'testowy',
-    letter: 'M',
-    buttonitle: 'O nas',
-    cName: 'letterHolder forth',
-    state: 'isHoveredForth',
-  },
-];
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -99,118 +52,91 @@ class Home extends Component {
   };
 
   render() {
+    const itemList = [
+      {
+        index: 1,
+        srcA: firstSectionImgA,
+        srcB: firstSectionImgB,
+        alt: 'FirstSectionImg',
+        text:
+          '  Mpr to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewnezyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupydocelowej.',
+        buttonTitle: 'test',
+        path: '/contact',
+        cNameA: 'letterHolder firstA',
+        cNameB: 'letterHolder firstB',
+        state: this.state.isHoveredFirst,
+        Enter: this.handleOnMouseEnterFirst,
+        Leave: this.handleOnMouseLeaveFirst,
+      },
+      {
+        index: 2,
+        srcA: secondSectionImgA,
+        srcB: secondSectionImgB,
+        alt: 'secondtSectionImg',
+        text:
+          ' Profesjonalizm to coś, co nas wyróżnia. Oferujemy wsparcie sprzedażowe firmom z każdego sektora gospodarki. Brandy działające w ramach grupy to wachlarz kilku dywizji - od fotowoltaicznej pointeraktywną. Działalność naszej grupy daje realny potencjałrozwoju każdej branży!',
+        buttonTitle: 'test2',
+        path: '/contact',
+        cNameA: 'letterHolder secondA',
+        cNameB: 'letterHolder secondB',
+        state: this.state.isHoveredSecond,
+        Enter: this.handleOnMouseEnterSecond,
+        Leave: this.handleOnMouseLeaveSecond,
+      },
+      {
+        index: 3,
+        srcA: thirdSectionImgA,
+        srcB: thirdSectionImgB,
+        alt: 'thirdSectionImg',
+        text:
+          '  Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie wspierają naszych klientów w osiąganiu celów i każdego dnia z entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.',
+        buttonTitle: 'test3',
+        path: '/contact',
+        cNameA: 'letterHolder thirdA',
+        cNameB: 'letterHolder thirdB',
+        state: this.state.isHoveredThird,
+        Enter: this.handleOnMouseEnterThird,
+        Leave: this.handleOnMouseLeaveThird,
+      },
+      {
+        index: 4,
+        srcA: forthSectionImgA,
+        srcB: forthSectionImgB,
+        alt: 'forthSectionImg',
+        text:
+          ' Działając w coraz większej ilości miast, dostarczymy Ci nie tylko rezultaty, ale także będziemy Twoim partnerem w działaniach związanych z budowaniem i rozwojem Twojej marki.',
+        buttonTitle: 'Kontat',
+        path: '/contact',
+        cNameA: 'letterHolder forthA',
+        cNameB: 'letterHolder forthB',
+        state: this.state.isHoveredForth,
+        Enter: this.handleOnMouseEnterForth,
+        Leave: this.handleOnMouseLeaveForth,
+      },
+    ];
+
     return (
       <div className="homeContainer" id="home">
-        <div
-          onMouseEnter={this.handleOnMouseEnterFirst}
-          onMouseLeave={this.handleOnMouseLeaveFirst}
-          className="section"
-        >
-          <img
-            src={
-              this.state.isHoveredFirst ? firstSectionImgA : firstSectionImgB
-            }
-            alt="test"
-          />
-
-          <div className="letterSection">
-            <div className="letterHolder firstA"></div>
-            <div className="letterHolder firstB"></div>
+        {itemList.map((obj) => (
+          <div
+            key={obj.index}
+            onMouseEnter={obj.Enter}
+            onMouseLeave={obj.Leave}
+            className="mainSection"
+          >
+            <img src={obj.state ? obj.srcA : obj.srcB} alt={obj.alt} />
+            <div className="letterSection">
+              <div className={obj.cNameA}></div>
+              <div className={obj.cNameB}></div>
+            </div>
+            <div className="textSection">
+              <p>{obj.text}</p>
+            </div>
+            <div className="btnSection">
+              <Button path={obj.path} text={obj.buttonTitle} />
+            </div>
           </div>
-          <div className="textSection">
-            <p className="test2">
-              Mpr to więcej niż marketing. To indywidualne podejście, dedykowana
-              strategia i innowacyjność w branży, która przekłada się na pewne
-              zyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy
-              Twoje produkty lub usługi do wybranej przez Ciebie grupy
-              docelowej.
-            </p>
-          </div>
-          <div className="btnSection">
-            <Button path="/contact" text="kontakt" />
-          </div>
-        </div>
-
-        <div
-          onMouseEnter={this.handleOnMouseEnterSecond}
-          onMouseLeave={this.handleOnMouseLeaveSecond}
-          className="section"
-        >
-          <img
-            src={
-              this.state.isHoveredSecond ? secondSectionImgA : secondSectionImgB
-            }
-            alt="test"
-          />
-          <div className="letterSection">
-            <div className="letterHolder secondA"></div>
-            <div className="letterHolder secondB"></div>
-          </div>
-          <div className="textSection">
-            <p className="test2">
-              Profesjonalizm to coś, co nas wyróżnia. Oferujemy wsparcie
-              sprzedażowe firmom z każdego sektora gospodarki. Brandy działające
-              w ramach grupy to wachlarz kilku dywizji - od fotowoltaicznej po
-              interaktywną. Działalność naszej grupy daje realny potencjał
-              rozwoju każdej branży!
-            </p>
-          </div>
-          <div className="btnSection">
-            <Button path="/contact" text="kontakt" />
-          </div>
-        </div>
-        <div
-          onMouseEnter={this.handleOnMouseEnterThird}
-          onMouseLeave={this.handleOnMouseLeaveThird}
-          className="section"
-        >
-          <img
-            src={
-              this.state.isHoveredThird ? thirdSectionImgA : thirdSectionImgB
-            }
-            alt="test"
-          />
-          <div className="letterSection">
-            <div className="letterHolder thirdA"></div>
-            <div className="letterHolder thirdB"></div>
-          </div>
-          <div className="textSection">
-            <p className="test2">
-              Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie
-              wspierają naszych klientów w osiąganiu celów i każdego dnia z
-              entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.
-            </p>
-          </div>
-          <div className="btnSection">
-            <Button path="/contact" text="kontakt" />
-          </div>
-        </div>
-        <div
-          onMouseEnter={this.handleOnMouseEnterForth}
-          onMouseLeave={this.handleOnMouseLeaveForth}
-          className="section"
-        >
-          <img
-            src={
-              this.state.isHoveredForth ? forthSectionImgA : forthSectionImgB
-            }
-            alt="test"
-          />
-          <div className="letterSection">
-            <div className="letterHolder forthA"></div>
-            <div className="letterHolder forthB"></div>
-          </div>
-          <div className="textSection">
-            <p className="test2">
-              Działając w coraz większej ilości miast, dostarczymy Ci nie tylko
-              rezultaty, ale także będziemy Twoim partnerem w działaniach
-              związanych z budowaniem i rozwojem Twojej marki.
-            </p>
-          </div>
-          <div className="btnSection">
-            <Button path="/contact" text="kontakt" />
-          </div>
-        </div>
+        ))}
       </div>
     );
   }
