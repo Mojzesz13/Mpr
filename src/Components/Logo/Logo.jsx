@@ -11,6 +11,9 @@ class Logo extends Component {
             MPR <span>GROUP</span>
           </h1>
         </Link>
+        <div className="sloganSection">
+          <h2>Liczby się liczą</h2>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,112 @@
+.buttonContactContainer {
+  a.buttonContact {
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    display: block;
+    position: relative;
+    margin: 50px auto 0;
+    overflow: hidden;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
+
+    // -webkit-transition: all 0.2s ease;
+    // -moz-transition: all 0.2s ease;
+    // -ms-transition: all 0.2s ease;
+    // -o-transition: all 0.2s ease;
+    // transition: all 0.2s ease;
+
+    background-image: -webkit-linear-gradient(
+      bottom,
+      #383838 0%,
+      #444444 49%,
+      #555 50%,
+      #555 100%
+    );
+    background-image: -moz-linear-gradient(
+      bottom,
+      #383838 0%,
+      #444444 49%,
+      #555 50%,
+      #555 100%
+    );
+    background-image: -ms-linear-gradient(
+      bottom,
+      #383838 0%,
+      #444444 49%,
+      #555 50%,
+      #555 100%
+    );
+    background-image: -o-linear-gradient(
+      bottom,
+      #383838 0%,
+      #444444 49%,
+      #555 50%,
+      #555 100%
+    );
+    background-image: linear-gradient(
+      bottom,
+      #383838 0%,
+      #444444 49%,
+      #555 50%,
+      #555 100%
+    );
+  }
+
+  a.buttonContact span.text {
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+    font-size: 1rem;
+  }
+
+  a.buttonContact span.shine {
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 100px;
+    background: white;
+    top: -80px;
+    right: -250px;
+    display: block;
+    opacity: 0.8;
+
+    -webkit-box-shadow: 0px 0px 20px 10px white;
+    -moz-box-shadow: 0px 0px 20px 10px white;
+    box-shadow: 0px 0px 20px 10px white;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  a.buttonContact:active {
+    -webkit-box-shadow: inset 0px 1px 15px 0px rgba(0, 0, 0, 0.4),
+      inset 0px 1px 1px 1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: inset 0px 1px 15px 0px rgba(0, 0, 0, 0.4),
+      inset 0px 1px 1px 1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 1px 15px 0px rgba(0, 0, 0, 0.4),
+      inset 0px 1px 1px 1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  a.buttonContact:hover span.shine {
+    right: 370px;
+    top: -200px;
+  }
+}

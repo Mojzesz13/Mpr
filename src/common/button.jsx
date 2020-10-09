@@ -14,7 +14,7 @@ class Button extends Component {
         <Link
           to={this.props.path}
           className="btn effect04"
-          data-sm-link-text="CLICK"
+          data-sm-link-text="PRZEJDŹ"
         >
           <span>{this.props.text}</span>
         </Link>

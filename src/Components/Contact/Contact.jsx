@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
+import FormContact from '../../common/form';
 import './Contact.scss';
 
 class Contact extends Component {
   render() {
     return (
       <div id="contact" className="contactContainer">
-        {' '}
-        Contact{' '}
-      </div>
+        <div className="formSection"> 
+        <FormContact/>
+        </div>
+  
+</div>
+      
     );
   }
 }
 export default Contact;
+
+
+// https://codepen.io/davinci/pen/YxwwWd

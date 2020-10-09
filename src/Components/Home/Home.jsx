@@ -19,35 +19,38 @@ class Home extends Component {
       isHoveredThird: false,
       isHoveredForth: false,
     };
-  }
+ }
 
-  handleOnMouseEnterFirst = () => {
+  handleOnMouseEnterFirst = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredFirst: true });
   };
-
-  handleOnMouseLeaveFirst = () => {
+  handleOnMouseLeaveFirst = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredFirst: false });
   };
-
-  handleOnMouseEnterSecond = () => {
+  handleOnMouseEnterSecond = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredSecond: true });
   };
-
-  handleOnMouseLeaveSecond = () => {
+  handleOnMouseLeaveSecond = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredSecond: false });
   };
-  handleOnMouseEnterThird = () => {
+  handleOnMouseEnterThird = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredThird: true });
   };
-
-  handleOnMouseLeaveThird = () => {
+  handleOnMouseLeaveThird = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredThird: false });
   };
-  handleOnMouseEnterForth = () => {
+  handleOnMouseEnterForth = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredForth: true });
   };
-
-  handleOnMouseLeaveForth = () => {
+  handleOnMouseLeaveForth = (e) => {
+    e.preventDefault();
     this.setState({ isHoveredForth: false });
   };
 
@@ -114,7 +117,6 @@ class Home extends Component {
         Leave: this.handleOnMouseLeaveForth,
       },
     ];
-
     return (
       <div className="homeContainer" id="home">
         {itemList.map((obj) => (

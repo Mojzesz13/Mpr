@@ -2,16 +2,16 @@
 // @import '../../scss/settings/font';
 
 .bm-burger-button {
-  width: 4rem;
-  height: 3rem;
+  width: 2rem;
+  height: 1.8rem;
   position: fixed;
-  right: 1rem;
-  top: 1rem;
+  right: 0.6rem;
+  top: 0.7rem;
   overflow: hidden;
+  z-index: 10001;
   span {
     background-color: $decorationColor;
-    border-radius: 30%;
-    height: 0.3rem !important;
+    height: 0.1rem !important;
     overflow: hidden;
   }
 }
@@ -24,11 +24,19 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
+  width: 3rem !important;
+  height: 2rem !important;
+  right: 0.1rem !important;
+  top: 0.05 !important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background-color: $decorationColor;
+  width: 2.2rem !important;
+  right: -0.7rem !important;
+  top: 0.5rem;
+  height: 0.1rem !important;
 }
 
 /*
@@ -42,7 +50,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: $logoBackground;
+  background: $sideBarColor;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden !important;
