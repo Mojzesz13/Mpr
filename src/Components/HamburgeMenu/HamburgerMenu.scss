@@ -50,9 +50,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: $sideBarColor;
+  background: black;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  // font-size: 0.6rem;
   overflow: hidden !important;
 }
 
@@ -70,12 +70,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-top: 2rem;
+
   text-decoration: none;
   color: $fontColor;
   &:focus {
     outline: 0;
+  }
+  &:hover {
+    color: gold;
   }
 }
 

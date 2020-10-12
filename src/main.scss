@@ -8,11 +8,6 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     font-family: $fontBase;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(56, 56, 56, 1) 100%
-    );
+    background-color: black;
   }
 }

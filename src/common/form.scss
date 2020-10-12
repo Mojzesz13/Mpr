@@ -8,18 +8,11 @@
   .textAreaContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     font-size: 2rem;
     transition: 1s;
-    p {
-      margin-right: 1rem;
-      color: $secondFontColor;
-      span {
-        color: $fontColor;
-      }
-    }
     input {
       width: 50rem;
       height: 1.5rem;
@@ -35,12 +28,6 @@
         text-transform: uppercase;
         font-family: $fontBase;
       }
-      .helperText {
-        font-size: 2rem;
-      }
-    }
-    .Mui-error {
-      font-size: 1.5rem;
     }
   }
   .buttonContainer {
@@ -114,24 +101,6 @@
         cursor: pointer;
       }
     }
-    // button {
-    //   width: 16rem;
-    //   height: 4rem;
-    //   //   margin-top: 2rem;
-    //   //   padding-top: 0.5rem;
-    //   background-color: transparent;
-    //   color: $fontColor;
-    //   font-size: 2rem;
-    //   transition: 0.5s;
-    //   border: 1.5px solid $secondFontColor;
-    //   &:hover {
-    //     color: $secondFontColor;
-    //     border: $fontColor;
-    //   }
-    //   &:focus {
-    //     outline: 0;
-    //   }
-    // }
     .error {
       margin: 0 1rem;
       position: relative;
