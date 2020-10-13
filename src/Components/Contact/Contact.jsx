@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormContact from '../../common/form';
+import FormContact from '../../common/form/form';
 import './Contact.scss';
 
 class Contact extends Component {
@@ -9,13 +9,11 @@ class Contact extends Component {
         <div className="formSection"> 
         <FormContact/>
         </div>
-  
-</div>
-      
+      </div>
     );
   }
 }
 export default Contact;
 
 
-// https://codepen.io/davinci/pen/YxwwWd
+// https://codepen.io/davinci/pen/YxwwWd   fala

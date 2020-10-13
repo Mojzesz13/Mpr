@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './buttonContact.scss';
 
-class ButtonContact extends Component {
- 
-  render() {
+const ButtonContact =()=> {
     return (
       <div  className="buttonContactContainer">
       <button type="submit" className="buttonContact">
         <span className="shine"></span>
-        <span className="text">Hover Me</span>
+        <span className="text">Wyślij</span>
       </button>
    </div>
     );
-  }
 }
 export default ButtonContact;

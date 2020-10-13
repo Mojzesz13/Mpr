@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './form.scss';
-import { Formik, Form } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import ButtonContact from './buttonContact';
 import TextInput from './input';
+
+import {
+  Input,
+  StyledInlineErrorMessage,
+} from "./styles";
 
 const formSchema = Yup.object({
   personalDate: Yup.string()
@@ -22,10 +27,10 @@ const formSchema = Yup.object({
   //   .oneOf([true], 'Pole obowiązkowe'),
 })
 
-
-class FormContact extends Component {
-  render() {
+const FormContact =()=> {
+  const[test, setTest] = useState("immie")
     return (
+      <>
       <div  className="formContainer">
         <Formik 
           initialValues={{
@@ -74,7 +79,44 @@ class FormContact extends Component {
                 return(
                   <Form onSubmit={handleSubmit}>
                       <div className="formContainer">
-                      <TextInput  
+                         <label htmlFor="personalDate"/>
+                         <div className="inputHolder"> 
+                            <Input
+                              type="text"
+                              name="personalDate"
+                              autoCorrect="off"
+                              autoComplete="name"
+                              placeholder="Imię i nazwisko"
+                              valid={touched.personalDate && !errors.personalDate}
+                              error={touched.personalDate && errors.personalDate}
+                             />
+                            
+                             {errors.personalDate && touched.personalDate && (
+                              <StyledInlineErrorMessage>
+                                {setTest(errors.personalDate )}
+                                {errors.personalDate}
+                              </StyledInlineErrorMessage>
+                              )}
+                              </div>
+                              <div className="inputHolder"> 
+                          <label htmlFor="email"/>
+                            <Input
+                              type="email"
+                              name="email"
+                              autoCapitalize="off"
+                              autoCorrect="off"
+                              autoComplete="email"
+                              placeholder="Email"
+                              valid={touched.email && !errors.email}
+                              error={touched.email && errors.email}
+                            />
+                         <ErrorMessage name="email">
+                            {msg => (
+                              <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
+                            )}
+                          </ErrorMessage>
+                          </div>
+                      {/* <TextInput  
                           name={"personalDate"}
                           label={"Imie"}
                           placeholder={"Imię i nazwisko"}
@@ -83,7 +125,7 @@ class FormContact extends Component {
                           label={"Email"}
                           name={"email"}
                           placeholder={"Email"}
-                        />
+                        /> */}
                         <div className="textAreaContainer">
                           <textarea label="Wiadomość" placeholder="Wiadomość" name="message" type="text" />
                         </div>
@@ -94,8 +136,11 @@ class FormContact extends Component {
               }}
           </Formik>
           </div>
+          </>
     );
-  }
+  
 }
 
 export default FormContact;
+
+

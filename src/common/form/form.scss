@@ -1,35 +1,31 @@
-@import '../scss/settings/colors';
-@import '../scss/settings/fonts';
+@import '../../scss/settings/colors';
+@import '../../scss/settings/fonts';
 .formContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  .inputHolder,
-  .textAreaContainer {
-    width: 100%;
+  justify-content: center;
+  align-content: center;
+
+  .inputHolder {
     display: flex;
+    width: 51rem;
+    height: 3rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 2rem;
-    transition: 1s;
+    justify-content: flex-start;
     input {
-      width: 50rem;
-      height: 1.5rem;
-      padding-left: 1rem;
-      margin-top: 2rem;
-      background-color: transparent;
-      border: 1px solid $fontColor;
-      color: $fontColor;
-      font-size: 0.9rem;
       &::placeholder {
         text-align: center;
-        color: $fontColor;
+        color: rgb(255, 255, 255);
         text-transform: uppercase;
         font-family: $fontBase;
+        text-transform: uppercase;
       }
     }
+
+    // margin-top: 2rem;
   }
+
   .buttonContainer {
     width: 100%;
     // margin: 2rem 0;
@@ -113,9 +109,9 @@
 
 .textAreaContainer {
   TextArea {
-    width: 50rem;
+    width: 51rem;
     height: 3rem;
-    margin-top: 2rem;
+    // margin-top: 0.3rem;
     padding: 0.5rem 0 0 1rem;
     background-color: transparent;
     border: 1px solid $fontColor;
