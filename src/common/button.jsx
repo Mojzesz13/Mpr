@@ -9,8 +9,10 @@ class Button extends Component {
     this.state = {};
   }
   render() {
+
+    const {width } = this.props
     return (
-      <div className="buttonContainer">
+      <div className="buttonContainer" style={{width:width}}>
         <Link
           to={this.props.path}
           className="btn effect04"

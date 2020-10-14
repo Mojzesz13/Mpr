@@ -56,11 +56,16 @@
       background-color: $fontColor;
     }
   }
+
+  .errorText {
+    margin-right: 0.5rem;
+  }
+
   p {
     color: $fontColor;
   }
   .rodoPolicy {
-    margin: 0.5rem;
+    margin-left: 0.5rem;
     font-size: 0.9rem;
     font-weight: 700;
     color: $logoBackground;

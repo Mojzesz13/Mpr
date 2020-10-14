@@ -1,0 +1,44 @@
+@import 'src/scss/settings/mixins';
+
+.rodoComponent {
+  width: 90%;
+  // height: 80rem;
+  margin: 1rem auto;
+  display: none;
+  align-self: center;
+  font-size: 1.5rem;
+  animation-duration: 0.5s;
+  animation-name: rodoAnimationBack;
+}
+@keyframes rodoAnimationBack {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+.activeRodo {
+  display: block;
+  animation-name: rodoAnimation forwards;
+}
+@keyframes rodoAnimation {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

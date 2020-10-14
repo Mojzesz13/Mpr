@@ -24,7 +24,7 @@ const formSchema = Yup.object({
     .oneOf([true], 'Pole obowiązkowe'),
 })
 
-const FormContact =()=> {
+const FormContact =({handleOpenPolicy})=> {
     return (
       <>
       <div  className="formContainer">
@@ -88,13 +88,13 @@ const FormContact =()=> {
                               lable="Email"
                               touched={touched.email}
                               errors={errors.email}
-                            />
+                            />  
                           <Textarea
                           name="message"
                           lable="Wiadomość"
                           />
-                        <Rodo/>
-                      <ButtonContact/>
+                        <Rodo handleOpenPolicy={handleOpenPolicy}/>
+                      <ButtonContact />
                       </div>
                   </Form>
                 )
@@ -103,7 +103,6 @@ const FormContact =()=> {
           </div>
           </>
     );
-  
 }
 
 export default FormContact;

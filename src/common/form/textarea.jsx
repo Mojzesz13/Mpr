@@ -7,7 +7,13 @@ const Textarea = (props) => {
     return (
       <div className="textareaConteiner">
           <label htmlFor={name}/>
-           <Field className="textreaContent" as="textarea" placeholder={lable} id={name}  name={name} {...rest} />
+           <Field 
+           className="textreaContent" 
+           as="textarea" 
+           placeholder={lable} 
+           id={name}  
+           name={name} 
+           {...rest} />
       </div>
     );
 }

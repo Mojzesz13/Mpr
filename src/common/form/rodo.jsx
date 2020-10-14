@@ -2,7 +2,6 @@ import React from 'react';
 import { useField} from 'formik';
 import './rodo.scss'
 
-
 const CustomCheckbox = ({ children, ...props }) => {
     const [field, meta] = useField(props, 'checkbox');
     return (
@@ -16,24 +15,18 @@ const CustomCheckbox = ({ children, ...props }) => {
           </div>
         </label>
         {meta.touched && meta.error ? (
-          <div className="error">{meta.error}</div>
+          <div className="errorText">{meta.error}</div>
         ) : null}
       </>
     );
   };
 
-
-
-const Rodo = (props) => {
-    
-
-
-
+const Rodo = ({handleOpenPolicy}) => {
     return (
             <div className="termsContainer">
               <CustomCheckbox name="acceptTerms"></CustomCheckbox>
               <p>Akceptuję politykę prywatności</p>
-              <span className="rodoPolicy">
+              <span className="rodoPolicy" onClick={handleOpenPolicy}>
                 RODO
               </span>
             </div>

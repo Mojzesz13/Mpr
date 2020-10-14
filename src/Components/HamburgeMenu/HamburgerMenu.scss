@@ -8,7 +8,6 @@
   right: 0.6rem;
   top: 0.7rem;
   overflow: hidden;
-  z-index: 10001;
   span {
     background-color: $decorationColor;
     height: 0.1rem !important;
@@ -54,6 +53,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 2.5em 1.5em 0;
   // font-size: 0.6rem;
   overflow: hidden !important;
+  // display: flex !important;
+  // justify-content: flex-end !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -65,14 +66,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+  text-transform: uppercase;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-  font-size: 1.3rem;
-  margin-top: 2rem;
-
+  text-align: right;
+  font-size: 1.6rem;
+  margin-top: 3rem;
   text-decoration: none;
   color: $fontColor;
   &:focus {

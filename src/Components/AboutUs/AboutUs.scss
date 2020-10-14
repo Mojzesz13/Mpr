@@ -1,5 +1,159 @@
+@import '../../scss/settings/colors';
 .aboutUsContainer {
-  background-color: darksalmon;
+  background-color: $aboutUsBackground;
   width: 100%;
-  height: 100rem;
+  height: 120rem;
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sectionBox {
+    width: 35rem;
+    height: 35rem;
+    margin: 0 1.3rem 0;
+    background-color: coral;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // z-index: 3;
+    }
+  }
+
+  .headerAboutUs {
+    .headerContent {
+      .btnSection {
+        position: absolute;
+        top: 20rem;
+        left: 10rem;
+        display: none;
+      }
+      .letterSection {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        .letterHolder {
+          width: 25rem;
+          height: 7rem;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          animation-fill-mode: forwards;
+        }
+        .firstA {
+          background-image: url('../../assets/aboutUsTextA.png');
+          animation: greyLetterDown1 1.5s forwards;
+        }
+        .firstB {
+          background-image: url('../../assets/aboutUsTextB.png');
+          opacity: 0;
+          animation: goldLetterDown1 1.5s forwards;
+        }
+      }
+    }
+  }
+  .firstBox:hover {
+    .btnSection {
+      display: inline-block;
+      animation: buttonAnimation1 1s forwards;
+    }
+    .letterSection {
+      .firstA {
+        background-image: url('../../assets/aboutUsTextA.png');
+        opacity: 0;
+        animation: greyLetterUp1 1.5s forwards;
+      }
+      .firstB {
+        background-image: url('../../assets/aboutUsTextB.png');
+        opacity: 1;
+        animation: goldLetterUp1 1.5s forwards;
+      }
+    }
+  }
+
+  @keyframes buttonAnimation1 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes greyLetterUp1 {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      bottom: 28rem;
+      opacity: 0;
+    }
+  }
+  @keyframes goldLetterUp1 {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    100% {
+      bottom: 28rem;
+    }
+  }
+
+  @keyframes greyLetterDown1 {
+    0% {
+      bottom: 28rem;
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes goldLetterDown1 {
+    0% {
+      bottom: 28rem;
+      opacity: 1;
+    }
+    100% {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  .sloganContainer {
+    width: 100%;
+    height: 4rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: $fontColor;
+    margin-bottom: 0.7rem;
+
+    h1 {
+      padding-left: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .aboutUsContent {
+    .contentBox {
+    }
+  }
 }
