@@ -1,18 +1,33 @@
 import React from 'react';
-import { useField } from 'formik';
+import './input.scss'
+import {
+    Input,
+    StyledInlineErrorMessage,
+  } from "./styles";
 
 const TextInput = (props) => {
-    const [field, meta] = useField(props.name)
+    const {lable, name, touched, type, errors, ...rest} = props
     return (
-        <div className="inputHolder">
-            {props.label && <label htmlFor={props.name}/>}
-            <input 
-            {...field}
-            {...props}
-            />
-            {meta.error && meta.touched && <div className={"alert"}>{meta.error}</div>}
-        </div>
+        <div className="inputHolder"> 
+        <label htmlFor={name}/>
+            <Input
+               type={type}
+               name={name}
+               id={name}
+               autoCorrect="off"
+               autoComplete={name}
+               placeholder={lable}
+               valid={touched && !errors}
+               error={touched && errors}
+               {...rest}
+              />
+              {errors && touched && (
+               <StyledInlineErrorMessage>
+                 {errors}
+               </StyledInlineErrorMessage>
+               )}
+          </div>
     );
-};
+};  
 
 export default TextInput;

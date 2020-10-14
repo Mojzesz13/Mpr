@@ -1,39 +1,19 @@
-@import '../scss/settings/colors';
-@import '../scss/settings/fonts';
+@import '../../scss/settings/colors';
+@import '../../scss/settings/fonts';
 
-.inputHolder,
-.textAreaContainer {
-  width: 100%;
+.inputHolder {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2rem;
-  transition: 1s;
-  p {
-    margin-right: 1rem;
-    color: $secondFontColor;
-    span {
-      color: $fontColor;
-    }
-  }
+  width: 51rem;
+  height: 3rem;
+  flex-direction: column;
+  justify-content: flex-start;
   input {
-    width: 50rem;
-    height: 1.5rem;
-    padding-left: 1rem;
-    margin-top: 2rem;
-    background-color: transparent;
-    border: 1px solid $fontColor;
-    color: $fontColor;
-    font-size: 0.9rem;
     &::placeholder {
       text-align: center;
-      color: $fontColor;
+      color: rgb(255, 255, 255);
       text-transform: uppercase;
       font-family: $fontBase;
-    }
-    .helperText {
-      font-size: 2rem;
+      text-transform: uppercase;
     }
   }
 }

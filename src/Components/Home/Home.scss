@@ -59,14 +59,14 @@
       }
       .forthA {
         background-image: url('../../assets/groupTextG.svg');
-        left: 3rem;
+        left: 4rem;
         width: 20rem;
         height: 6rem;
         top: 45rem;
       }
       .forthB {
         background-image: url('../../assets/groupText.svg');
-        left: 3rem;
+        left: 4rem;
         width: 20rem;
         height: 6rem;
         opacity: 0;
@@ -93,25 +93,25 @@
       .btnSection,
       & .textSection {
         animation: animationButton 1s forwards;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
       }
       .letterSection {
         .firstA,
         & .secondA,
         & .thirdA {
-          animation: greyLetterUp 2s forwards;
+          animation: greyLetterUp 1.5s forwards;
         }
         .forthA {
-          animation: greyGroup 2s forwards;
+          animation: greyGroup 1.5s forwards;
         }
         .firstB,
         & .secondB,
         & .thirdB {
-          animation: goldLetterUp 2s forwards;
+          animation: goldLetterUp 1.5s forwards;
           z-index: 2;
         }
         .forthB {
-          animation: goldGroup 2s forwards;
+          animation: goldGroup 1.5s forwards;
           z-index: 2;
         }
       }

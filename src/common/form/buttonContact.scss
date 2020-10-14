@@ -1,24 +1,26 @@
+@import '../../scss/settings/colors';
+
 .buttonContactContainer {
   .buttonContact {
-    width: 15rem;
-    height: 4rem;
+    width: 14rem;
+    height: 3rem;
     display: block;
     position: relative;
     margin: 1.5rem auto 0;
     overflow: hidden;
-    border: 1px solid white;
+    border: 1px solid $fontColor;
     background: transparent;
-    color: white;
+    color: $fontColor;
     cursor: pointer;
 
-    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
-    -moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
-    box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;
+    -moz-box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;
+    box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;
 
     span.text {
       position: absolute;
-      top: 1.3rem;
-      left: 6rem;
+      top: 0.8rem;
+      left: 5.5rem;
       font-size: 1rem;
     }
 

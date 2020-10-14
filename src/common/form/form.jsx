@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './form.scss';
-import { Formik, Form, ErrorMessage } from 'formik';
+import { Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import ButtonContact from './buttonContact';
-import TextInput from './input';
-
-import {
-  Input,
-  StyledInlineErrorMessage,
-} from "./styles";
+import Rodo from './rodo';
+import Textarea from './textarea';
+import TextInput from "./input";
 
 const formSchema = Yup.object({
   personalDate: Yup.string()
@@ -22,13 +19,12 @@ const formSchema = Yup.object({
     .email('Proszę podać poprawny adres email')
     .min(6, 'Minimum 6 znaków')
     .required('Pole obowiązkowe'),
-  // acceptTerms: Yup.boolean()
-  //   .required('Pole obowiązkowe ')
-  //   .oneOf([true], 'Pole obowiązkowe'),
+  acceptTerms: Yup.boolean()
+    .required('Pole obowiązkowe ')
+    .oneOf([true], 'Pole obowiązkowe'),
 })
 
 const FormContact =()=> {
-  const[test, setTest] = useState("immie")
     return (
       <>
       <div  className="formContainer">
@@ -37,7 +33,7 @@ const FormContact =()=> {
             personalDate: '',
             email: '',  
             message: '',
-            // acceptTerms: false,
+            acceptTerms: false,
           }}
           validationSchema={formSchema}
           onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -79,56 +75,25 @@ const FormContact =()=> {
                 return(
                   <Form onSubmit={handleSubmit}>
                       <div className="formContainer">
-                         <label htmlFor="personalDate"/>
-                         <div className="inputHolder"> 
-                            <Input
-                              type="text"
+                              <TextInput
                               name="personalDate"
-                              autoCorrect="off"
-                              autoComplete="name"
-                              placeholder="Imię i nazwisko"
-                              valid={touched.personalDate && !errors.personalDate}
-                              error={touched.personalDate && errors.personalDate}
+                              lable="Imię i nazwisko"
+                              type="text"
+                              touched={touched.personalDate}
+                              errors={errors.personalDate}
                              />
-                            
-                             {errors.personalDate && touched.personalDate && (
-                              <StyledInlineErrorMessage>
-                                {setTest(errors.personalDate )}
-                                {errors.personalDate}
-                              </StyledInlineErrorMessage>
-                              )}
-                              </div>
-                              <div className="inputHolder"> 
-                          <label htmlFor="email"/>
-                            <Input
+                            <TextInput
                               type="email"
                               name="email"
-                              autoCapitalize="off"
-                              autoCorrect="off"
-                              autoComplete="email"
-                              placeholder="Email"
-                              valid={touched.email && !errors.email}
-                              error={touched.email && errors.email}
+                              lable="Email"
+                              touched={touched.email}
+                              errors={errors.email}
                             />
-                         <ErrorMessage name="email">
-                            {msg => (
-                              <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
-                            )}
-                          </ErrorMessage>
-                          </div>
-                      {/* <TextInput  
-                          name={"personalDate"}
-                          label={"Imie"}
-                          placeholder={"Imię i nazwisko"}
-                        />
-                       <TextInput 
-                          label={"Email"}
-                          name={"email"}
-                          placeholder={"Email"}
-                        /> */}
-                        <div className="textAreaContainer">
-                          <textarea label="Wiadomość" placeholder="Wiadomość" name="message" type="text" />
-                        </div>
+                          <Textarea
+                          name="message"
+                          lable="Wiadomość"
+                          />
+                        <Rodo/>
                       <ButtonContact/>
                       </div>
                   </Form>
