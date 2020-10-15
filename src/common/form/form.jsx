@@ -26,7 +26,6 @@ const formSchema = Yup.object({
 
 const FormContact =({handleOpenPolicy})=> {
     return (
-      <>
       <div  className="formContainer">
         <Formik 
           initialValues={{
@@ -63,45 +62,45 @@ const FormContact =({handleOpenPolicy})=> {
             }, 1000);
           }}
         >
-              {({
-                handleSubmit, 
-                handleChange,
-                handleBlur,
-                resetForm,
-                values,
-                errors,
-                touched
-                }) => {
-                return(
-                  <Form onSubmit={handleSubmit}>
-                      <div className="formContainer">
-                              <TextInput
-                              name="personalDate"
-                              lable="Imię i nazwisko"
-                              type="text"
-                              touched={touched.personalDate}
-                              errors={errors.personalDate}
-                             />
-                            <TextInput
-                              type="email"
-                              name="email"
-                              lable="Email"
-                              touched={touched.email}
-                              errors={errors.email}
-                            />  
-                          <Textarea
-                          name="message"
-                          lable="Wiadomość"
-                          />
-                        <Rodo handleOpenPolicy={handleOpenPolicy}/>
-                      <ButtonContact />
-                      </div>
-                  </Form>
-                )
-              }}
-          </Formik>
-          </div>
-          </>
+        {({
+          handleSubmit, 
+          handleChange,
+          handleBlur,
+          resetForm,
+          values,
+          errors,
+          touched
+          }) => {
+            return(
+              <Form onSubmit={handleSubmit}>
+                <div className="formContainer">
+                    <TextInput
+                      name="personalDate"
+                      lable="Imię i nazwisko"
+                      type="text"
+                      touched={touched.personalDate}
+                      errors={errors.personalDate}
+                      />
+                    <TextInput
+                      type="email"
+                      name="email"
+                      lable="Email"
+                      touched={touched.email}
+                      errors={errors.email}
+                    />  
+                    <Textarea
+                      name="message"
+                      lable="Wiadomość"
+                    />
+                    <Rodo handleOpenPolicy={handleOpenPolicy}/>
+                    <ButtonContact />
+                </div>
+              </Form>
+            )
+          }
+        }
+      </Formik>
+    </div>
     );
 }
 

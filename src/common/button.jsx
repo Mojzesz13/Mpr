@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import './button.scss';
 
 class Button extends Component {
@@ -9,7 +8,6 @@ class Button extends Component {
     this.state = {};
   }
   render() {
-
     const {width } = this.props
     return (
       <div className="buttonContainer" style={{width:width}}>

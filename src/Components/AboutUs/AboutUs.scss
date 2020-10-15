@@ -1,159 +1,171 @@
 @import '../../scss/settings/colors';
+@import '../../scss/settings/fonts';
+@import '../../scss/settings/mixins';
 .aboutUsContainer {
-  background-color: $aboutUsBackground;
   width: 100%;
   height: 120rem;
-
-  .section {
+  background-color: $aboutUsBackground;
+  .mainSection {
+    padding-top: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    font-family: $textFont;
+    font-weight: 300;
   }
-
-  .sectionBox {
+  .boxSection {
     width: 35rem;
     height: 35rem;
     margin: 0 1.3rem 0;
-    background-color: coral;
     position: relative;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // z-index: 3;
     }
   }
-
   .headerAboutUs {
-    .headerContent {
-      .btnSection {
+    .letterSection {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      .letterHolder {
+        width: 25rem;
+        height: 7rem;
         position: absolute;
-        top: 20rem;
-        left: 10rem;
-        display: none;
+        left: 0;
+        bottom: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation-fill-mode: forwards;
       }
-      .letterSection {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        .letterHolder {
-          width: 25rem;
-          height: 7rem;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          background-size: contain;
-          background-repeat: no-repeat;
-          animation-fill-mode: forwards;
-        }
-        .firstA {
-          background-image: url('../../assets/aboutUsTextA.png');
-          animation: greyLetterDown1 1.5s forwards;
-        }
-        .firstB {
-          background-image: url('../../assets/aboutUsTextB.png');
-          opacity: 0;
-          animation: goldLetterDown1 1.5s forwards;
-        }
+      .firstA {
+        background-image: url('../../assets/aboutUsTextA.png');
+        animation: greyLetterDown1 1.5s forwards;
       }
+      .firstB {
+        background-image: url('../../assets/aboutUsTextB.png');
+        opacity: 0;
+        animation: goldLetterDown1 1.5s forwards;
+      }
+    }
+    .btnSection {
+      position: absolute;
+      top: 20rem;
+      left: 10rem;
+      display: none;
+    }
+    .secondBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      color: $fontColor;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    .thirdBox {
+      background-image: url('../../assets/aboutUsSecond.jpg');
+      background-size: contain;
     }
   }
   .firstBox:hover {
     .btnSection {
       display: inline-block;
-      animation: buttonAnimation1 1s forwards;
+      @include animationAppearing(1s);
     }
     .letterSection {
       .firstA {
         background-image: url('../../assets/aboutUsTextA.png');
         opacity: 0;
-        animation: greyLetterUp1 1.5s forwards;
+        @include letterMove(1.5s, 0rem, 28rem, 1, 0);
       }
       .firstB {
         background-image: url('../../assets/aboutUsTextB.png');
         opacity: 1;
-        animation: goldLetterUp1 1.5s forwards;
+        @include letterMove(1.5s, 0, 28rem, 0, 1);
       }
     }
   }
-
-  @keyframes buttonAnimation1 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes greyLetterUp1 {
-    0% {
-      bottom: 0;
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      bottom: 28rem;
-      opacity: 0;
-    }
-  }
-  @keyframes goldLetterUp1 {
-    0% {
-      bottom: 0;
-      opacity: 0;
-    }
-    100% {
-      bottom: 28rem;
-    }
-  }
-
-  @keyframes greyLetterDown1 {
-    0% {
-      bottom: 28rem;
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      bottom: 0;
-      opacity: 1;
-    }
-  }
-  @keyframes goldLetterDown1 {
-    0% {
-      bottom: 28rem;
-      opacity: 1;
-    }
-    100% {
-      bottom: 0;
-      opacity: 0;
-    }
-  }
-
   .sloganContainer {
     width: 100%;
-    height: 4rem;
+    height: 4.5rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     text-transform: uppercase;
     font-size: 4rem;
     color: $fontColor;
-    margin-bottom: 0.7rem;
-
     h1 {
       padding-left: 2rem;
-      margin-bottom: 0.5rem;
     }
   }
-
   .aboutUsContent {
     .contentBox {
+      margin-bottom: 2rem;
+      position: relative;
+      img {
+        opacity: 1;
+      }
+      .textBox {
+        opacity: 0;
+        &::after {
+          @include movingBackground;
+        }
+        .textHolder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $aboutUsBackground;
+          font-size: 2rem;
+          color: $fontColor;
+          z-index: 2;
+          p {
+            width: 80%;
+          }
+        }
+      }
+      &:hover {
+        img {
+          @include animationDisappearing(1s);
+        }
+        .textBox {
+          @include animationAppearing(0.5s);
+        }
+      }
     }
+  }
+}
+@keyframes goldLetterDown1 {
+  0% {
+    bottom: 28rem;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes greyLetterDown1 {
+  0% {
+    bottom: 28rem;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
   }
 }
