@@ -137,10 +137,10 @@
       }
       &:hover {
         img {
-          @include animationDisappearing(1s);
+          @include animationDisappearing(1);
         }
         .textBox {
-          @include animationAppearing(0.5s);
+          @include animationAppearing(0);
         }
       }
     }
