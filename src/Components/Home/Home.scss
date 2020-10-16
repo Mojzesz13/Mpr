@@ -86,8 +86,12 @@
     }
     .btnSection {
       position: absolute;
-      top: 80%;
-      left: 38%;
+      left: 0;
+      right: 0;
+      bottom: 15%;
+      margin: 0 auto;
+      width: 10rem;
+      height: 5rem;
       opacity: 0;
     }
     &:hover {
