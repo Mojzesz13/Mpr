@@ -12,3 +12,9 @@ class FinancialConsulting extends Component {
   }
 }
 export default FinancialConsulting;
+
+
+// https://www.youtube.com/watch?v=a7ICxQblYrM&ab_channel=OnlineTutorials
+
+// dywizje
+
