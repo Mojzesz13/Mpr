@@ -19,10 +19,13 @@
     height: 35rem;
     margin: 0 1.3rem 0;
     position: relative;
+    display: inline-block;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 2s;
     }
   }
   .headerAboutUs {
@@ -106,27 +109,29 @@
   }
   .aboutUsContent {
     .contentBox {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       position: relative;
       img {
         opacity: 1;
       }
       .textBox {
-        opacity: 0;
-        &::after {
-          @include movingBackground;
-        }
+        // opacity: 0;
+        // &::after {
+        //   @include movingBackground;
+        // }
         .textHolder {
-          width: 100%;
-          height: 100%;
+          width: 95%;
+          height: 95%;
           display: flex;
           justify-content: center;
           align-items: center;
           text-align: center;
           position: absolute;
-          top: 0;
-          left: 0;
-          background-color: $aboutUsBackground;
+          top: 1rem;
+          left: 1rem;
+          transform: scaleY(0);
+          transition: transform 0.5s;
+          background-color: rgba(0, 0, 0, 0.8);
           font-size: 2rem;
           color: $fontColor;
           z-index: 2;
@@ -137,10 +142,14 @@
       }
       &:hover {
         img {
-          @include animationDisappearing(0s);
+          // @include animationDisappearing(0s);
+          transform: scale(1.2);
         }
         .textBox {
-          @include animationAppearing(0s);
+          // @include animationAppearing(0s);
+          .textHolder {
+            transform: scaleY(1);
+          }
         }
       }
     }
