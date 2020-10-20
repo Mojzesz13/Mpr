@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Logo.scss';
 
 class Logo extends Component {
+
   render() {
     return (
       <div className="LogoContainer">
@@ -12,7 +13,7 @@ class Logo extends Component {
           </h1>
         </Link>
         <div className="sloganSection">
-          <h2>Liczby się liczą</h2>
+          <h2>{this.props.title}</h2>
         </div>
       </div>
     );

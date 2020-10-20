@@ -23,8 +23,8 @@ class HamburgerMenu extends Component {
         <Link to="/fundraising" className="bm-item">
           Zbieranie funduszy
         </Link>
-        <Link to="/coaching" className="bm-item">
-          Treningi
+        <Link to="/energetic" className="bm-item">
+          Dywizja energetyczna
         </Link>
         <Link
           to="/financialConsulting"

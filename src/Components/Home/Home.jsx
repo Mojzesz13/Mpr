@@ -55,6 +55,7 @@ class Home extends Component {
   };
 
   render() {
+
     const itemList = [
       {
         index: 1,
@@ -117,6 +118,7 @@ class Home extends Component {
         Leave: this.handleOnMouseLeaveForth,
       },
     ];
+    
     return (
       <div className="homeContainer" id="home">
         {itemList.map((obj) => (
