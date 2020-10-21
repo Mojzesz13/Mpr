@@ -26,7 +26,7 @@ const formSchema = Yup.object({
 
 const FormContact =({handleOpenPolicy})=> {
     return (
-      <div  className="formContainer">
+      <div  className="form-container">
         <Formik 
           initialValues={{
             personalDate: '',
@@ -73,7 +73,6 @@ const FormContact =({handleOpenPolicy})=> {
           }) => {
             return(
               <Form onSubmit={handleSubmit}>
-                <div className="formContainer">
                     <TextInput
                       name="personalDate"
                       lable="Imię i nazwisko"
@@ -94,7 +93,6 @@ const FormContact =({handleOpenPolicy})=> {
                     />
                     <Rodo handleOpenPolicy={handleOpenPolicy}/>
                     <ButtonContact />
-                </div>
               </Form>
             )
           }

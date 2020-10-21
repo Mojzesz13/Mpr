@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Home.scss';
 import firstSectionImgA from '../../assets/sectionFirstA.jpg';
 import firstSectionImgB from '../../assets/sectionFirstB.jpg';
@@ -10,51 +10,63 @@ import forthSectionImgA from '../../assets/sectionForthA.jpg';
 import forthSectionImgB from '../../assets/sectionForthB.jpg';
 import Button from '../../common/button';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHoveredFirst: false,
-      isHoveredSecond: false,
-      isHoveredThird: false,
-      isHoveredForth: false,
-    };
- }
+const Home = () =>  {
+  const[isHovered, setIsHovered] =useState({
+    first:false,
+    second: false,
+    third: false,
+    forth: false
+  });
 
-  handleOnMouseEnterFirst = (e) => {
+  const handleOnMouseEnterFirst = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredFirst: true });
+    setIsHovered({ ...isHovered,
+      first: true 
+    });
   };
-  handleOnMouseLeaveFirst = (e) => {
+  const handleOnMouseLeaveFirst = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredFirst: false });
+     setIsHovered({ ...isHovered,
+      first: false 
+    });
   };
-  handleOnMouseEnterSecond = (e) => {
+  const handleOnMouseEnterSecond = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredSecond: true });
+    setIsHovered({ ...isHovered,
+      second: true 
+    });
   };
-  handleOnMouseLeaveSecond = (e) => {
+  const handleOnMouseLeaveSecond = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredSecond: false });
+     setIsHovered({ ...isHovered,
+      second: false 
+    });
   };
-  handleOnMouseEnterThird = (e) => {
+  const handleOnMouseEnterThird = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredThird: true });
+    setIsHovered({ ...isHovered,
+      third: true 
+    });
   };
-  handleOnMouseLeaveThird = (e) => {
-    e.preventDefault();
-    this.setState({ isHoveredThird: false });
+  const handleOnMouseLeaveThird = (e) => {
+        e.preventDefault();
+     setIsHovered({ ...isHovered,
+      third: false 
+    });
   };
-  handleOnMouseEnterForth = (e) => {
+  const handleOnMouseEnterForth = (e) => {
     e.preventDefault();
-    this.setState({ isHoveredForth: true });
+    setIsHovered({ ...isHovered,
+      forth: true 
+    });
   };
-  handleOnMouseLeaveForth = (e) => {
-    e.preventDefault();
-    this.setState({ isHoveredForth: false });
+  const handleOnMouseLeaveForth = (e) => {
+        e.preventDefault();
+     setIsHovered({ ...isHovered,
+      forth: false 
+    });
   };
 
-  render() {
 
     const itemList = [
       {
@@ -66,11 +78,11 @@ class Home extends Component {
           '  Mpr to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewnezyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupydocelowej.',
         buttonTitle: 'test',
         path: '/contact',
-        cNameA: 'letterHolder firstA',
-        cNameB: 'letterHolder firstB',
-        state: this.state.isHoveredFirst,
-        Enter: this.handleOnMouseEnterFirst,
-        Leave: this.handleOnMouseLeaveFirst,
+        cNameA: 'letter-holder first-a',
+        cNameB: 'letter-holder first-b',
+        state: isHovered.first,
+        Enter: handleOnMouseEnterFirst,
+        Leave: handleOnMouseLeaveFirst,
       },
       {
         index: 2,
@@ -81,11 +93,11 @@ class Home extends Component {
           ' Profesjonalizm to coś, co nas wyróżnia. Oferujemy wsparcie sprzedażowe firmom z każdego sektora gospodarki. Brandy działające w ramach grupy to wachlarz kilku dywizji - od fotowoltaicznej pointeraktywną. Działalność naszej grupy daje realny potencjałrozwoju każdej branży!',
         buttonTitle: 'test2',
         path: '/contact',
-        cNameA: 'letterHolder secondA',
-        cNameB: 'letterHolder secondB',
-        state: this.state.isHoveredSecond,
-        Enter: this.handleOnMouseEnterSecond,
-        Leave: this.handleOnMouseLeaveSecond,
+        cNameA: 'letter-holder second-a',
+        cNameB: 'letter-holder second-b',
+        state: isHovered.second,
+        Enter: handleOnMouseEnterSecond,
+        Leave: handleOnMouseLeaveSecond,
       },
       {
         index: 3,
@@ -96,11 +108,11 @@ class Home extends Component {
           '  Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie wspierają naszych klientów w osiąganiu celów i każdego dnia z entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.',
         buttonTitle: 'test3',
         path: '/contact',
-        cNameA: 'letterHolder thirdA',
-        cNameB: 'letterHolder thirdB',
-        state: this.state.isHoveredThird,
-        Enter: this.handleOnMouseEnterThird,
-        Leave: this.handleOnMouseLeaveThird,
+        cNameA: 'letter-holder third-a',
+        cNameB: 'letter-holder third-b',
+        state: isHovered.third,
+        Enter: handleOnMouseEnterThird,
+        Leave: handleOnMouseLeaveThird,
       },
       {
         index: 4,
@@ -111,38 +123,37 @@ class Home extends Component {
           ' Działając w coraz większej ilości miast, dostarczymy Ci nie tylko rezultaty, ale także będziemy Twoim partnerem w działaniach związanych z budowaniem i rozwojem Twojej marki.',
         buttonTitle: 'Kontat',
         path: '/contact',
-        cNameA: 'letterHolder forthA',
-        cNameB: 'letterHolder forthB',
-        state: this.state.isHoveredForth,
-        Enter: this.handleOnMouseEnterForth,
-        Leave: this.handleOnMouseLeaveForth,
+        cNameA: 'letter-holder forth-a',
+        cNameB: 'letter-holder forth-b',
+        state: isHovered.forth,
+        Enter: handleOnMouseEnterForth,
+        Leave: handleOnMouseLeaveForth,
       },
     ];
     
     return (
-      <div className="homeContainer" id="home">
+      <div className="home-container" id="home">
         {itemList.map((obj) => (
           <div
             key={obj.index}
             onMouseEnter={obj.Enter}
             onMouseLeave={obj.Leave}
-            className="mainSection"
+            className="main-section"
           >
             <img src={obj.state ? obj.srcA : obj.srcB} alt={obj.alt} />
-            <div className="letterSection">
+            <div className="letter-section">
               <div className={obj.cNameA}></div>
               <div className={obj.cNameB}></div>
             </div>
-            <div className="textSection">
+            <div className="text-section">
               <p>{obj.text}</p>
             </div>
-            <div className="btnSection">
+            <div className="btn-section">
               <Button path={obj.path} text={obj.buttonTitle} />
             </div>
           </div>
         ))}
       </div>
     );
-  }
 }
 export default Home;

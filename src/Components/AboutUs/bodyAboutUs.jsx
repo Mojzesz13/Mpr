@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ThirdImg from "../../assets/aboutUsThird.jpg"
 import FourthImg from "../../assets/aboutUsFourth.jpg"
 import FifthImg from "../../assets/aboutUsFifth.jpg"
@@ -46,19 +46,14 @@ const dataSection = [
 },
 ];
 
-class BodyAboutUs extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
+const BodyAboutUs = () => {
     return (
-        <div className="aboutUsContent mainSection">
+        <div className="about-us-content main-section">
             {dataSection.map((obj)=>(
-                <div key={obj.id} className="contentBox boxSection">
+                <div key={obj.id} className="content-box box-section">
                     <img src={obj.src} alt={obj.alt}/>
-                    <div className="textBox"> 
-                        <div className="textHolder">
+                    <div className="text-box"> 
+                        <div className="text-holder">
                             <p>{obj.text}</p>
                         </div>
                      </div>
@@ -66,7 +61,6 @@ class BodyAboutUs extends Component {
             ))}
         </div>
     );
-  }
 }
 export default BodyAboutUs;
 

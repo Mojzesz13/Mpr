@@ -1,7 +1,7 @@
 @import '../../scss/settings/colors';
 
-.buttonContactContainer {
-  .buttonContact {
+.button-contact-container {
+  .button-holder {
     width: 14rem;
     height: 3rem;
     display: block;
@@ -12,7 +12,6 @@
     background: transparent;
     color: $fontColor;
     cursor: pointer;
-
     -webkit-box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;
     -moz-box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;
     box-shadow: inset 0px 1px 1px 0px $contactButtonBoxShadow;

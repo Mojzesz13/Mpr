@@ -2,13 +2,13 @@
 @import '../../scss/settings/fonts';
 @import '../../scss/settings/colors';
 
-.homeContainer {
+.home-container {
   width: 100%;
   height: 52rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  .mainSection {
+  .main-section {
     width: 25%;
     height: 100%;
     position: relative;
@@ -18,12 +18,12 @@
       object-fit: cover;
       z-index: 3;
     }
-    .letterSection {
+    .letter-section {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
-      .letterHolder {
+      .letter-holder {
         width: 23rem;
         height: 23rem;
         position: absolute;
@@ -33,39 +33,39 @@
         background-repeat: no-repeat;
         animation-fill-mode: forwards;
       }
-      .firstA {
+      .first-a {
         width: 29rem;
         background-image: url('../../assets/mLetterG.svg');
         left: 11rem;
       }
-      .firstB {
+      .first-b {
         width: 29rem;
         background-image: url('../../assets/mLetter.svg');
         left: 11rem;
         opacity: 0;
       }
-      .secondA {
+      .second-a {
         background-image: url('../../assets/pLetterG.svg');
       }
-      .secondB {
+      .second-b {
         background-image: url('../../assets/pLetter.svg');
         opacity: 0;
       }
-      .thirdA {
+      .third-a {
         background-image: url('../../assets/rLetterG.svg');
       }
-      .thirdB {
+      .third-b {
         background-image: url('../../assets/rLetter.svg');
         opacity: 0;
       }
-      .forthA {
+      .forth-a {
         width: 20rem;
         height: 6rem;
         top: 45rem;
         left: 5rem;
         background-image: url('../../assets/groupTextG.svg');
       }
-      .forthB {
+      .forth-b {
         left: 5rem;
         height: 6rem;
         width: 20rem;
@@ -73,7 +73,7 @@
         opacity: 0;
       }
     }
-    .textSection {
+    .text-section {
       width: 80%;
       height: 0;
       position: absolute;
@@ -84,7 +84,7 @@
       text-align: center;
       font-size: 1.2rem;
     }
-    .btnSection {
+    .btn-section {
       position: absolute;
       left: 0;
       right: 0;
@@ -95,27 +95,27 @@
       opacity: 0;
     }
     &:hover {
-      .btnSection,
-      & .textSection {
+      .btn-section,
+      & .text-section {
         @include animationAppearing(1s);
         animation-delay: 0.5s;
       }
-      .letterSection {
-        .firstA,
-        & .secondA,
-        & .thirdA {
+      .letter-section {
+        .first-a,
+        & .second-a,
+        & .third-a {
           animation: greyLetterUp 1.5s forwards;
         }
-        .forthA {
+        .forth-a {
           animation: greyGroup 1.5s forwards;
         }
-        .firstB,
-        & .secondB,
-        & .thirdB {
+        .first-b,
+        & .second-b,
+        & .third-b {
           animation: goldLetterUp 1.5s forwards;
           z-index: 2;
         }
-        .forthB {
+        .forth-b {
           animation: goldGroup 1.5s forwards;
           z-index: 2;
         }

@@ -21,7 +21,7 @@
       min-height: 45vw;
       color: #fff;
     }
-    .textHolder {
+    .text-holder {
       width: 30%;
       position: absolute;
       font-size: 1.3rem;
@@ -35,7 +35,7 @@
       transform: translateY(-50%);
       text-align: center;
     }
-    .bgImg {
+    .bg-img {
       box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
       width: 100%;
       position: absolute;
@@ -49,11 +49,11 @@
     .bottom {
       right: 5%;
     }
-    .textHolder {
+    .text-holder {
       bottom: 5rem;
       right: 4rem;
     }
-    .buttonHolder {
+    .button-holder {
       position: absolute;
       top: 5rem;
       left: 11rem;
@@ -93,11 +93,11 @@
         transform: skew(30deg);
         margin-left: 1000px;
       }
-      .textHolder {
+      .text-holder {
         top: 5rem;
         left: 5rem;
       }
-      .logoHolder {
+      .logo-holder {
         position: absolute;
         bottom: 5rem;
         right: 5rem;

@@ -1,5 +1,5 @@
 @import '../../scss/settings/colors';
-.contactContainer {
+.contact-container {
   width: 100%;
   height: 55rem;
   background-image: url('../../assets/contacBackground.jpg');
@@ -7,7 +7,7 @@
   background-size: contain, cover;
   display: flex;
   justify-content: flex-end;
-  .formSection {
+  .form-section {
     margin-right: 13.5%;
     margin-top: 18%;
   }

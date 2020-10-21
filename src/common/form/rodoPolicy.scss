@@ -1,6 +1,6 @@
 @import 'src/scss/settings/mixins';
 
-.rodoComponent {
+.rodo-component {
   width: 90%;
   // height: 80rem;
   margin: 1rem auto;
@@ -24,7 +24,7 @@
     opacity: 1;
   }
 }
-.activeRodo {
+.active-rodo {
   display: block;
   animation-name: rodoAnimation forwards;
 }

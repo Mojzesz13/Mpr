@@ -1,11 +1,11 @@
 @import '../../scss/settings/colors';
 @import '../../scss/settings/fonts';
 @import '../../scss/settings/mixins';
-.aboutUsContainer {
+.about-us-container {
   width: 100%;
   height: 120rem;
   background-color: $aboutUsBackground;
-  .mainSection {
+  .main-section {
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -14,7 +14,7 @@
     font-family: $textFont;
     font-weight: 300;
   }
-  .boxSection {
+  .box-section {
     width: 35rem;
     height: 35rem;
     margin: 0 1.3rem 0;
@@ -28,13 +28,13 @@
       transition: transform 2s;
     }
   }
-  .headerAboutUs {
-    .letterSection {
+  .header-about-us {
+    .letter-section {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
-      .letterHolder {
+      .letter-holder {
         width: 25rem;
         height: 7rem;
         position: absolute;
@@ -44,23 +44,23 @@
         background-repeat: no-repeat;
         animation-fill-mode: forwards;
       }
-      .firstA {
+      .first-a {
         background-image: url('../../assets/aboutUsTextA.png');
         animation: greyLetterDown1 1.5s forwards;
       }
-      .firstB {
+      .first-b {
         background-image: url('../../assets/aboutUsTextB.png');
         opacity: 0;
         animation: goldLetterDown1 1.5s forwards;
       }
     }
-    .btnSection {
+    .btn-section {
       position: absolute;
       top: 20rem;
       left: 10rem;
       display: none;
     }
-    .secondBox {
+    .second-box {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -70,30 +70,30 @@
       font-size: 2rem;
       line-height: 2rem;
     }
-    .thirdBox {
+    .third-box {
       background-image: url('../../assets/aboutUsSecond.jpg');
       background-size: contain;
     }
   }
-  .firstBox:hover {
-    .btnSection {
+  .first-box:hover {
+    .btn-section {
       display: inline-block;
       @include animationAppearing(1s);
     }
-    .letterSection {
-      .firstA {
+    .letter-section {
+      .first-a {
         background-image: url('../../assets/aboutUsTextA.png');
         opacity: 0;
         @include letterMove(1.5s, 0rem, 28rem, 1, 0);
       }
-      .firstB {
+      .first-b {
         background-image: url('../../assets/aboutUsTextB.png');
         opacity: 1;
         @include letterMove(1.5s, 0, 28rem, 0, 1);
       }
     }
   }
-  .sloganContainer {
+  .slogan-container {
     width: 100%;
     height: 4.5rem;
     padding-top: 1rem;
@@ -107,19 +107,19 @@
       padding-left: 2rem;
     }
   }
-  .aboutUsContent {
-    .contentBox {
+  .about-us-content {
+    .content-box {
       margin-bottom: 3rem;
       position: relative;
       img {
         opacity: 1;
       }
-      .textBox {
+      .text-box {
         // opacity: 0;
         // &::after {
         //   @include movingBackground;
         // }
-        .textHolder {
+        .text-holder {
           width: 95%;
           height: 95%;
           display: flex;
@@ -145,9 +145,9 @@
           // @include animationDisappearing(0s);
           transform: scale(1.2);
         }
-        .textBox {
+        .text-box {
           // @include animationAppearing(0s);
-          .textHolder {
+          .text-holder {
             transform: scaleY(1);
           }
         }

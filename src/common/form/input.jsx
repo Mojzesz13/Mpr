@@ -8,7 +8,7 @@ import {
 const TextInput = (props) => {
     const {lable, name, touched, type, errors, ...rest} = props
     return (
-        <div className="inputHolder"> 
+        <div className="input-holder"> 
         <label htmlFor={name}/>
             <Input
                type={type}

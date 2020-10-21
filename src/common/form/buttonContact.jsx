@@ -3,8 +3,8 @@ import './buttonContact.scss';
 
 const ButtonContact =()=> {
     return (
-      <div  className="buttonContactContainer">
-      <button type="submit" className="buttonContact">
+      <div  className="button-contact-container ">
+      <button type="submit" className="button-holder">
         <span className="shine"></span>
         <span className="text">Wyślij</span>
       </button>

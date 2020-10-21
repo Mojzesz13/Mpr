@@ -3,8 +3,6 @@ import './HamburgerMenu.scss';
 import { Link } from 'react-router-dom';
 import { scaleRotate as Menu } from 'react-burger-menu';
 
-const HamburgerMenu =({setTitle})=> {
-
   const navListItems= [{
     path: "/",
     name: "Strona główna",
@@ -48,6 +46,8 @@ const HamburgerMenu =({setTitle})=> {
   },
 ]
 
+const HamburgerMenu =({setTitle})=> {
+
   const handleSetTitle = (text) => {
     setTitle(text);
   }
@@ -55,7 +55,7 @@ const HamburgerMenu =({setTitle})=> {
     return (
       <Menu right pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
        {navListItems.map((obj)=> (
-          <Link to={obj.path} 
+          <Link key={obj.titleText} to={obj.path} 
           className="bm-item" 
           onClick={() => handleSetTitle(obj.titleText)} 
           style={{ display: 'block' }}>

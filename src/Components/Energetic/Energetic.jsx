@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Energetic.scss';
 import ImgTwo from '../../assets/raidenB.jpg';
 import ImgOne from '../../assets/raidenA.jpg';
@@ -7,10 +7,9 @@ import Button from '../../common/button';
 import Arrow from '../../common/arrow';
 
 
-class Energetic extends Component {
+const Energetic = () => {
 
-  render (
-   handleOnHover =()=> {
+  const handleOnHover =()=> {
     let parent = document.querySelector('.splitview'),
         topPanel = parent.querySelector('.top'),
         handle = parent.querySelector('.handle'),
@@ -20,43 +19,42 @@ class Energetic extends Component {
     if (parent.className.indexOf('skewed') !== -1) {
         skewHack = 1000;
     }
-
     parent.addEventListener('mousemove', function(event) {
         delta = (event.clientX - window.innerWidth / 2) * 1.3;
         handle.style.left = event.clientX + delta + 'px';
         topPanel.style.width = event.clientX + skewHack + delta + 'px';
     });
   }
-  ) {
+  
     return (
      <div className="test" onMouseEnter={handleOnHover}>
          <div className="splitview skewed">
           <div className="panel bottom">
             <div className="content">
-              <img className="bgImg" src={ImgOne} alt="Original"/>
-                <div className="textHolder">
+              <img className="bg-img" src={ImgOne} alt="Original"/>
+                <div className="text-holder">
                 <p>
                   W ramach tej dywizji posiadamy wykwalifikowany zespół niezależnych specjalistów i doradców
                   energetycznych, którzy zajmują się sprzedażą energii od topowych firm.
                 </p>
               </div>
-              <div className="buttonHolder">
+              <div className="button-holder">
                 <Button path="/" text="POWRÓT"/>
               </div>
               </div>
             </div>
           <div className="panel top">
             <div className="content">
-              <img className="bgImg" src={ImgTwo} alt="Duotone"/>
-              <div className="textHolder">
+              <img className="bg-img" src={ImgTwo} alt="Duotone"/>
+              <div className="text-holder">
                 <p>
                   W ramach dywizji energetycznej posiadamy wykwalifikowany zespół niezależnych specjalistów i doradców
                   energetycznych, którzy zajmują się sprzedażą energii od topowych firm.
                 </p>
               </div>
               <a href="http://raiden.pl/#/">
-                <div className="logoHolder">
-                  <img src={logoRaiden} alt="logoRaiden"/>
+                <div className="logo-holder">
+                  <img src={logoRaiden} alt="logo-raiden"/>
                   <Arrow/>
                 </div>
               </a>
@@ -67,7 +65,6 @@ class Energetic extends Component {
     </div>
     );
   }
-}
 
 export default Energetic;
 

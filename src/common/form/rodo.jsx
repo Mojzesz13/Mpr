@@ -15,7 +15,7 @@ const CustomCheckbox = ({ children, ...props }) => {
           </div>
         </label>
         {meta.touched && meta.error ? (
-          <div className="errorText">{meta.error}</div>
+          <div className="error-text">{meta.error}</div>
         ) : null}
       </>
     );
@@ -26,7 +26,7 @@ const Rodo = ({handleOpenPolicy}) => {
             <div className="termsContainer">
               <CustomCheckbox name="acceptTerms"></CustomCheckbox>
               <p>Akceptuję politykę prywatności</p>
-              <span className="rodoPolicy" onClick={handleOpenPolicy}>
+              <span className="rodo-policy" onClick={handleOpenPolicy}>
                 RODO
               </span>
             </div>
