@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "994760eeec4dd3a0634fcf60479e898c",
+    "revision": "abe2d470a8e484acaa9d190571a70624",
     "url": "/Mpr/index.html"
   },
   {
-    "revision": "a2669d3f2bd00f2e330d",
-    "url": "/Mpr/static/css/main.96147fa8.chunk.css"
+    "revision": "513edfe4c2d87b0d7cfa",
+    "url": "/Mpr/static/css/main.d8c1cf99.chunk.css"
   },
   {
-    "revision": "afcc5ca7d87ce68e1dd3",
-    "url": "/Mpr/static/js/2.1b65c3e6.chunk.js"
+    "revision": "21b095d0bc23f61a10d0",
+    "url": "/Mpr/static/js/2.52c21336.chunk.js"
   },
   {
     "revision": "77e7f328dacc981fca681ee4ae94d669",
-    "url": "/Mpr/static/js/2.1b65c3e6.chunk.js.LICENSE.txt"
+    "url": "/Mpr/static/js/2.52c21336.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2669d3f2bd00f2e330d",
-    "url": "/Mpr/static/js/main.94f01cf4.chunk.js"
+    "revision": "513edfe4c2d87b0d7cfa",
+    "url": "/Mpr/static/js/main.9f4ed5cd.chunk.js"
   },
   {
     "revision": "97a66030b4306bbf073d",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ca3f8489376ed2f8a6d04c0df7f37a91",
     "url": "/Mpr/static/media/MADE-Canvas-Black-PERSONAL-USE.ca3f8489.woff"
+  },
+  {
+    "revision": "ec327e1af06c24afc5ab8f4609b445fa",
+    "url": "/Mpr/static/media/RaidenLogo.ec327e1a.png"
   },
   {
     "revision": "987425daee701e316238db72c9f39a65",
@@ -106,6 +110,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b4ad2f7425c1be5ca13cd9f3dcec1dd2",
     "url": "/Mpr/static/media/rLetterG.b4ad2f74.svg"
+  },
+  {
+    "revision": "ba5cd6950b163d1ffc504fe80a6b25e2",
+    "url": "/Mpr/static/media/raidenA.ba5cd695.jpg"
+  },
+  {
+    "revision": "70cdbfd7fc2dc692fa3f7b220999c1ff",
+    "url": "/Mpr/static/media/raidenB.70cdbfd7.jpg"
   },
   {
     "revision": "ccedcee4c67c8dd7015bc495fda5868c",
