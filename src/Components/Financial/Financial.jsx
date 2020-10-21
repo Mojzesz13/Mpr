@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import './FinancialConsulting.scss';
+import './Financial.scss';
 
-class FinancialConsulting extends Component {
+class Financial extends Component {
   render() {
     return (
-      <div id="financialConsulting" className="financialConsultingContainer">
+      <div id="financial" className="financialContainer">
         {' '}
-        FinancialConsulting{' '}
+        Financial{' '}
       </div>
     );
   }
 }
-export default FinancialConsulting;
+export default Financial;
 
 
 // https://www.youtube.com/watch?v=a7ICxQblYrM&ab_channel=OnlineTutorials

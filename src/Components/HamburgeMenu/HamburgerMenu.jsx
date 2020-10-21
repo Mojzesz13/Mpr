@@ -1,54 +1,69 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './HamburgerMenu.scss';
 import { Link } from 'react-router-dom';
 import { scaleRotate as Menu } from 'react-burger-menu';
 
-class HamburgerMenu extends Component {
-  showSettings(event) {
-    event.preventDefault();
+const HamburgerMenu =({setTitle})=> {
+
+  const navListItems= [{
+    path: "/",
+    name: "Strona główna",
+    titleText: "Liczby się liczą"
+  },
+  {
+    path: "/aboutUs",
+    name: "O nas",
+    titleText: "O nas"
+  },
+    {
+    path: "/sale",
+    name: "Dywizja sprzedażowa",
+    titleText: "Dywizja sprzedażowa"
+  },
+  {
+    path: "/energetic",
+    name: "Dywizja energetyczna",
+    titleText: "Dywizja energetyczna"
+  },
+  {
+    path: "/photovoltaics",
+    name: "Dywizja fotowoltaiczna",
+    titleText: "Dywizja fotowoltaiczna"
+  },
+  {
+    path: "/financial",
+    name: "Dywizja finansowa",
+    titleText: "Dywizja finansowa"
+  },
+
+    {
+    path: "/fundraising",
+    name: "Dywizja charytatywna",
+    titleText: "Dywizja charytatywna"
+  },
+     {
+    path: "/contact",
+    name: "Kontakt",
+    titleText: "Kontakt"
+  },
+]
+
+  const handleSetTitle = (text) => {
+    setTitle(text);
   }
 
-  render() {
     return (
       <Menu right pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-        <Link to="/" className="bm-item">
-          Home
+       {navListItems.map((obj)=> (
+          <Link to={obj.path} 
+          className="bm-item" 
+          onClick={() => handleSetTitle(obj.titleText)} 
+          style={{ display: 'block' }}>
+          {obj.name}
         </Link>
-        <Link to="/aboutUs" className="bm-item" style={{ display: 'block' }}>
-          O nas
-        </Link>
-        <Link to="/sale" className="bm-item">
-          Sprzedaż
-        </Link>
-        <Link to="/fundraising" className="bm-item">
-          Zbieranie funduszy
-        </Link>
-        <Link to="/energetic" className="bm-item">
-          Dywizja energetyczna
-        </Link>
-        <Link
-          to="/financialConsulting"
-          className="bm-item"
-          style={{ display: 'block' }}
-        >
-          Konsultacje finansowe
-        </Link>
-        <Link
-          to="/humanResources"
-          className="bm-item"
-          style={{ display: 'block' }}
-        >
-          Zarządzanie zasobami ludzkimi
-        </Link>
-        <Link to="/insurance" className="bm-item" style={{ display: 'block' }}>
-          Ubezpieczenia
-        </Link>
-        <Link to="/contact" className="bm-item" style={{ display: 'block' }}>
-          Kontakt
-        </Link>
+       ))}
       </Menu>
     );
-  }
 }
 
 export default HamburgerMenu;
