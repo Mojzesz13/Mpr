@@ -44,7 +44,7 @@ import { scaleRotate as Menu } from 'react-burger-menu';
     name: "Kontakt",
     titleText: "Kontakt"
   },
-]
+];
 
 const HamburgerMenu =({setTitle})=> {
 
