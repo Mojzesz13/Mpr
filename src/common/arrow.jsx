@@ -1,12 +1,15 @@
 import React from 'react'
 import './arrow.scss'
 
-function arrow() {
+function arrow( {arrowColor}) {
+    const borderStyle= `0.4rem solid ${arrowColor}`
+
     return (
         <div className="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
+                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
+                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
+                
         </div>
     )
 }

@@ -53,6 +53,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 2.5em 1.5em 0;
   // font-size: 0.6rem;
   overflow: hidden !important;
+  border-left: 1px solid white;
   // display: flex !important;
   // justify-content: flex-end !important;
 }
@@ -88,4 +89,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(50, 89, 62, 0.8);
+  cursor: url('../../assets/tap.png'), auto;
 }

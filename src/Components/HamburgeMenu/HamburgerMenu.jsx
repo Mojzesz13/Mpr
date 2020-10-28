@@ -55,12 +55,14 @@ const HamburgerMenu =({setTitle})=> {
     return (
       <Menu right pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
        {navListItems.map((obj)=> (
-          <Link key={obj.titleText} to={obj.path} 
-          className="bm-item" 
-          onClick={() => handleSetTitle(obj.titleText)} 
-          style={{ display: 'block' }}>
-          {obj.name}
-        </Link>
+          <Link 
+            key={obj.titleText} 
+            to={obj.path} 
+            className="bm-item" 
+            onClick={() => handleSetTitle(obj.titleText)} 
+            style={{ display: 'block' }}>
+              {obj.name}
+          </Link>
        ))}
       </Menu>
     );

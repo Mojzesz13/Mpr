@@ -1,0 +1,114 @@
+@import '../scss/settings/colors';
+@import '../scss/settings/fonts';
+@import '../scss/settings/mixins';
+
+.division-container {
+  .splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+    font-family: $textFont;
+  }
+  .panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+    .content {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      color: #fff;
+    }
+    .text-holder {
+      width: 30%;
+      position: absolute;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      font-weight: 300;
+    }
+    .description {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .bg-img {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .bottom {
+    z-index: 1;
+    .bottom {
+      right: 5%;
+    }
+    .text-holder {
+      bottom: 5rem;
+      right: 4rem;
+    }
+    .button-holder {
+      position: absolute;
+      top: 5rem;
+      left: 11rem;
+    }
+  }
+  .top {
+    z-index: 2;
+    width: 50vw;
+    .description {
+      left: 5%;
+    }
+  }
+  .handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    width: 1px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+    background-color: transparent;
+  }
+  .skewed {
+    .handle {
+      top: 50%;
+      transform: rotate(30deg) translateY(-50%);
+      height: 200%;
+      -webkit-transform-origin: top;
+      -moz-transform-origin: top;
+      transform-origin: top;
+    }
+    .top {
+      transform: skew(-30deg);
+      margin-left: -1000px;
+      width: calc(50vw + 1000px);
+      .content {
+        transform: skew(30deg);
+        margin-left: 1000px;
+      }
+      .text-holder {
+        top: 5rem;
+        left: 5rem;
+      }
+      .logo-holder {
+        position: absolute;
+        bottom: 5rem;
+        right: 5rem;
+        width: 30rem;
+        display: flex;
+        flex-direction: row;
+        img {
+          width: 20rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+}
