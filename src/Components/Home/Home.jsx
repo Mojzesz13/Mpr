@@ -75,7 +75,7 @@ const Home = () =>  {
         srcB: firstSectionImgB,
         alt: 'FirstSectionImg',
         text:
-          '  Mpr to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewnezyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupydocelowej.',
+          '  Mpr to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewnezyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupy docelowej.',
         buttonTitle: 'test',
         path: '/contact',
         cNameA: 'letter-holder first-a',

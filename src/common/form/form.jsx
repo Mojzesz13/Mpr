@@ -81,7 +81,7 @@ const FormContact =({handleOpenPolicy})=> {
                       errors={errors.personalDate}
                       />
                     <TextInput
-                      type="email"
+                      type="text"
                       name="email"
                       lable="Email"
                       touched={touched.email}

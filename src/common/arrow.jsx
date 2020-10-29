@@ -3,13 +3,13 @@ import './arrow.scss'
 
 function arrow( {arrowColor}) {
     const borderStyle= `0.4rem solid ${arrowColor}`
+    const style= {borderBottom: borderStyle, borderRight: borderStyle}
 
     return (
         <div className="arrow">
-                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
-                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
-                <span style={{borderBottom: borderStyle, borderRight: borderStyle}}></span>
-                
+            <span style={style}></span>
+            <span style={style}></span>
+            <span style={style}></span>
         </div>
     )
 }

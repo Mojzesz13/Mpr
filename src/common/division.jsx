@@ -21,6 +21,24 @@ const Division = ({ imgTwo, logo, topText, bottomText, linkTo, arrowColor}) => {
         topPanel.style.width = event.clientX + skewHack + delta + 'px';
     });
   }
+let logoCondition = '';
+  if(logo && linkTo){
+    logoCondition = (
+         <a href={linkTo}>
+          <div className="logo-holder">
+            <img src={logo} alt="logo-raiden"/>
+              <Arrow arrowColor={arrowColor}/>
+               </div>
+        </a>
+      
+    )
+  }else {
+    logoCondition = (
+      <div className="logo-holder"> 
+        <Button path="/constact" text="Kontakt"/>
+      </div>
+    )
+  }
   
     return (
      <div className="division-container" onMouseEnter={handleOnHover}>
@@ -29,7 +47,7 @@ const Division = ({ imgTwo, logo, topText, bottomText, linkTo, arrowColor}) => {
             <div className="content">
               <img className="bg-img"  src={DivisionBg} alt="Original"/>
                 <div className="text-holder">
-                <p>{topText}</p>
+                <p>{bottomText}</p>
               </div>
               <div className="button-holder">
                 <Button path="/" text="POWRÓT"/>
@@ -41,15 +59,10 @@ const Division = ({ imgTwo, logo, topText, bottomText, linkTo, arrowColor}) => {
               <img className="bg-img" src={imgTwo} alt="Duotone"/>
               <div className="text-holder">
                 <p>
-                 {bottomText}
+                 {topText}
                 </p>
               </div>
-              <a href={linkTo}>
-                <div className="logo-holder">
-                  <img src={logo} alt="logo-raiden"/>
-                  <Arrow arrowColor={arrowColor}/>
-                </div>
-              </a>
+              {logoCondition}
             </div>
           </div>
           <div className="handle"/>
