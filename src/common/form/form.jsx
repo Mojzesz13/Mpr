@@ -49,9 +49,6 @@ const FormContact =({handleOpenPolicy})=> {
                   'user_0dBUHSltv50ciiIFRlEjN'
                 )
                 .then(() => {
-                  console.log(values);
-                })
-                .then(() => {
                   setSubmitting(false);
                   resetForm();
                 })
@@ -73,26 +70,26 @@ const FormContact =({handleOpenPolicy})=> {
           }) => {
             return(
               <Form onSubmit={handleSubmit}>
-                    <TextInput
-                      name="personalDate"
-                      lable="Imię i nazwisko"
-                      type="text"
-                      touched={touched.personalDate}
-                      errors={errors.personalDate}
-                      />
-                    <TextInput
-                      type="text"
-                      name="email"
-                      lable="Email"
-                      touched={touched.email}
-                      errors={errors.email}
-                    />  
-                    <Textarea
-                      name="message"
-                      lable="Wiadomość"
-                    />
-                    <Rodo handleOpenPolicy={handleOpenPolicy}/>
-                    <ButtonContact />
+               <TextInput
+                 name="personalDate"
+                 lable="Imię i nazwisko"
+                 type="text"
+                 touched={touched.personalDate}
+                 errors={errors.personalDate}
+               />
+               <TextInput
+                 type="text"
+                 name="email"
+                 lable="Email"
+                 touched={touched.email}
+                 errors={errors.email}
+               />  
+               <Textarea
+                 name="message"
+                 lable="Wiadomość"
+               />
+               <Rodo handleOpenPolicy={handleOpenPolicy}/>
+               <ButtonContact />
               </Form>
             )
           }

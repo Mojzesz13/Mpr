@@ -6,18 +6,14 @@ import RodoPolicy from '../../common/form/rodoPolicy';
 const Contact = () => {
   const[openPolicy, setOpenPolicy] = useState(false)
   
- const handleOpenPolicy =()=>{
-  setOpenPolicy(prevState => ({
-    openPolicy: !prevState.openPolicy
-  }));
-}
+  const handleOpenPolicy =()=>{
+  setOpenPolicy((prevState) => !prevState);
+  };
 
     return (
-      <div id="contact" className="contact-container">
-        <div className="form-section"> 
-        <FormContact handleOpenPolicy={handleOpenPolicy}/>
+      <div id="contact" className={ openPolicy ? "contact-container" : "contact-container active"} >
+        <FormContact handleOpenPolicy={handleOpenPolicy} />
         <RodoPolicy visibleCondition={openPolicy} />
-        </div>
       </div>
     );
 }

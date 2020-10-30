@@ -1,7 +1,10 @@
 @import '../../scss/settings/colors';
 @import '../../scss/settings/fonts';
 .form-container {
-  width: 100%;
+  width: 50%;
+  position: absolute;
+  right: 10rem;
+  top: 22rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

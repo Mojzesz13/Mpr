@@ -28,6 +28,11 @@
       line-height: 2rem;
       font-weight: 300;
     }
+    .bottom-button-holder{
+      position: absolute;
+      bottom: 5rem;
+      right: 11rem;
+    }
     .description {
       width: 25%;
       position: absolute;
@@ -53,7 +58,7 @@
       bottom: 5rem;
       right: 4rem;
     }
-    .button-holder {
+    .top-button-holder {
       position: absolute;
       top: 5rem;
       left: 11rem;

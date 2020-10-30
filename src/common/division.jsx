@@ -2,9 +2,8 @@ import React from 'react';
 import './division.scss';
 import Button from './button';
 import Arrow from './arrow';
-import DivisionBg from '../assets/divisionMpr.jpg'
 
-const Division = ({ imgTwo, logo, topText, bottomText, linkTo, arrowColor}) => {
+const Division = ({imgOne, imgTwo, logo, topText, bottomText, linkTo, arrowColor}) => {
 
   const handleOnHover =()=> {
     let parent = document.querySelector('.splitview'),
@@ -34,7 +33,7 @@ let logoCondition = '';
     )
   }else {
     logoCondition = (
-      <div className="logo-holder"> 
+      <div className="bottom-button-holder"> 
         <Button path="/constact" text="Kontakt"/>
       </div>
     )
@@ -45,11 +44,11 @@ let logoCondition = '';
          <div className="splitview skewed">
           <div className="panel bottom">
             <div className="content">
-              <img className="bg-img"  src={DivisionBg} alt="Original"/>
+              <img className="bg-img"  src={imgOne} alt="Original"/>
                 <div className="text-holder">
                 <p>{bottomText}</p>
               </div>
-              <div className="button-holder">
+              <div className="top-button-holder">
                 <Button path="/" text="POWRÓT"/>
               </div>
               </div>
