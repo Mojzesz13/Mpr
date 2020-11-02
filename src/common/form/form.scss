@@ -1,12 +1,25 @@
 @import '../../scss/settings/colors';
-@import '../../scss/settings/fonts';
+@import '../../scss/settings/mixins';
 .form-container {
   width: 50%;
   position: absolute;
-  right: 10rem;
+  right: 10%;
   top: 22rem;
+  transition: 1s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+@include desktopTwo {
+  .form-container {
+    right: 15%;
+  }
+}
+
+@include desktopThree {
+  .form-container {
+    right: 20%;
+  }
 }

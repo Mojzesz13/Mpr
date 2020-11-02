@@ -20,25 +20,25 @@ const Division = ({imgOne, imgTwo, logo, topText, bottomText, linkTo, arrowColor
         topPanel.style.width = event.clientX + skewHack + delta + 'px';
     });
   }
-let logoCondition = '';
-  if(logo && linkTo){
-    logoCondition = (
-         <a href={linkTo}>
-          <div className="logo-holder">
-            <img src={logo} alt="logo-raiden"/>
+
+  let logoCondition = '';
+
+    if(logo && linkTo){
+      logoCondition = (
+           <a href={linkTo}>
+            <div className="logo-holder">
+              <img src={logo} alt="logo-raiden"/>
               <Arrow arrowColor={arrowColor}/>
-               </div>
-        </a>
-      
-    )
-  }else {
-    logoCondition = (
-      <div className="bottom-button-holder"> 
-        <Button path="/constact" text="Kontakt"/>
-      </div>
-    )
-  }
-  
+            </div>
+           </a>
+      )}else {
+      logoCondition = (
+        <div className="bottom-button-holder"> 
+          <Button path="/constact" text="Kontakt"/>
+        </div>
+      )
+    }
+    
     return (
      <div className="division-container" onMouseEnter={handleOnHover}>
          <div className="splitview skewed">

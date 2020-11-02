@@ -67,7 +67,6 @@ const Home = () =>  {
     });
   };
 
-
     const itemList = [
       {
         index: 1,
@@ -75,7 +74,7 @@ const Home = () =>  {
         srcB: firstSectionImgB,
         alt: 'FirstSectionImg',
         text:
-          '  Mpr to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewnezyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupy docelowej.',
+          '  MPR to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewne zyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupy docelowej.',
         buttonTitle: 'O nas',
         path: '/aboutus',
         cNameA: 'letter-holder first-a',
@@ -145,7 +144,7 @@ const Home = () =>  {
               <div className={obj.cNameA}></div>
               <div className={obj.cNameB}></div>
             </div>
-            <div className="text-section">
+            <div className="text- ">
               <p>{obj.text}</p>
             </div>
             <div className="btn-section">

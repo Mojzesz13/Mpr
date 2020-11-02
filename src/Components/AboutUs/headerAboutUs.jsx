@@ -11,7 +11,7 @@ const HeaderAboutUs = ({isHovered, handleOnMouseEnter, handleOnMouseLeave, about
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave} 
             className="box-section first-box">
-              <img src={isHovered ? firstImgB  : firstImgA} alt={"first-img"} />
+              <img src={isHovered ? firstImgB : firstImgA} alt={"first-img"} />
               <div className="letter-section">
                 <div className="letter-holder first-a"></div>
                 <div className="letter-holder first-b"></div>

@@ -62,5 +62,5 @@ const BodyAboutUs = () => {
         </div>
     );
 }
-export default BodyAboutUs;
 
+export default BodyAboutUs;

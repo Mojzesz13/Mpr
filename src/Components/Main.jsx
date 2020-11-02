@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import './Main.scss';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
@@ -12,12 +12,32 @@ import Footer from './Footer/Footer';
 import Logo from './Logo/Logo';
 import Photovoltaics from './Photovoltaics/Photovoltaics';
 import Financial from './Financial/Financial';
+import Tablet from './TabletView/Tablet';
 
 
 const Main =()=> {
   const[title, setTitle] = useState("Liczby się liczą")
+  const [isTablet, setIsTablet] = useState(false);
 
-    return (
+  const resize = () => {
+    let currentView = window.innerWidth <= 1199;
+    if (currentView !== isTablet) {
+      setIsTablet(currentView);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resize.bind(this));
+    resize();
+
+    return window.removeEventListener('resize', resize.bind(this));
+  });
+
+  if (isTablet) {
+    return(
+      <Tablet/>
+    )
+  } return (
       <Router>
         <HamburgerMenu setTitle={setTitle}/>
         <div id="outer-container">
