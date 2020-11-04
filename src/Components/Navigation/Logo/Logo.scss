@@ -1,0 +1,14 @@
+@import '../../../scss/settings/mixins';
+
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  img {
+    width: 20rem;
+    height: 8rem;
+  }
+}

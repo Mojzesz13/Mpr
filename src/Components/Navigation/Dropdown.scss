@@ -1,0 +1,40 @@
+@import 'src/scss/settings/mixins';
+
+.dropdownContainer {
+  .dropdownMenu {
+    width: 22rem;
+    position: absolute;
+    top: 6rem;
+    display: inline-block;
+    background-size: cover;
+    list-style: none;
+    text-align: start;
+    z-index: 200;
+    li {
+      width: 90%;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    li:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .dropdownLink {
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    z-index: 300;
+  }
+  .dropdownMenu.open {
+    display: none;
+  }
+}
+
+@include mobile {
+  .dropdownContainer {
+    display: none;
+  }
+}

@@ -11,63 +11,46 @@ import forthSectionImgB from '../../assets/sectionForthB.jpg';
 import Button from '../../common/button';
 
 const Home = () =>  {
-  const[isHovered, setIsHovered] =useState({
-    first:false,
-    second: false,
-    third: false,
-    forth: false
-  });
+  const[isHoveredFirst, setIsHoveredFirst] =useState(false);
+  const[isHoveredSecond, setIsHoveredSecond] =useState(false);
+  const[isHoveredThird, setIsHoveredThird] =useState(false);
+  const[isHoveredForth, setIsHoveredForth] =useState(false);
 
-  const handleOnMouseEnterFirst = (e) => {
+const handleOnMouseEnterFirst = (e) => {
     e.preventDefault();
-    setIsHovered({ ...isHovered,
-      first: true 
-    });
+    setIsHoveredFirst(true );
   };
-  const handleOnMouseLeaveFirst = (e) => {
+const handleOnMouseLeaveFirst = (e) => {
     e.preventDefault();
-     setIsHovered({ ...isHovered,
-      first: false 
-    });
+      setIsHoveredFirst(false 
+    );
   };
-  const handleOnMouseEnterSecond = (e) => {
+const handleOnMouseEnterSecond = (e) => {
     e.preventDefault();
-    setIsHovered({ ...isHovered,
-      second: true 
-    });
+    setIsHoveredSecond(true);
   };
-  const handleOnMouseLeaveSecond = (e) => {
+const handleOnMouseLeaveSecond = (e) => {
     e.preventDefault();
-     setIsHovered({ ...isHovered,
-      second: false 
-    });
+     setIsHoveredSecond(false);
   };
-  const handleOnMouseEnterThird = (e) => {
+const handleOnMouseEnterThird = (e) => {
     e.preventDefault();
-    setIsHovered({ ...isHovered,
-      third: true 
-    });
+    setIsHoveredThird(true);
   };
-  const handleOnMouseLeaveThird = (e) => {
+const handleOnMouseLeaveThird = (e) => {
         e.preventDefault();
-     setIsHovered({ ...isHovered,
-      third: false 
-    });
+     setIsHoveredThird(false);
   };
-  const handleOnMouseEnterForth = (e) => {
+const handleOnMouseEnterForth = (e) => {
     e.preventDefault();
-    setIsHovered({ ...isHovered,
-      forth: true 
-    });
+    setIsHoveredForth(true);
   };
-  const handleOnMouseLeaveForth = (e) => {
+const handleOnMouseLeaveForth = (e) => {
         e.preventDefault();
-     setIsHovered({ ...isHovered,
-      forth: false 
-    });
+     setIsHoveredForth(false);
   };
 
-    const itemList = [
+const itemList = [
       {
         index: 1,
         srcA: firstSectionImgA,
@@ -79,7 +62,7 @@ const Home = () =>  {
         path: '/aboutus',
         cNameA: 'letter-holder first-a',
         cNameB: 'letter-holder first-b',
-        state: isHovered.first,
+        state: isHoveredFirst,
         Enter: handleOnMouseEnterFirst,
         Leave: handleOnMouseLeaveFirst,
       },
@@ -94,7 +77,7 @@ const Home = () =>  {
         path: '/photovoltaics',
         cNameA: 'letter-holder second-a',
         cNameB: 'letter-holder second-b',
-        state: isHovered.second,
+        state: isHoveredSecond,
         Enter: handleOnMouseEnterSecond,
         Leave: handleOnMouseLeaveSecond,
       },
@@ -109,7 +92,7 @@ const Home = () =>  {
         path: '/sale',
         cNameA: 'letter-holder third-a',
         cNameB: 'letter-holder third-b',
-        state: isHovered.third,
+        state: isHoveredThird,
         Enter: handleOnMouseEnterThird,
         Leave: handleOnMouseLeaveThird,
       },
@@ -124,7 +107,7 @@ const Home = () =>  {
         path: '/contact',
         cNameA: 'letter-holder forth-a',
         cNameB: 'letter-holder forth-b',
-        state: isHovered.forth,
+        state: isHoveredForth,
         Enter: handleOnMouseEnterForth,
         Leave: handleOnMouseLeaveForth,
       },
@@ -135,16 +118,16 @@ const Home = () =>  {
         {itemList.map((obj) => (
           <div
             key={obj.index}
+            className="main-section"
             onMouseEnter={obj.Enter}
             onMouseLeave={obj.Leave}
-            className="main-section"
           >
             <img src={obj.state ? obj.srcA : obj.srcB} alt={obj.alt} />
             <div className="letter-section">
               <div className={obj.cNameA}></div>
               <div className={obj.cNameB}></div>
             </div>
-            <div className="text- ">
+            <div className="text-section">
               <p>{obj.text}</p>
             </div>
             <div className="btn-section">

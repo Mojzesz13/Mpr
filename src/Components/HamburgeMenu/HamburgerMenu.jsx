@@ -14,7 +14,7 @@ import { scaleRotate as Menu } from 'react-burger-menu';
     titleText: "O nas"
   },
     {
-    path: "/sale",
+    path: "/sales",
     name: "Dywizja sprzedażowa",
     titleText: "Dywizja sprzedażowa"
   },

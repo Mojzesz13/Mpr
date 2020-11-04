@@ -4,7 +4,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import HamburgerMenu from './HamburgeMenu/HamburgerMenu';
 import AboutUs from './AboutUs/AboutUs';
-import Sale from './Sale/Sale';
+import Sales from './Sales/Sales';
 import Fundraising from './Fundraising/Fundraising';
 import Energetic from './Energetic/Energetic';
 import Contact from './Contact/Contact';
@@ -33,11 +33,52 @@ const Main =()=> {
     return window.removeEventListener('resize', resize.bind(this));
   });
 
-  if (isTablet) {
-    return(
-      <Tablet/>
-    )
-  } return (
+
+  let test = [{
+    path:'/aboutUs',
+    component:{AboutUs},
+  },
+  {
+    path:'/sales',
+    component:{Sales},
+  },
+  {
+    path:'/energetic',
+    component:{Energetic},
+  },
+   {
+    path:'/photovoltaics',
+    component:{Photovoltaics},
+  },
+   {
+    path:'/financial',
+    component:{Financial},
+  },
+   {
+    path:'/fundraising',
+    component:{Fundraising},
+  },
+     {
+    path:'/contact',
+    component:{Contact},
+  },
+]
+
+
+  // if (isTablet) {
+  //   return(
+  //       <Router>
+  //           <Switch>
+  //             <Route exact path="/" component={Tablet} />
+  //             {/* {test.map((obj)=>{
+  //               <Route path={obj.path} component={obj.component} />
+  //             })} */}
+  //           </Switch>
+  //       <Footer />
+  //     </Router>
+  //   )
+  // } 
+  return (
       <Router>
         <HamburgerMenu setTitle={setTitle}/>
         <div id="outer-container">
@@ -46,7 +87,7 @@ const Main =()=> {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/aboutUs" component={AboutUs} />
-              <Route path="/sale" component={Sale} />
+              <Route path="/sales" component={Sales} />
               <Route path="/energetic" component={Energetic} />
               <Route path="/photovoltaics" component={Photovoltaics} />
               <Route path="/financial" component={Financial} />

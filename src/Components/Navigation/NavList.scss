@@ -1,0 +1,26 @@
+@import 'src/scss/settings/mixins';
+
+.header-links {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  .nav-item {
+    height: 6rem;
+    padding: 1.2rem 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    .nav-links {
+      padding: 1rem 2rem;
+      display: inline-block;
+      color: black;
+      i {
+        margin-left: 0.3rem;
+        text-decoration: none;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
