@@ -1,4 +1,4 @@
-@import 'src/scss/settings/mixins';
+
 
 .dropdownContainer {
   .dropdownMenu {
@@ -6,6 +6,7 @@
     position: absolute;
     top: 6rem;
     display: inline-block;
+    background-color: greenyellow;
     background-size: cover;
     list-style: none;
     text-align: start;
@@ -33,8 +34,3 @@
   }
 }
 
-@include mobile {
-  .dropdownContainer {
-    display: none;
-  }
-}

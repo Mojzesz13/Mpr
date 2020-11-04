@@ -1,22 +1,21 @@
 @import 'src/scss/settings/mixins';
 
-.header-links {
+.headerLinks {
   width: 60%;
   display: flex;
   justify-content: space-evenly;
-  .nav-item {
+  .navItem {
     height: 6rem;
     padding: 1.2rem 1rem;
     font-size: 2.5rem;
     cursor: pointer;
-
-    .nav-links {
+    .navLinks {
+      width: 100%;
       padding: 1rem 2rem;
       display: inline-block;
-      color: black;
+      color: orangered;
       i {
         margin-left: 0.3rem;
-        text-decoration: none;
       }
       &:focus {
         outline: none;

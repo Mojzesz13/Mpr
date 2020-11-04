@@ -10,20 +10,20 @@ const Aboutus = ()  => {
  
   const handleOnMouseEnter = (e) => {
     e.preventDefault();
-    setIsHovered({ isHovered: true });
+    setIsHovered(true);
   };
   const handleOnMouseLeave = (e) => {
     e.preventDefault();
-    setIsHovered({ isHovered: false });
+    setIsHovered(false);
   };
 
     return (
-      <div className="about-us-container" id="Aboutus">
+      <div className="about-us-container" id="aboutus">
         <HeaderAboutUs 
-        handleOnMouseEnter={handleOnMouseEnter}
-        handleOnMouseLeave={handleOnMouseLeave}
-        isHovered={isHovered}
-        aboutUsText={aboutUsText}
+          handleOnMouseEnter={handleOnMouseEnter}
+          handleOnMouseLeave={handleOnMouseLeave}
+          isHovered={isHovered}
+          aboutUsText={aboutUsText}
         />
         <div className="slogan-container">
           <h1>Idealnie sprawdzamy się w:</h1>

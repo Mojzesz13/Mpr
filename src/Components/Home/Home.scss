@@ -7,7 +7,7 @@
   height: 52rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   .main-section {
     width: 25%;
     height: 100%;
@@ -182,6 +182,82 @@
           top: 20rem;
           opacity: 1;
         }
+      }
+    }
+  }
+}
+
+@include desktopTwo {
+  .home-container {
+    .main-section {
+      .letter-section {
+        .letter-holder {
+          width: 20rem;
+          height: 20rem;
+          position: absolute;
+          left: 10rem;
+          top: 28rem;
+        }
+        .first-a {
+          width: 20rem;
+          left: 10rem;
+        }
+        .first-b {
+          width: 20rem;
+          left: 10rem;
+        }
+        .forth-a {
+          width: 12rem;
+          height: 4rem;
+          top: 45rem;
+          left: 25%;
+        }
+        .forth-b {
+          width: 12rem;
+          height: 4rem;
+          left: 25%;
+        }
+      }
+      .btn-section {
+        bottom: 5%;
+      }
+    }
+  }
+}
+
+@include desktopThree {
+  .home-container {
+    .main-section {
+      .letter-section {
+        .letter-holder {
+          width: 20rem;
+          height: 20rem;
+          position: absolute;
+          left: 6rem;
+          top: 28rem;
+        }
+        .first-a {
+          width: 20rem;
+          left: 6rem;
+        }
+        .first-b {
+          width: 20rem;
+          left: 6rem;
+        }
+        .forth-a {
+          width: 12rem;
+          height: 4rem;
+          top: 45rem;
+          left: 25%;
+        }
+        .forth-b {
+          width: 12rem;
+          height: 4rem;
+          left: 25%;
+        }
+      }
+      .btn-section {
+        bottom: 2%;
       }
     }
   }

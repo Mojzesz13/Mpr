@@ -1,27 +1,27 @@
-export const MenuItems = [
-  {
-    title: 'Sprzedażowa',
-    path: '/sales',
+export const MenuItems = [ {
+    path: "/sales",
+    title: "sprzedażowa",
     cName: 'dropdownLink',
   },
   {
-    title: 'Energetyczna',
-    path: '/energetic',
+    path: "/energetic",
+    title: "energetyczna",
     cName: 'dropdownLink',
   },
+  {
+    path: "/photovoltaics",
+    title: "fotowoltaiczna",
+    cName: 'dropdownLink',
+  },
+  {
+    path: "/interactive",
+    title: "interaktywna",
+    cName: 'dropdownLink',
+  },
+
     {
-    title: 'Fotowoltaiczna',
-    path: '/photovoltaics',
+    path: "/charity",
+    title: "charytatywna",
     cName: 'dropdownLink',
   },
-    {
-    title: 'Finansowa',
-    path: '/financial',
-    cName: 'dropdownLink',
-  },
-    {
-    title: 'Charytatywna',
-    path: '/fundraising',
-    cName: 'dropdownLink',
-  },
-];
+]

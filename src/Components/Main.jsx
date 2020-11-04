@@ -5,14 +5,16 @@ import Home from './Home/Home';
 import HamburgerMenu from './HamburgeMenu/HamburgerMenu';
 import AboutUs from './AboutUs/AboutUs';
 import Sales from './Sales/Sales';
-import Fundraising from './Fundraising/Fundraising';
+import Charity from './Charity/Charity';
 import Energetic from './Energetic/Energetic';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Logo from './Logo/Logo';
 import Photovoltaics from './Photovoltaics/Photovoltaics';
-import Financial from './Financial/Financial';
+import Interactive from './Interactive/Interactive';
 import Tablet from './TabletView/Tablet';
+import Divisions from './Divisions/Divisions';
+import Navbar from './Navigation/Navbar';
 
 
 const Main =()=> {
@@ -33,51 +35,25 @@ const Main =()=> {
     return window.removeEventListener('resize', resize.bind(this));
   });
 
-
-  let test = [{
-    path:'/aboutUs',
-    component:{AboutUs},
-  },
-  {
-    path:'/sales',
-    component:{Sales},
-  },
-  {
-    path:'/energetic',
-    component:{Energetic},
-  },
-   {
-    path:'/photovoltaics',
-    component:{Photovoltaics},
-  },
-   {
-    path:'/financial',
-    component:{Financial},
-  },
-   {
-    path:'/fundraising',
-    component:{Fundraising},
-  },
-     {
-    path:'/contact',
-    component:{Contact},
-  },
-]
-
-
-  // if (isTablet) {
-  //   return(
-  //       <Router>
-  //           <Switch>
-  //             <Route exact path="/" component={Tablet} />
-  //             {/* {test.map((obj)=>{
-  //               <Route path={obj.path} component={obj.component} />
-  //             })} */}
-  //           </Switch>
-  //       <Footer />
-  //     </Router>
-  //   )
-  // } 
+  if (isTablet) {
+    return(
+        <Router>
+          <Navbar/>
+            <Switch>
+              <Route exact path="/" component={Tablet} />
+              <Route path="/aboutUs" component={AboutUs} />
+              <Route path="/divisions" component={Divisions} />
+              <Route path="/sales" component={Sales} />
+              <Route path="/energetic" component={Energetic} />
+              <Route path="/photovoltaics" component={Photovoltaics} />
+              <Route path="/interactive" component={Interactive} />
+              <Route path="/charity" component={Charity} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+        <Footer />
+      </Router>
+    )
+  } 
   return (
       <Router>
         <HamburgerMenu setTitle={setTitle}/>
@@ -87,11 +63,12 @@ const Main =()=> {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/aboutUs" component={AboutUs} />
+              <Route path="/divisions" component={Divisions} />
               <Route path="/sales" component={Sales} />
               <Route path="/energetic" component={Energetic} />
               <Route path="/photovoltaics" component={Photovoltaics} />
-              <Route path="/financial" component={Financial} />
-              <Route path="/fundraising" component={Fundraising} />
+              <Route path="/interactive" component={Interactive} />
+              <Route path="/charity" component={Charity} />
               <Route path="/contact" component={Contact} />
             </Switch>
           </div>

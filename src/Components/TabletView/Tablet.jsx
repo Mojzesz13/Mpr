@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from '../Navigation/Navbar';
 import './Tablet.scss';
 
 const Tablet = () => {
     return (
-        <Navbar/>
+       <div>
+           test
+       </div>
+        
     );
 }
 export default Tablet;

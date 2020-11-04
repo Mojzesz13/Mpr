@@ -2,6 +2,24 @@ import React from 'react';
 import './HamburgerMenu.scss';
 import { Link } from 'react-router-dom';
 import { scaleRotate as Menu } from 'react-burger-menu';
+import { MenuItems } from '../Navigation/MenuItems';
+
+const test2 = (
+  <div className="division-list"> 
+      {MenuItems.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link
+                className={item.cName}
+                to={item.path}
+              >
+                {item.title}
+              </Link>
+            </li>
+          );
+        })}
+  </div>
+)
 
   const navListItems= [{
     path: "/",
@@ -13,31 +31,11 @@ import { scaleRotate as Menu } from 'react-burger-menu';
     name: "O nas",
     titleText: "O nas"
   },
-    {
-    path: "/sales",
-    name: "Dywizja sprzedażowa",
-    titleText: "Dywizja sprzedażowa"
-  },
-  {
-    path: "/energetic",
-    name: "Dywizja energetyczna",
-    titleText: "Dywizja energetyczna"
-  },
-  {
-    path: "/photovoltaics",
-    name: "Dywizja fotowoltaiczna",
-    titleText: "Dywizja fotowoltaiczna"
-  },
-  {
-    path: "/financial",
-    name: "Dywizja finansowa",
-    titleText: "Dywizja finansowa"
-  },
-
-    {
-    path: "/fundraising",
-    name: "Dywizja charytatywna",
-    titleText: "Dywizja charytatywna"
+   {
+    path: "/divisions",
+    name: "Dywizje",
+    titleText: "Dywizje",
+    test: test2
   },
      {
     path: "/contact",
@@ -62,7 +60,9 @@ const HamburgerMenu =({setTitle})=> {
             onClick={() => handleSetTitle(obj.titleText)} 
             style={{ display: 'block' }}>
               {obj.name}
+              {obj.test}
           </Link>
+          
        ))}
       </Menu>
     );

@@ -2,30 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavList.scss';
 import Dropdown from './Dropdown';
-import downArrow from '../../assets/downArrow.png'
+import arrow from '../../assets/downArrow.png'
 
 const NavList = ({
   dropdown,
   handleDropdown,
+  onMouseLeave,
+  onMouseEnter,
 }) => {
   return (
-    <ul className="header-links ">
-      <li className="nav-item">
-        <Link to="/aboutUs" className="nav-links">
-          O NAS
+    <ul className="headerLinks ">
+      <li className="navItem">
+        <Link to="/" className="navLinks">
+          Strona główna
+        </Link>
+      </li>
+       <li className="navItem">
+        <Link to="/aboutus" className="navLinks">
+          O nas
         </Link>
       </li>
       <li
-        className="nav-item"
+        className="navItem"
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
-        <Link to="/dresses" className="nav-links" onClick={handleDropdown}>
-          DYWIZJE
-          <img src={downArrow} alt="downArrow"/>
+        <Link to="/divisions" className="navLinks" onClick={handleDropdown}>
+          Suknie
+            <img src={arrow} alt="down-arrow"/>
         </Link>
-        {dropdown && <Dropdown />}
+        {dropdown && <Dropdown/>}
       </li>
-      <li className="nav-item">
-        <Link to="/contact" className="nav-links">
+
+      <li className="navItem">
+        <Link to="/contact" className="navLinks">
           Kontakt
         </Link>
       </li>
