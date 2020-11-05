@@ -28,7 +28,7 @@ const NavList = ({
         onMouseLeave={onMouseLeave}
       >
         <Link to="/divisions" className="navLinks" onClick={handleDropdown}>
-          Suknie
+          Dywizje
             <img src={arrow} alt="down-arrow"/>
         </Link>
         {dropdown && <Dropdown/>}

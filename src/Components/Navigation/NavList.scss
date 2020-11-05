@@ -1,24 +1,28 @@
 @import 'src/scss/settings/mixins';
+@import '../../scss/settings/colors';
 
 .headerLinks {
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
+  padding: 1rem 0;
   .navItem {
-    height: 6rem;
-    padding: 1.2rem 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     .navLinks {
       width: 100%;
-      padding: 1rem 2rem;
       display: inline-block;
-      color: orangered;
-      i {
+      color: $fontColor;
+      text-decoration: none;
+
+      img {
         margin-left: 0.3rem;
       }
       &:focus {
         outline: none;
+      }
+      &:hover {
+        color: $hoverColor;
       }
     }
   }

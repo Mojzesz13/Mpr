@@ -17,7 +17,7 @@
 
 .bm-burger-button:hover {
   span {
-    background-color: gold;
+    background-color: $hoverColor;
   }
 }
 
@@ -77,16 +77,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-top: 3rem;
   text-decoration: none;
   color: $fontColor;
+
   &:focus {
     outline: 0;
   }
   &:hover {
-    color: gold;
-    .division-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
+    color: $hoverColor;
   }
 }
 
@@ -101,16 +97,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 15rem;
   position: absolute;
   right: 55%;
-  bottom: 60%;
+  bottom: 50%;
   background-color: black;
-  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: start;
   list-style: none;
-
   a {
     text-decoration: none;
-    color: white;
+    color: $fontColor;
     padding-left: 1rem;
     text-transform: capitalize;
+    &:hover {
+      color: $hoverColor;
+    }
   }
 }

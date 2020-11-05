@@ -3,7 +3,7 @@ import './Tablet.scss';
 
 const Tablet = () => {
     return (
-       <div>
+       <div className="tablet-container">
            test
        </div>
         
