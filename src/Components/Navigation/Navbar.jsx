@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import Logo from '../Logo/Logo';
 import './Navbar.scss';
 import NavList from './NavList';
+import Hamburger from '../../common/hamburger'
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
+  const [click, setClick] = useState(false);
+
+  const handleOnClick = () => setClick(!click);
 
   const handleDropdown = () => {
     setDropdown(!dropdown);
@@ -18,13 +22,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className={'headerContainer'}>
-      <Logo/>
-      <nav
-        className="navbar desktop"
-        id="navbar"
-     >
+    <header className={'header-container'}>
+      <Logo />
+        <div className="menu-icon" onClick={handleOnClick}>
+          <Hamburger click={click} />
+        </div>
+      <nav className="navbar" id="navbar">
         <NavList
+          click={click}
           dropdown={dropdown}
           Dropdown={handleDropdown}
           onMouseEnter={onMouseEnter}

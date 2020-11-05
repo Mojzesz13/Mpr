@@ -9,33 +9,34 @@ const NavList = ({
   handleDropdown,
   onMouseLeave,
   onMouseEnter,
+  click
 }) => {
   return (
-    <ul className="headerLinks ">
-      <li className="navItem">
-        <Link to="/" className="navLinks">
+    <ul className={click ? 'header-links active' : 'header-links'}>
+      <li className="nav-item">
+        <Link to="/" className="nav-links">
           Strona główna
         </Link>
       </li>
-       <li className="navItem">
-        <Link to="/aboutus" className="navLinks">
+       <li className="nav-item">
+        <Link to="/aboutus" className="nav-links">
           O nas
         </Link>
       </li>
       <li
-        className="navItem"
+        className="nav-item"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <Link to="/divisions" className="navLinks" onClick={handleDropdown}>
-          Dywizje
+        <Link to="/divisions" className="nav-links" onClick={handleDropdown}>
+          Dywizje 
             <img src={arrow} alt="down-arrow"/>
         </Link>
         {dropdown && <Dropdown/>}
       </li>
 
-      <li className="navItem">
-        <Link to="/contact" className="navLinks">
+      <li className="nav-item">
+        <Link to="/contact" className="nav-links">
           Kontakt
         </Link>
       </li>

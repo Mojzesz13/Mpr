@@ -9,9 +9,9 @@ const Dropdown = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <div className="dropdownContainer">
+    <div className="dropdown-container">
       <ul
-        className={click ? 'dropdownMenu open' : 'dropdownMenu'}
+        className={click ? 'dropdown-menu open' : 'dropdown-menu'}
         onClick={handleClick}
       >
         {MenuItems.map((item, index) => {

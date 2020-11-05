@@ -1,27 +1,27 @@
 export const MenuItems = [ {
     path: "/sales",
     title: "sprzedażowa",
-    cName: 'dropdownLink',
+    cName: 'dropdown-link',
   },
   {
     path: "/energetic",
     title: "energetyczna",
-    cName: 'dropdownLink',
+    cName: 'dropdown-link',
   },
   {
     path: "/photovoltaics",
     title: "fotowoltaiczna",
-    cName: 'dropdownLink',
+    cName: 'dropdown-link',
   },
   {
     path: "/interactive",
     title: "interaktywna",
-    cName: 'dropdownLink',
+    cName: 'dropdown-link',
   },
 
     {
     path: "/charity",
     title: "charytatywna",
-    cName: 'dropdownLink',
+    cName: 'dropdown-link',
   },
 ]
