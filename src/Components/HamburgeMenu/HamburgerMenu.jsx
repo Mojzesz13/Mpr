@@ -21,7 +21,6 @@ const HamburgerMenu =({setTitle})=> {
     setShowDivisionMenu("none");
   }
 
-
   const navListItems= [{
     path: "/",
     name: "Strona główna",

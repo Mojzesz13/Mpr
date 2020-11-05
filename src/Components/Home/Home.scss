@@ -262,3 +262,126 @@
     }
   }
 }
+
+@include tabletMax {
+  .home-container {
+    width: 100%;
+    height: 52rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .main-section {
+      width: 50%;
+      height: 50%;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 3;
+      }
+      .letter-section {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        .letter-holder {
+          width: 23rem;
+          height: 23rem;
+          position: absolute;
+          left: 13rem;
+          top: 28rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          animation-fill-mode: forwards;
+        }
+        .first-a {
+          display: none;
+          width: 29rem;
+          background-image: url('../../assets/mLetterG.svg');
+          left: 11rem;
+        }
+        .first-b {
+          width: 29rem;
+          background-image: url('../../assets/mLetter.svg');
+          left: 11rem;
+          opacity: 0;
+          display: none;
+        }
+        .second-a {
+          display: none;
+          background-image: url('../../assets/pLetterG.svg');
+        }
+        .second-b {
+          display: none;
+          background-image: url('../../assets/pLetter.svg');
+          opacity: 0;
+        }
+        .third-a {
+          display: none;
+          background-image: url('../../assets/rLetterG.svg');
+        }
+        .third-b {
+          display: none;
+          background-image: url('../../assets/rLetter.svg');
+          opacity: 0;
+        }
+        .forth-a {
+          display: none;
+          width: 20rem;
+          height: 6rem;
+          top: 45rem;
+          left: 5rem;
+          background-image: url('../../assets/groupTextG.svg');
+        }
+        .forth-b {
+          display: none;
+          left: 5rem;
+          height: 6rem;
+          width: 20rem;
+          background-image: url('../../assets/groupText.svg');
+          opacity: 0;
+        }
+      }
+      .text-section {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        opacity: 0;
+        font-family: $textFont;
+        color: $fontColor;
+        text-align: center;
+        font-size: 1.2rem;
+        background: linear-gradient(
+          180deg,
+          rgba(3, 2, 20, 0) 5%,
+          rgba(0, 0, 0, 0.5046393557422969) 50%,
+          rgba(255, 255, 255, 0) 95%
+        );
+        p {
+          margin: 0 auto;
+          padding: 0 3rem;
+          background: linear-gradient(
+            180deg,
+            rgba(3, 2, 20, 0) 5%,
+            rgba(0, 0, 0, 0.5046393557422969) 50%,
+            rgba(255, 255, 255, 0) 95%
+          );
+        }
+      }
+      .btn-section {
+        width: 10rem;
+        height: 5rem;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15%;
+        opacity: 0;
+      }
+    }
+  }
+}
