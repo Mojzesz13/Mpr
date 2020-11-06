@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // const divisions = [ {
 //     path: "/sales",
@@ -29,11 +29,7 @@ import React from 'react'
 // ]
 
 const Divisions = () => {
-    return (
-        <div className="divisions-container">
-            test
-        </div>
-    )
-}
+  return <div className='divisions-container'>test</div>;
+};
 
-export default Divisions
+export default Divisions;

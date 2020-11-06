@@ -11,11 +11,11 @@ const NavBar = () => {
   const handleOnClick = () => setClick(!click);
 
   return (
-    <nav className="navBar">
-      <Link to="/">
+    <nav className='navBar'>
+      <Link to='/'>
         <Logo />
       </Link>
-      <div className="menuIcon" onClick={handleOnClick}>
+      <div className='menuIcon' onClick={handleOnClick}>
         <Hamburger click={click} />
       </div>
       <NavList click={click} />

@@ -9,7 +9,7 @@ const Dropdown = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <div className="dropdown-container">
+    <div className='dropdown-container'>
       <ul
         className={click ? 'dropdown-menu open' : 'dropdown-menu'}
         onClick={handleClick}

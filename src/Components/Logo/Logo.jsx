@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Logo.scss';
-import logo from '../../assets/mprLogo.svg'
+import logo from '../../assets/mprLogo.svg';
 
-const Logo = ({title}) => {
+const Logo = ({ title }) => {
   return (
-    <div className="logo-container">
-      <Link to="/">
-        <img src={logo} alt="mprLogo"/>
+    <div className='logo-container'>
+      <Link to='/'>
+        <img src={logo} alt='mpr-logo' />
       </Link>
-      <div className="slogan-section">
+      <div className='slogan-section'>
         <h2>{title}</h2>
       </div>
     </div>
   );
-}
+};
 export default Logo;

@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import FilteredPropsInputField from "./FilteredPropsInputField";
+import styled, { css } from 'styled-components';
+import FilteredPropsInputField from './FilteredPropsInputField';
 
 export const Input = styled(FilteredPropsInputField)`
   width: 50rem;
@@ -22,13 +22,13 @@ export const Input = styled(FilteredPropsInputField)`
 `;
 
 export const StyledInlineErrorMessage = styled.div`
-  margin: .2rem 0 0 .5rem;
+  margin: 0.2rem 0 0 0.5rem;
   padding-left: 0.7rem;
   display: block;
   background-color: transparent;
   color: black;
   text-align: center;
   text-transform: uppercase;
-  font-size: .7rem;
+  font-size: 0.7rem;
   white-space: pre-line;
 `;

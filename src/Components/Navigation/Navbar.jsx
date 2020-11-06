@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../Logo/Logo';
 import './Navbar.scss';
 import NavList from './NavList';
-import Hamburger from '../../common/hamburger'
+import Hamburger from '../../common/hamburger';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -24,10 +24,10 @@ const Navbar = () => {
   return (
     <header className={'header-container'}>
       <Logo />
-        <div className="menu-icon" onClick={handleOnClick}>
-          <Hamburger click={click} />
-        </div>
-      <nav className="navbar" id="navbar">
+      <div className='menu-icon' onClick={handleOnClick}>
+        <Hamburger click={click} />
+      </div>
+      <nav className='navbar' id='navbar'>
         <NavList
           click={click}
           dropdown={dropdown}
