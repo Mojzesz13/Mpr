@@ -1,28 +1,28 @@
 export const MenuItems = [
   {
     path: '/sales',
-    title: 'sprzedażowa',
+    title: 'Sprzedażowa',
     cName: 'dropdown-link',
   },
   {
     path: '/energetic',
-    title: 'energetyczna',
+    title: 'Energetyczna',
     cName: 'dropdown-link',
   },
   {
     path: '/photovoltaics',
-    title: 'fotowoltaiczna',
+    title: 'Fotowoltaiczna',
     cName: 'dropdown-link',
   },
   {
     path: '/interactive',
-    title: 'interaktywna',
+    title: 'Interaktywna',
     cName: 'dropdown-link',
   },
 
   {
     path: '/charity',
-    title: 'charytatywna',
+    title: 'Charytatywna',
     cName: 'dropdown-link',
   },
 ];

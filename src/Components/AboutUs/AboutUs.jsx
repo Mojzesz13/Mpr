@@ -4,7 +4,7 @@ import HeaderAboutUs from './headerAboutUs';
 import BodyAboutUs from './bodyAboutUs';
 
 const aboutUsText =
-  'Świadczymy usługi dla firm z różnych sektorów rynku. Posiadamy wieloletnie doświadczenie w realizowaniu projektów dla klientów z całej Polski. Jeśli prowadzisz firmę lub organizację charytatywną, połączymy Cię z Twoją grupą docelową. Dysponujemy profesjonalnymi grupami sprzedażowymi, dzięki którym dostarczymy Twoje produkty lub usługi do wybranych przez Ciebie odbiorców. Nasza firma będzie najlepszym rozwiązaniem dla przedsiębiorstw, których specyfika wymaga zastosowania indywidualnego podejścia.';
+  'Świadczymy usługi marketingu bezpośredniego dla firm z różnych sektorów rynku. Dysponujemy profesjonalnymi grupami sprzedażowymi, dzięki którym dostarczymy Twoje produkty lub usługi do wybranych przez Ciebie odbiorców. Nasi handlowcy pozyskają firmy do Twojego portfolio, co pomoże zwiększyć Twoje dochody. Jesteśmy najlepszym rozwiązaniem dla przedsiębiorstw, których specyfika wymaga zastosowania indywidualnego podejścia.';
 
 const Aboutus = () => {
   const [isHovered, setIsHovered] = useState(false);

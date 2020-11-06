@@ -4,9 +4,9 @@ import interactiveMpr from '../../assets/interactiveMpr.jpg';
 import interactiveBg from '../../assets/interactiveBg.jpg';
 
 const mprDivision =
-  'Zatrudniamy specjalistów doskonale znających rynek finansowy i posiadających doświadczenie w zakresie inwestowania. Nasi doradcy potrafią odpowiednio przeanalizować kondycję finansową przedsiębiorstwa oraz posiadają wiedzę na temat rynków finansowych. Dzięki temu jesteśmy w stanie wskazać najlepsze rozwiązania i kierunki, które będą korzystne finansowo dla Twojego przedsiębiorstwa.';
+  'Skontaktuj się z nami, jeśli Twoja firma potrzebuje profesjonalnej identyfikacji wizualnej - zaprojektujemy (lub odświeżymy) Twoje logo, wizytówki, stronę www, profile w social media. Zadbamy o Twój biznes w świecie online!';
 const interactiveDivision =
-  'Obszar naszych działań to kredyty gotówkowe, kredyty inwestycyjne i hipoteczne, leasingi, reinwestowanie kredytów, oszczędności długoterminowe, przyszła emerytura, konta oszczędnościowe i biznesowe.';
+  'W swoim portfelu firm posiadamy również agencję marketingu internetowego. Zajmujemy się tworzeniem i optymalizacją stron internetowych, spacerami wirtualnymi, prowadzeniem mediów społecznościowych, tworzeniem kampanii Facebook Ads oraz tworzeniem identyfikacji wizualnej.';
 
 const Interactive = () => {
   return (

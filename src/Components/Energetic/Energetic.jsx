@@ -1,8 +1,8 @@
 import React from 'react';
 import Division from '../../common/division';
-import Raiden from '../../assets/raidenBg.jpg';
+import energeticBg from '../../assets/energeticBg.jpg';
 import LogoRaiden from '../../assets/RaidenLogo.png';
-import energeticMpr from '../../assets/energyMpr.jpg';
+import energeticMpr from '../../assets/energeticMpr.jpg';
 
 const mprDivision =
   'W ramach dywizji energetycznej posiadamy wykwalifikowany zespół niezależnych specjalistów i doradców energetycznych, którzy zajmują się sprzedażą energii od topowych firm.';
@@ -15,7 +15,7 @@ const Energetic = () => {
   return (
     <Division
       imgOne={energeticMpr}
-      imgTwo={Raiden}
+      imgTwo={energeticBg}
       logo={LogoRaiden}
       topText={mprDivision}
       bottomText={raidenDivision}

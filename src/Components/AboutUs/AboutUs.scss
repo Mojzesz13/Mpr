@@ -67,7 +67,7 @@
       background-color: transparent;
       color: $fontColor;
       text-align: center;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       line-height: 2rem;
     }
     .third-box {
@@ -128,11 +128,12 @@
           transform: scaleY(0);
           transition: transform 0.5s;
           background-color: rgba(0, 0, 0, 0.8);
-          font-size: 2rem;
-          color: $fontColor;
+
           z-index: 2;
           p {
             width: 80%;
+            font-size: 2rem;
+            color: $fontColor;
           }
         }
       }
@@ -227,7 +228,9 @@
     }
     .header-about-us {
       .second-box {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        text-align: left;
       }
       .letter-section {
         .letter-holder {
@@ -250,6 +253,142 @@
         }
         .first-b {
           @include letterMove(1.5s, 0, 15rem, 0, 1);
+        }
+      }
+    }
+    .slogan-container {
+      font-size: 2.5rem;
+      h1 {
+        padding-left: 1rem;
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            p {
+              font-size: 1.5rem;
+              line-height: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tabletMax {
+  .about-us-container {
+    height: 65rem;
+    .box-section {
+      width: 16.5rem;
+      height: 16.5rem;
+    }
+    .header-about-us {
+      .second-box {
+        font-size: 0.85rem;
+        line-height: 1rem;
+        text-align: left;
+      }
+      .letter-section {
+        .letter-holder {
+          width: 15rem;
+          height: 4rem;
+        }
+      }
+      .btn-section {
+        position: absolute;
+        top: 11rem;
+        left: 0.7rem;
+        display: none;
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        top: -3rem;
+        .first-a {
+          @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 9.5rem, 0, 1);
+        }
+      }
+    }
+    .slogan-container {
+      font-size: 2.5rem;
+      h1 {
+        padding-left: 1rem;
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            transform: scaleY(1);
+            p {
+              font-size: 1rem;
+              line-height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tabletMin {
+  .about-us-container {
+    height: 65rem;
+    .box-section {
+      width: 13rem;
+      height: 13rem;
+    }
+    .header-about-us {
+      .second-box {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        text-align: left;
+      }
+      .letter-section {
+        .letter-holder {
+          width: 15rem;
+          height: 4rem;
+        }
+      }
+      .btn-section {
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        display: none;
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        top: -3rem;
+        .first-a {
+          @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 9.5rem, 0, 1);
+        }
+      }
+    }
+    .slogan-container {
+      font-size: 2.5rem;
+      h1 {
+        padding-left: 1rem;
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            transform: scaleY(1);
+            p {
+              font-size: 1rem;
+              line-height: 1.5rem;
+            }
+          }
         }
       }
     }

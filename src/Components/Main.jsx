@@ -15,6 +15,7 @@ import Interactive from './Interactive/Interactive';
 import Tablet from './TabletView/Tablet';
 import Divisions from './Divisions/Divisions';
 import Navbar from './Navigation/Navbar';
+import Testimonial from './Testimonial/Testimonial';
 
 const Main = () => {
   const [title, setTitle] = useState('Liczby się liczą');
@@ -42,6 +43,7 @@ const Main = () => {
           <Route exact path='/' component={Tablet} />
           <Route path='/aboutUs' component={AboutUs} />
           <Route path='/divisions' component={Divisions} />
+          <Route path='/testimonial' component={Testimonial} />
           <Route path='/sales' component={Sales} />
           <Route path='/energetic' component={Energetic} />
           <Route path='/photovoltaics' component={Photovoltaics} />
@@ -63,6 +65,7 @@ const Main = () => {
             <Route exact path='/' component={Home} />
             <Route path='/aboutUs' component={AboutUs} />
             <Route path='/divisions' component={Divisions} />
+            <Route path='/testimonial' component={Testimonial} />
             <Route path='/sales' component={Sales} />
             <Route path='/energetic' component={Energetic} />
             <Route path='/photovoltaics' component={Photovoltaics} />

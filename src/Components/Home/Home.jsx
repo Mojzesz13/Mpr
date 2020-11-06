@@ -56,7 +56,7 @@ const Home = () => {
       srcB: firstSectionImgB,
       alt: 'FirstSectionImg',
       text:
-        '  MPR to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży, która przekłada się na pewne zyski dla Twojego biznesu. Jeśli prowadzisz firmę, dostarczymy Twoje produkty lub usługi do wybranej przez Ciebie grupy docelowej.',
+        '  MPR to więcej niż marketing. To indywidualne podejście, dedykowana strategia i innowacyjność w branży. Jeśli prowadzisz firmę, możemy zaoferować Ci przeszkolone zespoły sprzedażowe.',
       buttonTitle: 'O nas',
       path: '/aboutus',
       cNameA: 'letter-holder first-a',
@@ -72,8 +72,8 @@ const Home = () => {
       alt: 'secondtSectionImg',
       text:
         ' Profesjonalizm to coś, co nas wyróżnia. Oferujemy wsparcie sprzedażowe firmom z każdego sektora gospodarki. Brandy działające w ramach grupy to wachlarz kilku dywizji - od fotowoltaicznej po finansową. Działalność naszej grupy daje realny potencjał rozwoju każdej branży!',
-      buttonTitle: 'Fotowoltaika',
-      path: '/photovoltaics',
+      buttonTitle: 'Dywizje',
+      path: '/divisions',
       cNameA: 'letter-holder second-a',
       cNameB: 'letter-holder second-b',
       state: isHoveredSecond,
@@ -87,8 +87,8 @@ const Home = () => {
       alt: 'thirdSectionImg',
       text:
         '  Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie wspierają naszych klientów w osiąganiu celów i każdego dnia z entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.',
-      buttonTitle: 'Sprzedaż',
-      path: '/sale',
+      buttonTitle: 'Testimoniale',
+      path: '/testimonial',
       cNameA: 'letter-holder third-a',
       cNameB: 'letter-holder third-b',
       state: isHoveredThird,
@@ -117,7 +117,7 @@ const Home = () => {
       {itemList.map((obj) => (
         <div
           key={obj.index}
-          className='main-section'
+          className='main-section noHover'
           onMouseEnter={obj.Enter}
           onMouseLeave={obj.Leave}
         >

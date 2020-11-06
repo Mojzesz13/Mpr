@@ -21,3 +21,9 @@
     color: $fontColor;
   }
 }
+
+@include tabletMax {
+  .header-container {
+    padding: 1rem 0;
+  }
+}

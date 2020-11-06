@@ -37,14 +37,14 @@ const dataSection = [
   {
     id: 5,
     text:
-      'Jeśli prowadzisz firmę lub organizację charytatywną, połączymy Cię z Twoją grupą docelową. Posiadamy profesjonalne grupy sprzedażowe, dzięki którym dostarczymy Twoje produkty lub usługi do wybranych przez Ciebie odbiorców.',
+      'Dostarczaniu Twoich produktów lub usług do wybranej przez Ciebie grupy docelowej.',
     src: SeventhImg,
     alt: 'MprDivisionImg',
   },
   {
     id: 6,
     text:
-      'Działając w coraz większej ilości miast w Polsce nie tylko dostarczymy Ci pożądane rezultaty, ale także będziemy Twoim partnerem w działaniach związanych z budowaniem marki oraz rozwojem Twojej firmy.',
+      'Działaniach związanych z budowaniem marki oraz rozwojem Twojej firmy.',
     src: EightImg,
     alt: 'MprDivisionImg',
   },
