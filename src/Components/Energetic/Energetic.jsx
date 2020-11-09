@@ -5,7 +5,7 @@ import LogoRaiden from '../../assets/RaidenLogo.png';
 import energeticMpr from '../../assets/energeticMpr.jpg';
 
 const mprDivision =
-  'W ramach dywizji energetycznej posiadamy wykwalifikowany zespół niezależnych specjalistów i doradców energetycznych, którzy zajmują się sprzedażą energii od topowych firm.';
+  'Świadczymy usługi marketingu bezpośredniego dla firm z różnych sektorów rynku. Dysponujemy profesjonalnymi grupami sprzedażowymi, dzięki którym dostarczymy Twoje produkty lub usługi do wybranych przez Ciebie odbiorców. Nasi handlowcy pozyskają firmy do Twojego portfolio, co pomoże zwiększyć Twoje dochody. Jesteśmy najlepszym rozwiązaniem dla przedsiębiorstw, których specyfika wymaga zastosowania indywidualnego podejścia.';
 const raidenDivision =
   'Chcesz zmniejszyć rachunki za prąd w swojej firmie? Chciałbyś spróbować sił w pracy handlowca lub masz do nas jakieś pytania? Chętnie udzielimy Ci na nie odpowiedzi!   Oszczędność to najlepszy wybór, a więc nie czekaj - skontaktuj się z nami!';
 const websiteAddress = 'http://raiden.pl/#/';

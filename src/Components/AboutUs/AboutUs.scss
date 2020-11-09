@@ -57,7 +57,7 @@
     .btn-section {
       position: absolute;
       top: 20rem;
-      left: 7.5rem;
+      left: 9rem;
       display: none;
     }
     .second-box {
@@ -128,7 +128,6 @@
           transform: scaleY(0);
           transition: transform 0.5s;
           background-color: rgba(0, 0, 0, 0.8);
-
           z-index: 2;
           p {
             width: 80%;
@@ -195,7 +194,6 @@
         height: 4rem;
       }
     }
-
     .first-box:hover {
       .letter-section {
         .first-a {

@@ -4,7 +4,7 @@
 
 .home-container {
   width: 100%;
-  height: 100%;
+  height: 52rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -66,9 +66,9 @@
         background-image: url('../../assets/groupTextG.svg');
       }
       .forth-b {
-        left: 5rem;
-        height: 6rem;
         width: 20rem;
+        height: 6rem;
+        left: 5rem;
         background-image: url('../../assets/groupText.svg');
         opacity: 0;
       }
@@ -194,9 +194,7 @@
         .letter-holder {
           width: 20rem;
           height: 20rem;
-          position: absolute;
           left: 10rem;
-          top: 28rem;
         }
         .first-a {
           width: 20rem;
@@ -209,7 +207,6 @@
         .forth-a {
           width: 12rem;
           height: 4rem;
-          top: 45rem;
           left: 25%;
         }
         .forth-b {
@@ -230,30 +227,14 @@
     .main-section {
       .letter-section {
         .letter-holder {
-          width: 20rem;
-          height: 20rem;
-          position: absolute;
           left: 6rem;
           top: 28rem;
         }
         .first-a {
-          width: 20rem;
           left: 6rem;
         }
         .first-b {
-          width: 20rem;
           left: 6rem;
-        }
-        .forth-a {
-          width: 12rem;
-          height: 4rem;
-          top: 45rem;
-          left: 25%;
-        }
-        .forth-b {
-          width: 12rem;
-          height: 4rem;
-          left: 25%;
         }
       }
       .btn-section {
@@ -275,7 +256,6 @@
       width: 50%;
       height: 50%;
       position: relative;
-      pointer-events: none;
       .letter-section {
         .letter-holder {
           width: 10rem;
@@ -307,12 +287,73 @@
       .text-section {
         top: 40%;
         opacity: 1;
-        transition: none;
       }
       .btn-section {
-        bottom: 10%;
+        bottom: 1%;
         opacity: 1;
-        pointer-events: auto;
+      }
+      &:hover {
+        .btn-section,
+        & .text-section {
+          animation: none;
+        }
+        .letter-section {
+          .first-a,
+          & .second-a,
+          & .third-a {
+            animation: none;
+          }
+          .forth-a {
+            animation: none;
+          }
+          .first-b,
+          & .second-b,
+          & .third-b {
+            animation: none;
+            z-index: 2;
+          }
+          .forth-b {
+            animation: none;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .home-container {
+    height: 120rem;
+    flex-direction: column;
+    .main-section {
+      width: 100%;
+      height: 25%;
+      .letter-section {
+        .letter-holder {
+          top: 1rem;
+        }
+      }
+      .text-section {
+        p {
+          padding: 0 5rem;
+        }
+      }
+      .btn-section {
+        bottom: 1%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include mobileMin {
+  .home-container {
+    .main-section {
+      .text-section {
+        p {
+          padding: 0 1rem;
+        }
       }
     }
   }

@@ -22,7 +22,7 @@ const HeaderAboutUs = ({
           <div className='letter-holder first-b'></div>
         </div>
         <div className='btn-section'>
-          <Button path='/' text='POWRÓT' width='15rem' />
+          <Button path='/' text='POWRÓT' width='12rem' />
         </div>
       </div>
       <div className='box-section second-box'>

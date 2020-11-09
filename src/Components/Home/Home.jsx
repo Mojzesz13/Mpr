@@ -117,7 +117,7 @@ const Home = () => {
       {itemList.map((obj) => (
         <div
           key={obj.index}
-          className='main-section noHover'
+          className='main-section'
           onMouseEnter={obj.Enter}
           onMouseLeave={obj.Leave}
         >
