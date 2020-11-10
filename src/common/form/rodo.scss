@@ -1,7 +1,8 @@
 @import '../../scss/settings/colors';
+@import '../../scss/settings/mixins';
 
-.termsContainer {
-  width: 100%;
+.terms-container {
+  width: 90%;
   margin-top: 1rem;
   padding: 0 1rem;
   display: flex;
@@ -20,7 +21,7 @@
       opacity: 0;
     }
   }
-  .checkMark {
+  .check-mark {
     height: 1rem;
     width: 1rem;
     position: absolute;
@@ -44,13 +45,13 @@
       transform: rotate(-45deg);
     }
   }
-  .checkbox:hover input ~ .checkMark {
+  .checkbox:hover input ~ .check-mark {
     span {
       visibility: visible;
       background-color: grey;
     }
   }
-  .checkbox input:checked ~ .checkMark {
+  .checkbox input:checked ~ .check-mark {
     span {
       visibility: visible;
       background-color: $fontColor;
@@ -68,5 +69,26 @@
     font-weight: 700;
     color: $logoBackground;
     cursor: pointer;
+  }
+}
+
+@include mobile {
+  .terms-container {
+    height: 5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    .check-mark {
+      top: 3rem;
+      left: 0rem;
+      span {
+        top: 0.45rem;
+        left: 0.01rem;
+      }
+    }
+    .rodo-policy {
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
   }
 }

@@ -297,7 +297,7 @@
       .btn-section {
         position: absolute;
         top: 11rem;
-        left: 0.7rem;
+        left: 2.5rem;
         display: none;
       }
     }
@@ -336,7 +336,7 @@
 
 @include tabletMin {
   .about-us-container {
-    height: 65rem;
+    height: 55rem;
     .box-section {
       width: 13rem;
       height: 13rem;
@@ -349,14 +349,14 @@
       }
       .letter-section {
         .letter-holder {
-          width: 15rem;
+          width: 12rem;
           height: 4rem;
         }
       }
       .btn-section {
         position: absolute;
         top: 8rem;
-        left: 0;
+        left: 0.5rem;
         display: none;
       }
     }
@@ -384,6 +384,63 @@
             transform: scaleY(1);
             p {
               font-size: 1rem;
+              line-height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .about-us-container {
+    height: 70rem;
+    .third-box {
+      display: none;
+    }
+    .slogan-container {
+      font-size: 1.1rem;
+      h1 {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+@include mobileMin {
+  .about-us-container {
+    height: 190em;
+    .box-section {
+      width: 20rem;
+      height: 20rem;
+    }
+    .header-about-us {
+      .letter-section {
+        .letter-holder {
+          width: 12rem;
+        }
+      }
+      .btn-section {
+        left: 0.6rem;
+      }
+      .second-box {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+    }
+    .first-box {
+      margin-bottom: 1rem;
+    }
+    .slogan-container {
+      margin: 1rem 0;
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            p {
+              font-size: 1.5rem;
               line-height: 1.5rem;
             }
           }

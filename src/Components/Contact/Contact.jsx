@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div
       id='contact'
-      className={openPolicy ? 'contact-container' : 'contact-container active'}
+      className={openPolicy ? 'contact-container active' : 'contact-container '}
     >
       <FormContact handleOpenPolicy={handleOpenPolicy} />
       <RodoPolicy visibleCondition={openPolicy} />

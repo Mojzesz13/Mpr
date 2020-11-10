@@ -1,19 +1,61 @@
-@import '../../scss/settings/colors';
+@import '../../scss/settings/mixins';
 @import '../../scss/settings/fonts';
 
 .input-holder {
   display: flex;
-  width: 51rem;
   height: 3rem;
   flex-direction: column;
   justify-content: flex-start;
   input {
+    width: 50rem;
     &::placeholder {
       text-align: center;
       color: rgb(255, 255, 255);
       text-transform: uppercase;
       font-family: $fontBase;
       text-transform: uppercase;
+    }
+  }
+}
+
+@include desktopThree {
+  .input-holder {
+    input {
+      width: 41rem;
+    }
+  }
+}
+
+@include tabletMax {
+  .input-holder {
+    input {
+      width: 41rem;
+    }
+  }
+}
+
+@include tabletMin {
+  .input-holder {
+    input {
+      width: 31rem;
+    }
+  }
+}
+
+@include mobile {
+  .input-holder {
+    input {
+      width: 21rem;
+    }
+  }
+}
+
+@include mobileMin {
+  .input-holder {
+    width: 12rem;
+    margin-left: 7%;
+    input {
+      width: 12rem;
     }
   }
 }

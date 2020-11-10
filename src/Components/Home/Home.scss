@@ -279,7 +279,7 @@
         }
         .forth-b {
           width: 20rem;
-          left: 0;
+          left: 0.5rem;
           top: 2.5rem;
           opacity: 1;
         }
@@ -317,6 +317,48 @@
             z-index: 2;
           }
         }
+      }
+    }
+  }
+}
+
+@include tabletMin {
+  .home-container {
+    .main-section {
+      .letter-section {
+        .letter-holder {
+          width: 10rem;
+          height: 10rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .first-a,
+        .second-a,
+        .third-a,
+        .forth-a {
+          display: none;
+        }
+        .first-b,
+        .second-b,
+        .third-b {
+          width: 10rem;
+          left: 0;
+          opacity: 1;
+        }
+        .forth-b {
+          width: 18rem;
+          top: 2.5rem;
+          opacity: 1;
+        }
+      }
+      .text-section {
+        top: 40%;
+        opacity: 1;
+      }
+      .btn-section {
+        bottom: 1%;
+        opacity: 1;
       }
     }
   }

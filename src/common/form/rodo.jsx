@@ -9,7 +9,7 @@ const CustomCheckbox = ({ children, ...props }) => {
       <label className='checkbox'>
         <input type='checkbox' {...field} {...props} />
         {children}
-        <div className='checkMark'>
+        <div className='check-mark'>
           <span />
           <span />
         </div>
@@ -23,7 +23,7 @@ const CustomCheckbox = ({ children, ...props }) => {
 
 const Rodo = ({ handleOpenPolicy }) => {
   return (
-    <div className='termsContainer'>
+    <div className='terms-container'>
       <CustomCheckbox name='acceptTerms'></CustomCheckbox>
       <p>Akceptuję politykę prywatności</p>
       <span className='rodo-policy' onClick={handleOpenPolicy}>

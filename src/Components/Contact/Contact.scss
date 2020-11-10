@@ -1,11 +1,33 @@
 @import '../../scss/settings/colors';
+@import '../../scss/settings/mixins';
+
 .contact-container {
   width: 100%;
   height: 55rem;
   background-image: url('../../assets/contacBackground.jpg');
   background-repeat: no-repeat;
-  background-size: contain, cover;
+  background-size: cover;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 1s;
+}
+
+@include tabletMax {
+  .active {
+    height: 65rem;
+  }
+}
+
+@include tabletMin {
+  .active {
+    height: 75rem;
+  }
+}
+@include mobile {
+  .contact-container {
+    justify-content: flex-start;
+  }
 }

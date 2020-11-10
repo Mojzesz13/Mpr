@@ -3,18 +3,10 @@ import Logo from '../Logo/Logo';
 import './Navbar.scss';
 import NavList from './NavList';
 import Hamburger from '../../common/hamburger';
-// import { useEffect } from 'react';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [click, setClick] = useState(false);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', function () {
-  //     let header = document.querySelector('#header');
-  //     header.classList.toggle('sticky', window.scrollY > 0);
-  //   });
-  // });
 
   const handleOnClick = () => setClick(!click);
 

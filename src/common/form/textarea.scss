@@ -1,11 +1,12 @@
 @import '../../scss/settings/colors';
 @import '../../scss/settings/fonts';
+@import '../../scss/settings/mixins';
 
 .textarea-conteiner {
   .textrea-content {
-    width: 51rem;
+    width: 98.2%;
     height: 3rem;
-    padding: 0.5rem 0 0 1rem;
+    padding: 0.5rem 0 0 1.5%;
     background-color: transparent;
     border: 1px solid $fontColor;
     color: $fontColor;
@@ -16,6 +17,15 @@
       text-transform: uppercase;
       font-family: $fontBase;
       padding-top: 0.6rem;
+    }
+  }
+}
+
+@include mobileMin {
+  .textarea-conteiner {
+    .textrea-content {
+      width: 13.7rem;
+      margin-left: 7%;
     }
   }
 }
