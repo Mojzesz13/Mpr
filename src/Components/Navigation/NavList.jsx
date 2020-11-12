@@ -35,6 +35,11 @@ const NavList = ({
         {dropdown && <Dropdown />}
       </li>
       <li className='nav-item'>
+        <Link to='/testimonial' className='nav-links'>
+          Liczby
+        </Link>
+      </li>
+      <li className='nav-item'>
         <Link to='/contact' className='nav-links'>
           Kontakt
         </Link>

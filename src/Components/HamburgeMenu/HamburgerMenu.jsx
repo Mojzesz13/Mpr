@@ -40,6 +40,11 @@ const HamburgerMenu = ({ setTitle }) => {
       hiddeSideBar: handleHiddeDivisionMenu,
     },
     {
+      path: '/testimonial',
+      name: 'Liczby',
+      titleText: 'Liczby',
+    },
+    {
       path: '/contact',
       name: 'Kontakt',
       titleText: 'Kontakt',

@@ -16,7 +16,7 @@
 @include tabletMax {
   .header-container {
     height: 3rem;
-    position: sticky;
+    position: fixed;
     position: -webkit-sticky;
     top: 0;
     display: flex;

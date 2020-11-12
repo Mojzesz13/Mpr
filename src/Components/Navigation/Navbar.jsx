@@ -3,6 +3,7 @@ import Logo from '../Logo/Logo';
 import './Navbar.scss';
 import NavList from './NavList';
 import Hamburger from '../../common/hamburger';
+import Backdrop from './Backdrop';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -22,21 +23,24 @@ const Navbar = () => {
   };
 
   return (
-    <header className={'header-container'} id='header'>
-      <Logo />
-      <div className='menu-icon' onClick={handleOnClick}>
-        <Hamburger click={click} />
-      </div>
-      <nav className='navbar' id='navbar'>
-        <NavList
-          click={click}
-          dropdown={dropdown}
-          Dropdown={handleDropdown}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-        />
-      </nav>
-    </header>
+    <>
+      <header className={'header-container'} id='header'>
+        <Logo />
+        <div className='menu-icon' onClick={handleOnClick}>
+          <Hamburger click={click} />
+        </div>
+        <nav className='navbar' id='navbar'>
+          <NavList
+            click={click}
+            dropdown={dropdown}
+            Dropdown={handleDropdown}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          />
+        </nav>
+      </header>
+      <Backdrop click={click} setClick={setClick}/>
+    </>
   );
 };
 export default Navbar;
