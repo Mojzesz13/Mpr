@@ -1,0 +1,49 @@
+@import '../../scss/settings/colors';
+@import '../../scss/settings/mixins';
+
+.testimonial-container {
+  width: 100%;
+  height: 100%;
+  .testimonial-cotent {
+    height: 50vh;
+    background-image: url('../../assets/testimonialBgW.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .text-holder {
+      margin: 1.5rem auto;
+      text-align: center;
+      .text-content {
+        font-size: 2rem;
+        font-weight: 100;
+      }
+      .signature-content {
+        margin-top: 1rem;
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    }
+  }
+  .numbers-content {
+    height: 50vh;
+    background-image: url('../../assets/testimonialBgB.jpg');
+    background-size: cover;
+    .numbers-holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-top: 1rem;
+      img {
+        height: 3rem;
+      }
+      .text {
+        width: 60%;
+        color: $fontColor;
+        display: flex;
+        align-items: flex-end;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
