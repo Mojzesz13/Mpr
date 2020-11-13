@@ -1,75 +1,67 @@
 import React from 'react';
 import './Testimonial.scss';
-import NumberOne from '../../assets/groupText.svg';
+import NumberOne from '../../assets/10.svg';
+import NumberTwo from '../../assets/200.svg';
+import NumberThrie from '../../assets/3500.svg';
+import NumberFourth from '../../assets/32000.svg';
+import NumberFifth from '../../assets/65000.svg';
 
 const contentNumbers = [
   {
-    index: 1,
     src: NumberOne,
-    text: 'test1',
+    text: 'otwartych biur w różnych miastach w Polsce',
   },
   {
-    index: 2,
-    src: NumberOne,
-    text: 'test2',
+    src: NumberTwo,
+    text: 'przeprowadzanych szkoleń każdego miesiąca',
   },
   {
-    index: 3,
-    src: NumberOne,
-    text: 'test3',
+    src: NumberThrie,
+    text: 'osób zatrudnionych w różnych sekcjach naszej organizacji',
   },
   {
-    index: 4,
-    src: NumberOne,
-    text: 'test4',
+    src: NumberFourth,
+    text: 'pozyskach darczyńców dla fundacji charytatywnych',
   },
   {
-    index: 5,
-    src: NumberOne,
-    text: 'test5',
-  },
-  {
-    index: 6,
-    src: NumberOne,
-    text: 'test6',
+    src: NumberFifth,
+    text:
+      'pozyskanych klientów z branży telekomunikacyjnej, energetycznej i ubezpieczeniowej',
   },
 ];
 
 const contentTestimonials = [
   {
-    index: 1,
     text:
       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
     signature: 'Antonio',
   },
   {
-    index: 2,
     text:
       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
     signature: 'Zbuntowany Anioł',
   },
   {
-    index: 3,
     text:
       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
     signature: 'Draska',
   },
 ];
 
-function Testimonial() {
+const Testimonial = () => {
   return (
     <div className='testimonial-container'>
       <div className='testimonial-cotent'>
-        {contentTestimonials.map((obj) => (
-          <div className='text-holder' key={obj.index}>
+        {contentTestimonials.map((obj, index) => (
+          <div className='text-holder' key={index}>
             <div className='text-content'>{obj.text}</div>
             <div className='signature-content'>{obj.signature}</div>
           </div>
         ))}
       </div>
       <div className='numbers-content'>
-        {contentNumbers.map((obj) => (
-          <div className='numbers-holder' key={obj.index}>
+        {contentNumbers.map((obj, index) => (
+          <div className='numbers-holder' key={index}>
             <img src={obj.src} alt={obj.text} />
             <div className='text'>{obj.text}</div>
           </div>
@@ -77,6 +69,6 @@ function Testimonial() {
       </div>
     </div>
   );
-}
+};
 
 export default Testimonial;

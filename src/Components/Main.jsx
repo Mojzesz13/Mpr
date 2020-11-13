@@ -21,6 +21,28 @@ const Main = () => {
   const [title, setTitle] = useState('Liczby się liczą');
   const [isTablet, setIsTablet] = useState(false);
 
+  const routes = [
+    { path: '/aboutUs', component: AboutUs },
+    { path: '/testimonial', component: Testimonial },
+    { path: '/sales', component: Sales },
+    { path: '/photovoltaics', component: Photovoltaics },
+    { path: '/energetic', component: Energetic },
+    { path: '/interactive', component: Interactive },
+    { path: '/charity', component: Charity },
+    { path: '/contact', component: Contact },
+  ];
+
+  // const routes = [
+  //   { path: '/aboutUs', component: AboutUs, setTitle: setTitle },
+  //   { path: '/testimonial', component: Testimonial, setTitle: setTitle },
+  //   { path: '/sales', component: Sales, setTitle: setTitle },
+  //   { path: '/photovoltaics', component: Photovoltaics, setTitle: setTitle },
+  //   { path: '/energetic', component: Energetic, setTitle: setTitle },
+  //   { path: '/interactive', component: Interactive, setTitle: setTitle },
+  //   { path: '/charity', component: Charity, setTitle: setTitle },
+  //   { path: '/contact', component: Contact, setTitle: setTitle },
+  // ];
+
   const resize = () => {
     let currentView = window.innerWidth <= 1199;
     if (currentView !== isTablet) {
@@ -41,15 +63,10 @@ const Main = () => {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Tablet} />
-          <Route path='/aboutUs' component={AboutUs} />
+          {routes.map(({ path, component: C }) => (
+            <Route key={path} path={path} component={C} />
+          ))}
           <Route path='/divisions' component={Divisions} />
-          <Route path='/testimonial' component={Testimonial} />
-          <Route path='/sales' component={Sales} />
-          <Route path='/energetic' component={Energetic} />
-          <Route path='/photovoltaics' component={Photovoltaics} />
-          <Route path='/interactive' component={Interactive} />
-          <Route path='/charity' component={Charity} />
-          <Route path='/contact' component={Contact} />
         </Switch>
         <Footer />
       </Router>
@@ -62,16 +79,15 @@ const Main = () => {
         <Logo title={title} />
         <div id='page-wrap'>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/aboutUs' component={AboutUs} />
-            <Route path='/divisions' component={Divisions} />
-            <Route path='/testimonial' component={Testimonial} />
-            <Route path='/sales' component={Sales} />
-            <Route path='/energetic' component={Energetic} />
-            <Route path='/photovoltaics' component={Photovoltaics} />
-            <Route path='/interactive' component={Interactive} />
-            <Route path='/charity' component={Charity} />
-            <Route path='/contact' component={Contact} />
+            <Route exact path='/'>
+              <Home setTitle={setTitle} />
+            </Route>
+            <Route path='/divisions'>
+              <Divisions setTitle={setTitle} />
+            </Route>
+            {routes.map(({ path, component: C }) => (
+              <Route key={path} path={path} component={C} />
+            ))}
           </Switch>
         </div>
       </div>

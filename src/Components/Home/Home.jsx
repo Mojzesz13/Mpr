@@ -10,7 +10,7 @@ import forthSectionImgA from '../../assets/sectionForthA.jpg';
 import forthSectionImgB from '../../assets/sectionForthB.jpg';
 import Button from '../../common/button';
 
-const Home = () => {
+const Home = ({ setTitle }) => {
   const [isHoveredFirst, setIsHoveredFirst] = useState(false);
   const [isHoveredSecond, setIsHoveredSecond] = useState(false);
   const [isHoveredThird, setIsHoveredThird] = useState(false);
@@ -130,7 +130,11 @@ const Home = () => {
             <p>{obj.text}</p>
           </div>
           <div className='btn-section'>
-            <Button path={obj.path} text={obj.buttonTitle} />
+            <Button
+              path={obj.path}
+              text={obj.buttonTitle}
+              setTitle={setTitle}
+            />
           </div>
         </div>
       ))}

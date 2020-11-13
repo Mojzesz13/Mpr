@@ -1,6 +1,6 @@
 @import '../scss/settings/mixins';
 
-.hamburgerMenu {
+.hamburger-menu {
   width: 4rem;
   height: 4rem;
   margin-right: 2rem;
@@ -12,7 +12,7 @@
   transition: all 0.5s ease-in-out;
   text-align: unset;
   cursor: pointer;
-  .burgerBtn {
+  .burger-btn {
     width: 3rem;
     height: 0.1rem;
     background-color: $hoverColor;
@@ -40,7 +40,7 @@
 }
 
 .open {
-  .burgerBtn {
+  .burger-btn {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
@@ -54,7 +54,7 @@
 }
 
 @include mobile {
-  .hamburgerMenu {
+  .hamburger-menu {
     margin-right: 0.5rem;
     display: flex;
   }
