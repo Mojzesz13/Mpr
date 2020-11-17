@@ -8,6 +8,7 @@ const HeaderAboutUs = ({
   handleOnMouseEnter,
   handleOnMouseLeave,
   aboutUsText,
+  setTitle,
 }) => {
   return (
     <div className='header-about-us main-section'>
@@ -22,7 +23,7 @@ const HeaderAboutUs = ({
           <div className='letter-holder first-b'></div>
         </div>
         <div className='btn-section'>
-          <Button path='/' text='POWRÓT' width='12rem' />
+          <Button path='/' text='POWRÓT' width='12rem' setTitle={setTitle} />
         </div>
       </div>
       <div className='box-section second-box'>

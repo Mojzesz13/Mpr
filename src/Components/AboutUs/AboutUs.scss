@@ -3,7 +3,7 @@
 @import '../../scss/settings/mixins';
 .about-us-container {
   width: 100%;
-  height: 120rem;
+  height: 110rem;
   background-color: $aboutUsBackground;
   .main-section {
     padding-top: 2rem;
@@ -278,6 +278,7 @@
 @include tabletMax {
   .about-us-container {
     height: 65rem;
+    padding-top: 3rem;
     .box-section {
       width: 16.5rem;
       height: 16.5rem;
@@ -396,6 +397,7 @@
 @include mobile {
   .about-us-container {
     height: 70rem;
+    padding-top: 4rem;
     .third-box {
       display: none;
     }

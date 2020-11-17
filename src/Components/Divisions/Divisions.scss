@@ -8,41 +8,122 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  .main-section {
+  .box {
     width: 20%;
     height: 100%;
     position: relative;
+    text-decoration: none;
+    color: $fontColor;
+    background-size: cover;
+
     .bg-section {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      z-index: 3;
+      object-fit: contain;
+      // z-index: 3;
     }
     .title-section {
       position: absolute;
-      top: 15%;
-      left: 20%;
-      width: 15rem;
-      height: 5rem;
-    }
-    &:nth-child(2) {
-      h1 {
-        top: 30%;
+      bottom: 0;
+      left: 0;
+      height: 1.5rem;
+      width: 90%;
+      background-image: url('../../assets/salesTitle.svg');
+      background-color: cyan;
+      animation: test1 1s forwards;
+      background-color: darkblue;
+      @keyframes test1 {
+        0% {
+          bottom: 95%;
+          opacity: 0;
+        }
+        50% {
+        }
+        100% {
+          bottom: 0;
+          opacity: 1;
+        }
       }
     }
-    &:nth-child(3) {
-      h1 {
-        top: 50%;
+
+    .text-section {
+      width: 80%;
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      text-align: center;
+      font-family: $textFont;
+      font-size: 1.5rem;
+      color: $fontColor;
+      opacity: 0;
+    }
+    .first {
+      .title-section {
+        background-color: crimson;
       }
     }
-    &:nth-child(4) {
-      h1 {
-        top: 70%;
+  }
+  .first {
+    background-image: url('../../assets/divSalesBg.jpg');
+    &:hover {
+      background-image: url('../../assets/divSalesMpr.jpg');
+      .text-section {
+        opacity: 1;
+      }
+      .title-section {
+        animation: test 1s forwards;
+        background-color: darkblue;
+        @keyframes test {
+          0% {
+            bottom: 0;
+            opacity: 1;
+          }
+          50% {
+          }
+          100% {
+            bottom: 95%;
+            opacity: 0;
+          }
+        }
       }
     }
-    &:nth-child(5) {
-      h1 {
-        top: 90%;
+    .title-section {
+      height: 1.7rem;
+    }
+  }
+  .second {
+    background-image: url('../../assets/divEnergeticBg.jpg');
+    &:hover {
+      background-image: url('../../assets/divEnergeticMpr.jpg');
+      .text-section {
+        opacity: 1;
+      }
+    }
+  }
+  .third {
+    background-image: url('../../assets/divPhotovoltaicsBg.jpg');
+    &:hover {
+      background-image: url('../../assets/divPhotovoltaicsMpr.jpg');
+      .text-section {
+        opacity: 1;
+      }
+    }
+  }
+  .forth {
+    background-image: url('../../assets/divInteractiveBg.jpg');
+    &:hover {
+      background-image: url('../../assets/divInteractiveMpr.jpg');
+      .text-section {
+        opacity: 1;
+      }
+    }
+  }
+  .fifth {
+    background-image: url('../../assets/divCharityBg.jpg');
+    &:hover {
+      background-image: url('../../assets/divCharityMpr.jpg');
+      .text-section {
+        opacity: 1;
       }
     }
   }

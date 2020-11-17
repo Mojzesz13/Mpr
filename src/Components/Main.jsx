@@ -21,27 +21,27 @@ const Main = () => {
   const [title, setTitle] = useState('Liczby się liczą');
   const [isTablet, setIsTablet] = useState(false);
 
-  const routes = [
-    { path: '/aboutUs', component: AboutUs },
-    { path: '/testimonial', component: Testimonial },
-    { path: '/sales', component: Sales },
-    { path: '/photovoltaics', component: Photovoltaics },
-    { path: '/energetic', component: Energetic },
-    { path: '/interactive', component: Interactive },
-    { path: '/charity', component: Charity },
-    { path: '/contact', component: Contact },
-  ];
-
   // const routes = [
-  //   { path: '/aboutUs', component: AboutUs, setTitle: setTitle },
-  //   { path: '/testimonial', component: Testimonial, setTitle: setTitle },
-  //   { path: '/sales', component: Sales, setTitle: setTitle },
-  //   { path: '/photovoltaics', component: Photovoltaics, setTitle: setTitle },
-  //   { path: '/energetic', component: Energetic, setTitle: setTitle },
-  //   { path: '/interactive', component: Interactive, setTitle: setTitle },
-  //   { path: '/charity', component: Charity, setTitle: setTitle },
-  //   { path: '/contact', component: Contact, setTitle: setTitle },
+  //   { path: '/aboutUs', component: AboutUs },
+  //   { path: '/testimonial', component: Testimonial },
+  //   { path: '/sales', component: Sales },
+  //   { path: '/photovoltaics', component: Photovoltaics },
+  //   { path: '/energetic', component: Energetic },
+  //   { path: '/interactive', component: Interactive },
+  //   { path: '/charity', component: Charity },
+  //   { path: '/contact', component: Contact },
   // ];
+
+  const routes = [
+    // { path: '/aboutUs', component: AboutUs, setTitle: setTitle },
+    { path: '/testimonial', component: Testimonial, setTitle: setTitle },
+    { path: '/sales', component: Sales, setTitle: setTitle },
+    { path: '/photovoltaics', component: Photovoltaics, setTitle: setTitle },
+    { path: '/energetic', component: Energetic, setTitle: setTitle },
+    { path: '/interactive', component: Interactive, setTitle: setTitle },
+    { path: '/charity', component: Charity, setTitle: setTitle },
+    // { path: '/contact', component: Contact },
+  ];
 
   const resize = () => {
     let currentView = window.innerWidth <= 1199;
@@ -76,7 +76,7 @@ const Main = () => {
     <Router>
       <HamburgerMenu setTitle={setTitle} />
       <div id='outer-container'>
-        <Logo title={title} />
+        <Logo title={title} setTitle={setTitle} />
         <div id='page-wrap'>
           <Switch>
             <Route exact path='/'>
@@ -85,8 +85,16 @@ const Main = () => {
             <Route path='/divisions'>
               <Divisions setTitle={setTitle} />
             </Route>
-            {routes.map(({ path, component: C }) => (
-              <Route key={path} path={path} component={C} />
+            <Route path='/aboutUs'>
+              <AboutUs setTitle={setTitle} />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            {routes.map((obj) => (
+              <Route key={obj.path} path={obj.path} setTitle={obj.setTitle}>
+                {obj.component}
+              </Route>
             ))}
           </Switch>
         </div>
