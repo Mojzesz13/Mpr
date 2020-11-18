@@ -3,7 +3,7 @@ import Division from '../../common/division';
 import './Photovoltaics.scss';
 import photovoltaicsBg from '../../assets/photovoltaicsBg.jpg';
 import photovoltaicsMpr from '../../assets/photovoltaicsMpr.jpg';
-import logo from '../../assets/sunSolarLogo.png';
+import logo from '../../assets/sunSolarLogo.svg';
 
 const mprDivision =
   'Sprzedajesz 50, 100 czy 200 kw miesięcznie? Napisz do nas, a zapewnimy Ci zespół sprzedażowy, który pomoże Ci podwoić ilość sprzedawanych instalacji.';

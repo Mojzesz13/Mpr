@@ -12,119 +12,191 @@
     width: 20%;
     height: 100%;
     position: relative;
-    text-decoration: none;
-    color: $fontColor;
     background-size: cover;
-
-    .bg-section {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      // z-index: 3;
-    }
+    background-position: center;
+    display: flex;
+    align-items: center;
     .title-section {
-      position: absolute;
-      bottom: 0;
-      left: 0;
       height: 1.5rem;
-      width: 90%;
-      background-image: url('../../assets/salesTitle.svg');
-      background-color: cyan;
-      animation: test1 1s forwards;
-      background-color: darkblue;
-      @keyframes test1 {
-        0% {
-          bottom: 95%;
-          opacity: 0;
-        }
-        50% {
-        }
-        100% {
-          bottom: 0;
-          opacity: 1;
-        }
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2rem;
+        width: 90%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .firstT {
+        opacity: 1;
+        animation: greyDown 1s forwards;
+      }
+      .secondT {
+        opacity: 0;
+        animation: goldDown 1s forwards;
       }
     }
-
     .text-section {
-      width: 80%;
-      position: absolute;
-      top: 25%;
-      left: 10%;
+      width: 100%;
+
       text-align: center;
       font-family: $textFont;
       font-size: 1.5rem;
       color: $fontColor;
       opacity: 0;
-    }
-    .first {
-      .title-section {
-        background-color: crimson;
+      p {
+        width: 80%;
+        margin: 0 auto;
       }
-    }
-  }
-  .first {
-    background-image: url('../../assets/divSalesBg.jpg');
-    &:hover {
-      background-image: url('../../assets/divSalesMpr.jpg');
-      .text-section {
-        opacity: 1;
-      }
-      .title-section {
-        animation: test 1s forwards;
-        background-color: darkblue;
-        @keyframes test {
-          0% {
-            bottom: 0;
-            opacity: 1;
-          }
-          50% {
-          }
-          100% {
-            bottom: 95%;
-            opacity: 0;
-          }
+      .btn-section {
+        width: 100%;
+        position: absolute;
+        bottom: 5rem;
+        img {
+          width: 80%;
         }
       }
     }
-    .title-section {
-      height: 1.7rem;
+    &:hover {
+      .text-section {
+        animation: showText 1s forwards;
+        animation-delay: 1s;
+      }
+      .title-section {
+        .firstT {
+          animation: greyUp 1.5s forwards;
+        }
+        .secondT {
+          animation: goldUp 1.5s forwards;
+        }
+      }
     }
   }
+
+  .first {
+    background-image: url('../../assets/divSalesBg.jpg');
+    .title-section {
+      height: 1.7rem;
+      .firstT {
+        background-image: url('../../assets/salesTitle.svg');
+      }
+      .secondT {
+        background-image: url('../../assets/salesTitleG.svg');
+      }
+    }
+    &:hover {
+      background-image: url('../../assets/divSalesMpr.jpg');
+    }
+  }
+
   .second {
     background-image: url('../../assets/divEnergeticBg.jpg');
+    .title-section {
+      .firstT {
+        background-image: url('../../assets/energeticTitle.svg');
+      }
+      .secondT {
+        background-image: url('../../assets/energeticTitleG.svg');
+      }
+    }
+
     &:hover {
       background-image: url('../../assets/divEnergeticMpr.jpg');
-      .text-section {
-        opacity: 1;
-      }
     }
   }
   .third {
     background-image: url('../../assets/divPhotovoltaicsBg.jpg');
+    .title-section {
+      .firstT {
+        background-image: url('../../assets/photovoltaicsTitle.svg');
+      }
+      .secondT {
+        background-image: url('../../assets/photovoltaicsTitleG.svg');
+      }
+    }
     &:hover {
       background-image: url('../../assets/divPhotovoltaicsMpr.jpg');
-      .text-section {
-        opacity: 1;
-      }
     }
   }
   .forth {
     background-image: url('../../assets/divInteractiveBg.jpg');
+    .title-section {
+      .firstT {
+        background-image: url('../../assets/interactiveTitle.svg');
+      }
+      .secondT {
+        background-image: url('../../assets/interactiveTitleG.svg');
+      }
+    }
     &:hover {
       background-image: url('../../assets/divInteractiveMpr.jpg');
-      .text-section {
-        opacity: 1;
-      }
     }
   }
   .fifth {
     background-image: url('../../assets/divCharityBg.jpg');
-    &:hover {
-      background-image: url('../../assets/divCharityMpr.jpg');
-      .text-section {
-        opacity: 1;
+    .title-section {
+      .firstT {
+        background-image: url('../../assets/charityTitle.svg');
+      }
+      .secondT {
+        background-image: url('../../assets/charityTitleG.svg');
       }
     }
+    &:hover {
+      background-image: url('../../assets/divCharityMpr.jpg');
+    }
+  }
+}
+
+@keyframes greyUp {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes goldUp {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 90%;
+    opacity: 1;
+  }
+}
+
+@keyframes greyDown {
+  0% {
+    bottom: 90%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes goldDown {
+  0% {
+    bottom: 90%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

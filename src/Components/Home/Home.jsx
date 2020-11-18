@@ -123,8 +123,8 @@ const Home = ({ setTitle }) => {
         >
           <img src={obj.state ? obj.srcA : obj.srcB} alt={obj.alt} />
           <div className='letter-section'>
-            <div className={obj.cNameA}></div>
-            <div className={obj.cNameB}></div>
+            <div className={obj.cNameA} />
+            <div className={obj.cNameB} />
           </div>
           <div className='text-section'>
             <p>{obj.text}</p>

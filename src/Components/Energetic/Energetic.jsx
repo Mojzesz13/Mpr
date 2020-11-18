@@ -1,7 +1,7 @@
 import React from 'react';
 import Division from '../../common/division';
 import energeticBg from '../../assets/energeticBg.jpg';
-import LogoRaiden from '../../assets/RaidenLogo.png';
+import LogoRaiden from '../../assets/RaidenLogo.svg';
 import energeticMpr from '../../assets/energeticMpr.jpg';
 
 const mprDivision =
