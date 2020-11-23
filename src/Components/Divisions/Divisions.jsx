@@ -70,10 +70,6 @@ const divisions = [
 ];
 
 const Divisions = ({ setTitle }) => {
-  // const handleSetTitle = (text) => {
-  //   setTitle(text);
-  // };
-
   return (
     <div className='divisions-container'>
       {divisions.map((obj) => (
@@ -90,7 +86,12 @@ const Divisions = ({ setTitle }) => {
                   <img src={obj.logo} alt='logo' />
                 </a>
               ) : (
-                <Button width='10rem' path={obj.path} text={obj.name} />
+                <Button
+                  width='10rem'
+                  path={obj.path}
+                  text={obj.name}
+                  setTitle={setTitle}
+                />
               )}
             </div>
           </div>

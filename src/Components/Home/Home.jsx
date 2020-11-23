@@ -102,7 +102,7 @@ const Home = ({ setTitle }) => {
       alt: 'forthSectionImg',
       text:
         ' Działając w coraz większej ilości miast, dostarczymy Ci nie tylko rezultaty, ale także będziemy Twoim partnerem w działaniach związanych z budowaniem i rozwojem Twojej marki.',
-      buttonTitle: 'Kontat',
+      buttonTitle: 'Kontakt',
       path: '/contact',
       cNameA: 'letter-holder forth-a',
       cNameB: 'letter-holder forth-b',
