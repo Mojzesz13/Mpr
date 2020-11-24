@@ -5,22 +5,6 @@ import Button from '../../common/button';
 import raidenLogo from '../../assets/RaidenLogo.svg';
 import sunSolarLogo from '../../assets/sunSolarLogo.svg';
 
-// import salesBg from '../../assets/divSalesBg.jpg';
-// import salesMpr from '../../assets/divSalesMpr.jpg';
-// import salesTitle from '../../assets/salesTitle.svg';
-// import energeticTitle from '../../assets/energeticTitle.svg';
-// import energeticBg from '../../assets/divEnergeticBg.jpg';
-// import energeticMpr from '../../assets/divEnergeticMpr.jpg';
-// import photovoltaicsTitle from '../../assets/photovoltaicsTitle.svg';
-// import photovoltaicsBg from '../../assets/divPhotovoltaicsBg.jpg';
-// import photovoltaicsMpr from '../../assets/divPhotovoltaicsMpr.jpg';
-// import interactiveBg from '../../assets/divInteractiveBg.jpg';
-// import interactiveMpr from '../../assets/divInteractiveMpr.jpg';
-// import interactiveTitle from '../../assets/interactiveTitle.svg';
-// import charityBg from '../../assets/divCharityBg.jpg';
-// import charityMpr from '../../assets/divCharityMpr.jpg';
-// import charityTitle from '../../assets/charityTitle.svg';
-
 const divisions = [
   {
     path: '/sales',

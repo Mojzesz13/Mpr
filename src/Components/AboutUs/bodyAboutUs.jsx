@@ -11,47 +11,46 @@ const dataSection = [
   {
     id: 1,
     text:
-      'Organizacji sieci sprzedaży dla dostawców usług i klientów korporacyjnych',
+      'Organizacja sieci sprzedaży dla dostawców usług i klientów korporacyjnych',
     text2: 'test1',
     src: ThirdImg,
     alt: 'MprDivisionImg',
   },
   {
     id: 2,
-    text: 'Fundraisingu dla fundacji  i organizacji pozarządowych',
-    text2: 'test1',
+    text: 'Fundraising dla fundacji  i organizacji pozarządowych',
+    text2: 'test2',
     src: FourthImg,
     alt: 'MprDivisionImg',
   },
 
   {
     id: 3,
-    text: 'Kreowaniu wizerunku  i produkcji  materiałów promocyjnych',
-    text2: 'test1',
+    text: 'Kreowanie wizerunku  i produkcji  materiałów promocyjnych',
+    text2: 'test3',
     src: FifthImg,
     alt: 'MprDivisionImg',
   },
   {
     id: 4,
-    text:
-      'Świadczeniu usług  finansowych,  ubezpieczeniowych i księgowo-prawnych  ',
-    text2: 'test1',
+    text: 'test4  ',
+    text2: 'test4',
     src: SixImg,
     alt: 'MprDivisionImg',
   },
   {
     id: 5,
     text:
-      'Dostarczaniu Twoich produktów lub usług do wybranej przez Ciebie grupy docelowej.',
-    text2: 'test1',
+      'Dostarczanie Twoich produktów lub usług do wybranej przez Ciebie grupy docelowej.',
+    text2: 'test5',
     src: SeventhImg,
     alt: 'MprDivisionImg',
   },
   {
     id: 6,
     text:
-      'Działaniach związanych z budowaniem marki oraz rozwojem Twojej firmy.',
-    text2: 'test1',
+      'Działania związane z budowaniem marki oraz rozwojem Twojej firmy w Internecie.',
+    text2: 'test6',
     src: EightImg,
     alt: 'MprDivisionImg',
   },
@@ -75,11 +74,11 @@ const BodyAboutUs = () => {
         >
           <img src={obj.src} alt={obj.alt} />
           <div className='text-box'>
-            <div className={click ? 'text-holder' : 'text-holder activeTest'}>
+            <div className={click ? 'text-holder activeText' : 'text-holder'}>
               {click ? (
-                <p className='first View'>{obj.text2}</p>
+                <p className='secondText'>{obj.text2}</p>
               ) : (
-                <p className='second View'>{obj.text}</p>
+                <p>{obj.text}</p>
               )}
             </div>
           </div>
@@ -90,5 +89,3 @@ const BodyAboutUs = () => {
 };
 
 export default BodyAboutUs;
-
-// https://davidwalsh.name/css-flip

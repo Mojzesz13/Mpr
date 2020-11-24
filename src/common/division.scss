@@ -84,18 +84,18 @@
   .skewed {
     .handle {
       top: 50%;
-      transform: rotate(30deg) translateY(-50%);
+      // transform: rotate(30deg) translateY(-50%);
       height: 200%;
       -webkit-transform-origin: top;
       -moz-transform-origin: top;
       transform-origin: top;
     }
     .top {
-      transform: skew(-30deg);
+      // transform: skew(-30deg);
       margin-left: -1000px;
       width: calc(50vw + 1000px);
       .content {
-        transform: skew(30deg);
+        //  
         margin-left: 1000px;
       }
       .text-holder {
