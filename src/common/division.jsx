@@ -11,6 +11,7 @@ const Division = ({
   bottomText,
   linkTo,
   arrowColor,
+  setTitle,
 }) => {
   const handleOnHover = () => {
     let parent = document.querySelector('.splitview'),
@@ -57,7 +58,7 @@ const Division = ({
               <p>{bottomText}</p>
             </div>
             <div className='top-button-holder'>
-              <Button path='/' text='POWRÓT' />
+              <Button path='/' text='POWRÓT' setTitle={setTitle} />
             </div>
           </div>
         </div>

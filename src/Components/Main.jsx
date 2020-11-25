@@ -33,14 +33,12 @@ const Main = () => {
   // ];
 
   const routes = [
-    // { path: '/aboutUs', component: AboutUs, setTitle: setTitle },
     { path: '/testimonial', component: Testimonial, setTitle: setTitle },
     { path: '/sales', component: Sales, setTitle: setTitle },
     { path: '/photovoltaics', component: Photovoltaics, setTitle: setTitle },
     { path: '/energetic', component: Energetic, setTitle: setTitle },
     { path: '/interactive', component: Interactive, setTitle: setTitle },
     { path: '/charity', component: Charity, setTitle: setTitle },
-    // { path: '/contact', component: Contact },
   ];
 
   const resize = () => {
@@ -60,13 +58,21 @@ const Main = () => {
   if (isTablet) {
     return (
       <Router>
-        <Navbar />
+        <Navbar isTablet={isTablet} />
         <Switch>
-          <Route exact path='/' component={Tablet} />
+          <Route exact path='/'>
+            <Tablet isTablet={isTablet} />
+          </Route>
           {routes.map(({ path, component: C }) => (
             <Route key={path} path={path} component={C} />
           ))}
           <Route path='/divisions' component={Divisions} />
+          <Route path='/aboutUs'>
+            <AboutUs setTitle={setTitle} />
+          </Route>
+          <Route path='/contact'>
+            <Contact />
+          </Route>
         </Switch>
         <Footer />
       </Router>
@@ -90,6 +96,9 @@ const Main = () => {
             </Route>
             <Route path='/contact'>
               <Contact />
+            </Route>
+            <Route path='/testimonial'>
+              <Testimonial />
             </Route>
             {routes.map((obj) => (
               <Route key={obj.path} path={obj.path} setTitle={obj.setTitle}>

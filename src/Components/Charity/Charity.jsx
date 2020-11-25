@@ -8,13 +8,14 @@ const mprDivision =
 const fundraisinDivision =
   'Bez nowych darczyńców nie będziesz mógł zwiększać przychodów, ani rozwijać swojej fundacji, więc niezależnie od tego czy chcesz pozyskać darczyńców indywidualnych czy biznesowych, możesz liczyć na naszą pomoc w tej kwestii.';
 
-const Charity = () => {
+const Charity = ({ setTitle }) => {
   return (
     <Division
       imgOne={charityMpr}
       imgTwo={charityBg}
       topText={mprDivision}
       bottomText={fundraisinDivision}
+      setTitle={setTitle}
     />
   );
 };

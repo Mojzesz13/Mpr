@@ -84,21 +84,11 @@
       color: $fontColor;
       text-align: center;
       font-size: 1.2rem;
-      background: linear-gradient(
-        180deg,
-        rgba(3, 2, 20, 0) 5%,
-        rgba(0, 0, 0, 0.5046393557422969) 50%,
-        rgba(255, 255, 255, 0) 95%
-      );
+
       p {
         margin: 0 auto;
         padding: 0 3rem;
-        background: linear-gradient(
-          180deg,
-          rgba(3, 2, 20, 0) 5%,
-          rgba(0, 0, 0, 0.5046393557422969) 50%,
-          rgba(255, 255, 255, 0) 95%
-        );
+        @include gradientBlack;
       }
     }
     .btn-section {
@@ -391,10 +381,11 @@
 
 @include mobileMin {
   .home-container {
+    margin-top: 4.5rem;
     .main-section {
       .text-section {
         p {
-          padding: 0 1rem;
+          padding: 0 2rem;
         }
       }
     }

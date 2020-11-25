@@ -3,17 +3,21 @@ import './AboutUs.scss';
 import HeaderAboutUs from './headerAboutUs';
 import BodyAboutUs from './bodyAboutUs';
 
-const aboutUsText = `  MPR to profesjonalne podejście do marketingu bezpośredniego. ${(
-  <br />
-)} Dotarcie do klientów B2B lub B2C? Outsourcing sprzedaży?
-          Promocja produktów i usług? Właśnie tym się zajmujemy! Świadczymy
-          usługi marketingu bezpośredniego dla firm z różnych sektorów rynku.
-          Jesteśmy najlepszym rozwiązaniem dla przedsiębiorstw, których
-          specyfika wymaga zastosowania indywidualnego podejścia. Dysponujemy
-          profesjonalnymi grupami sprzedażowymi, dzięki którym zwiększysz swoją
-          sprzedaż kilkukrotnie! Dlaczego marketing bezpośredni? Nasze
-          doświadczenie pokazuje, że jest to jedna z najefektywniejszych metod
-          dotarcia do klienta.`;
+const aboutUsText = (
+  <p>
+    MPR to profesjonalne podejście do marketingu bezpośredniego. {<br />}
+    Dotarcie do klientów B2B lub B2C? Outsourcing sprzedaży? Promocja produktów
+    i usług? {<br />}Właśnie tym się zajmujemy! {<br />}Świadczymy usługi
+    marketingu bezpośredniego dla firm z różnych sektorów rynku.{<br />}
+    Jesteśmy najlepszym rozwiązaniem dla przedsiębiorstw, których specyfika
+    wymaga zastosowania indywidualnego podejścia.{<br />} Dysponujemy
+    profesjonalnymi grupami sprzedażowymi, dzięki którym zwiększysz swoją
+    sprzedaż kilkukrotnie!
+    {<br />}
+    Dlaczego marketing bezpośredni? {<br />}Nasze doświadczenie pokazuje, że
+    jest to jedna z najefektywniejszych metod dotarcia do klienta.
+  </p>
+);
 
 const Aboutus = ({ setTitle }) => {
   const [isHovered, setIsHovered] = useState(false);

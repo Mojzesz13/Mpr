@@ -27,7 +27,11 @@
 }
 
 @include mobile {
-  .footerConainer {
-    display: none;
+  .footer-conainer {
+    height: 18rem;
+    flex-direction: column;
+    .column {
+      width: 100%;
+    }
   }
 }

@@ -10,7 +10,7 @@ import forthSectionImgA from '../../assets/sectionForthA.jpg';
 import forthSectionImgB from '../../assets/sectionForthB.jpg';
 import Button from '../../common/button';
 
-const Home = ({ setTitle }) => {
+const Home = ({ setTitle, isTablet }) => {
   const [isHoveredFirst, setIsHoveredFirst] = useState(false);
   const [isHoveredSecond, setIsHoveredSecond] = useState(false);
   const [isHoveredThird, setIsHoveredThird] = useState(false);
@@ -134,6 +134,7 @@ const Home = ({ setTitle }) => {
               path={obj.path}
               text={obj.buttonTitle}
               setTitle={setTitle}
+              isTablet={isTablet}
             />
           </div>
         </div>

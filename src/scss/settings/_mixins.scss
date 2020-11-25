@@ -88,6 +88,14 @@
   }
 }
 
+@mixin gradientBlack() {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 2, 20, 0) 5%,
+    rgba(0, 0, 0, 0.5046393557422969) 50%,
+    rgba(255, 255, 255, 0) 95%
+  );
+}
 
 // @mixin movingBackground() {
 //   position: absolute;

@@ -2,10 +2,10 @@ import React from 'react';
 import './Tablet.scss';
 import Home from '../Home/Home';
 
-const Tablet = () => {
+const Tablet = ({ isTablet }) => {
   return (
     <div className='tablet-container'>
-      <Home />
+      <Home isTablet={isTablet} />
     </div>
   );
 };

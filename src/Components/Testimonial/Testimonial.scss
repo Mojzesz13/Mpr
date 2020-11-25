@@ -3,47 +3,38 @@
 
 .testimonial-container {
   width: 100%;
-  height: 100%;
-  .testimonial-cotent {
-    height: 26rem;
-    background-image: url('../../assets/testimonialBgW.jpg');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .text-holder {
-      margin: 1.5rem auto;
-      text-align: center;
-      .text-content {
-        font-size: 2rem;
-        font-weight: 100;
-      }
-      .signature-content {
-        margin-top: 1rem;
-        font-weight: 600;
-        font-size: 2rem;
-      }
-    }
-  }
+  height: 52rem;
+  background-image: url('../../assets/testimonialBg.jpg');
+  background-size: 110%;
+  background-repeat: no-repeat;
   .numbers-content {
-    height: 26rem;
-    background-image: url('../../assets/testimonialBgB.jpg');
-    background-size: cover;
+    width: 100%;
+    padding-top: 10%;
+    color: black;
     .numbers-holder {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       padding-top: 2rem;
+      align-items: flex-end;
+
       img {
         height: 3rem;
+        flex: 1;
+      }
+      .number {
+        flex: 1;
+        font-size: 3rem;
+        justify-self: flex-end;
+        display: flex;
+        justify-content: flex-end;
       }
       .text {
-        width: 60%;
         display: flex;
+        flex: 2;
         align-items: center;
         margin-left: 2rem;
-        font-size: 1.7rem;
-        color: $fontColor;
+        font-size: 2rem;
       }
     }
   }

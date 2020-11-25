@@ -38,12 +38,12 @@
     }
     .text-section {
       width: 100%;
-
       text-align: center;
       font-family: $textFont;
       font-size: 1.5rem;
       color: $fontColor;
       opacity: 0;
+      @include gradientBlack;
       p {
         width: 80%;
         margin: 0 auto;

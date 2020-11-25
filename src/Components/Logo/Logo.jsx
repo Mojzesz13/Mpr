@@ -3,11 +3,20 @@ import { Link } from 'react-router-dom';
 import './Logo.scss';
 import logo from '../../assets/mprLogo.svg';
 
-const Logo = ({ title, setTitle }) => {
+const Logo = ({ title, setTitle, isTablet }) => {
   const handleSetTitle = () => {
     setTitle('Liczby się liczą');
   };
 
+  if (isTablet) {
+    return (
+      <div className='logo-container'>
+        <Link to='/'>
+          <img src={logo} alt='mpr-logo' />
+        </Link>
+      </div>
+    );
+  }
   return (
     <div className='logo-container'>
       <Link to='/' onClick={() => handleSetTitle()}>

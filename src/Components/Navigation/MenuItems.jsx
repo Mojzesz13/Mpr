@@ -8,11 +8,13 @@ export const MenuItems = [
     path: '/energetic',
     title: 'Energetyczna',
     cName: 'dropdown-link',
+    linkTo: 'https://raiden.pl/',
   },
   {
     path: '/photovoltaics',
     title: 'Fotowoltaiczna',
     cName: 'dropdown-link',
+    linkTo: 'https://sunsolar.com.pl/',
   },
   {
     path: '/interactive',

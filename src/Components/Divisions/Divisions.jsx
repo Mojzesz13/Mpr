@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Divisions.scss';
 import Button from '../../common/button';
 import raidenLogo from '../../assets/RaidenLogo.svg';

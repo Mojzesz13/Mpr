@@ -23,13 +23,16 @@ const HeaderAboutUs = ({
           <div className='letter-holder first-b'></div>
         </div>
         <div className='btn-section'>
-          <Button path='/' text='POWRÓT' width='12rem' setTitle={setTitle} />
+          <Button
+            path='/'
+            text='Strona główna '
+            width='12rem'
+            setTitle={setTitle}
+          />
         </div>
       </div>
-      <div className='box-section second-box'>
-        <p>{aboutUsText}</p>
-      </div>
-      <div className='box-section third-box'></div>
+      <div className='box-section second-box'>{aboutUsText}</div>
+      <div className='box-section third-box' />
     </div>
   );
 };
