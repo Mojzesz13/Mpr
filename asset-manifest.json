@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mpr/static/css/main.6dddedec.chunk.css",
-    "main.js": "/Mpr/static/js/main.b7c23486.chunk.js",
-    "main.js.map": "/Mpr/static/js/main.b7c23486.chunk.js.map",
+    "main.css": "/Mpr/static/css/main.de28ceff.chunk.css",
+    "main.js": "/Mpr/static/js/main.7b7a88e3.chunk.js",
+    "main.js.map": "/Mpr/static/js/main.7b7a88e3.chunk.js.map",
     "runtime-main.js": "/Mpr/static/js/runtime-main.f631d68c.js",
     "runtime-main.js.map": "/Mpr/static/js/runtime-main.f631d68c.js.map",
-    "static/js/2.ab34b036.chunk.js": "/Mpr/static/js/2.ab34b036.chunk.js",
-    "static/js/2.ab34b036.chunk.js.map": "/Mpr/static/js/2.ab34b036.chunk.js.map",
+    "static/js/2.27c0160d.chunk.js": "/Mpr/static/js/2.27c0160d.chunk.js",
+    "static/js/2.27c0160d.chunk.js.map": "/Mpr/static/js/2.27c0160d.chunk.js.map",
     "index.html": "/Mpr/index.html",
-    "precache-manifest.b373e43da0d255273d24cb1589ae5548.js": "/Mpr/precache-manifest.b373e43da0d255273d24cb1589ae5548.js",
+    "precache-manifest.33a2d7ad8beacda503d0e26c74a4c78e.js": "/Mpr/precache-manifest.33a2d7ad8beacda503d0e26c74a4c78e.js",
     "service-worker.js": "/Mpr/service-worker.js",
-    "static/css/main.6dddedec.chunk.css.map": "/Mpr/static/css/main.6dddedec.chunk.css.map",
-    "static/js/2.ab34b036.chunk.js.LICENSE.txt": "/Mpr/static/js/2.ab34b036.chunk.js.LICENSE.txt",
+    "static/css/main.de28ceff.chunk.css.map": "/Mpr/static/css/main.de28ceff.chunk.css.map",
+    "static/js/2.27c0160d.chunk.js.LICENSE.txt": "/Mpr/static/js/2.27c0160d.chunk.js.LICENSE.txt",
     "static/media/10.svg": "/Mpr/static/media/10.0c9395aa.svg",
     "static/media/200.svg": "/Mpr/static/media/200.ce041234.svg",
     "static/media/32000.svg": "/Mpr/static/media/32000.ec629f29.svg",
@@ -50,12 +50,12 @@
     "static/media/sectionThirdB.jpg": "/Mpr/static/media/sectionThirdB.dcf69caf.jpg",
     "static/media/sunSolarLogo.svg": "/Mpr/static/media/sunSolarLogo.50aff9b9.svg",
     "static/media/HamburgerMenu.scss": "/Mpr/static/media/tap.2d56f2b3.png",
-    "static/media/Testimonial.scss": "/Mpr/static/media/testimonialBgW.60d6fd2a.jpg"
+    "static/media/Testimonial.scss": "/Mpr/static/media/testimonialBg.69390782.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f631d68c.js",
-    "static/js/2.ab34b036.chunk.js",
-    "static/css/main.6dddedec.chunk.css",
-    "static/js/main.b7c23486.chunk.js"
+    "static/js/2.27c0160d.chunk.js",
+    "static/css/main.de28ceff.chunk.css",
+    "static/js/main.7b7a88e3.chunk.js"
   ]
 }
