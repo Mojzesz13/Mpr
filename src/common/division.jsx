@@ -1,16 +1,16 @@
 import React from 'react';
 import './division.scss';
-import Button from './button';
-import Arrow from './arrow';
+import ButtonDivision from './buttonDivision';
 
 const Division = ({
   imgOne,
   imgTwo,
   logo,
+  logo2,
+  linkTo2,
   topText,
   bottomText,
   linkTo,
-  arrowColor,
   setTitle,
 }) => {
   const handleOnHover = () => {
@@ -29,46 +29,41 @@ const Division = ({
     });
   };
 
-  let logoCondition = '';
-
-  if (logo && linkTo) {
-    logoCondition = (
-      <a href={linkTo}>
-        <div className='logo-holder'>
-          <img src={logo} alt='logo-raiden' />
-          <Arrow arrowColor={arrowColor} />
-        </div>
-      </a>
-    );
-  } else {
-    logoCondition = (
-      <div className='bottom-button-holder'>
-        <Button path='/contact' text='Kontakt' setTitle={setTitle} />
-      </div>
-    );
-  }
-
   return (
     <div className='division-container' onMouseEnter={handleOnHover}>
       <div className='splitview skewed'>
         <div className='panel bottom'>
           <div className='content'>
-            <img className='bg-img' src={imgOne} alt='Original' />
+            <img className='bg-img' src={imgOne} alt='mprBg' />
             <div className='text-holder'>
               <p>{bottomText}</p>
             </div>
-            <div className='top-button-holder'>
-              <Button path='/' text='STRONA GŁÓWNA' setTitle={setTitle} />
+            <div className='top-btn'>
+              <ButtonDivision
+                logo={logo2}
+                linkTo={linkTo2}
+                path='/'
+                text='STRONA GŁÓWNA'
+                setTitle={setTitle}
+              />
             </div>
           </div>
         </div>
         <div className='panel top'>
           <div className='content'>
-            <img className='bg-img' src={imgTwo} alt='Duotone' />
+            <img className='bg-img' src={imgTwo} alt='partnerBg' />
             <div className='text-holder'>
               <p>{topText}</p>
             </div>
-            {logoCondition}
+            <div className='bottom-btn'>
+              <ButtonDivision
+                logo={logo}
+                linkTo={linkTo}
+                path='/contact'
+                text='Kontakt'
+                setTitle={setTitle}
+              />
+            </div>
           </div>
         </div>
         <div className='handle' />

@@ -9,6 +9,12 @@
     min-height: 45vw;
     overflow: hidden;
     font-family: $textFont;
+    .logo-holder {
+      img {
+        width: 30rem;
+        height: 10rem;
+      }
+    }
   }
   .panel {
     position: absolute;
@@ -19,7 +25,7 @@
       position: absolute;
       width: 100vw;
       min-height: 45vw;
-      color: #fff;
+      color: $fontColor;
     }
     .text-holder {
       width: 30%;
@@ -28,11 +34,17 @@
       line-height: 2rem;
       font-weight: 300;
     }
-    .bottom-button-holder {
+    .bottom-btn {
       position: absolute;
       bottom: 5rem;
-      right: 11rem;
+      right: 5rem;
     }
+    .top-btn {
+      position: absolute;
+      top: 5rem;
+      left: 5rem;
+    }
+
     .description {
       width: 25%;
       position: absolute;
@@ -57,11 +69,6 @@
     .text-holder {
       bottom: 5rem;
       right: 4rem;
-    }
-    .top-button-holder {
-      position: absolute;
-      top: 5rem;
-      left: 11rem;
     }
   }
   .top {
@@ -95,24 +102,12 @@
       margin-left: -1000px;
       width: calc(50vw + 1000px);
       .content {
-        //  
+        //
         margin-left: 1000px;
       }
       .text-holder {
         top: 5rem;
         left: 5rem;
-      }
-      .logo-holder {
-        position: absolute;
-        bottom: 5rem;
-        right: 5rem;
-        width: 30rem;
-        display: flex;
-        flex-direction: row;
-        img {
-          width: 20rem;
-          height: 5rem;
-        }
       }
     }
   }

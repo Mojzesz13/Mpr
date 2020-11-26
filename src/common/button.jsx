@@ -7,21 +7,12 @@ const Button = ({ width, path, text, setTitle, isTablet }) => {
     setTitle(text);
   };
 
-  if (isTablet) {
-    return (
-      <div className='btn-container' style={{ width }}>
-        <Link to={path} className='btn btn-effect'>
-          <span>{text}</span>
-        </Link>
-      </div>
-    );
-  }
   return (
     <div className='btn-container' style={{ width }}>
       <Link
         to={path}
         className='btn btn-effect'
-        onClick={() => handleSetTitle(text)}
+        onClick={isTablet ? null : () => handleSetTitle(text)}
       >
         <span>{text}</span>
       </Link>

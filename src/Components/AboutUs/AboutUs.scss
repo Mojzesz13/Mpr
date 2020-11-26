@@ -6,7 +6,7 @@
   height: 110rem;
   background-color: $aboutUsBackground;
   .main-section {
-    padding-top: 2rem;
+    padding: 2rem 0 0 3.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,17 +63,18 @@
     .second-box {
       display: flex;
       justify-content: center;
-      align-items: center;
       background-color: transparent;
       color: $fontColor;
       text-align: left;
-      font-size: 1.4rem;
-      line-height: 2rem;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      flex: 1;
+      padding-left: 1.4rem;
     }
-    .third-box {
-      background-image: url('../../assets/aboutUsSecond.jpg');
-      background-size: contain;
-    }
+    // .third-box {
+    //   background-image: url('../../assets/aboutUsSecond.jpg');
+    //   background-size: contain;
+    // }
   }
   .first-box:hover {
     .btn-section {
@@ -192,7 +193,8 @@
     }
     .header-about-us {
       .second-box {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
       }
       .btn-section {
         left: 5rem;
@@ -218,8 +220,8 @@
       .content-box {
         .text-box {
           .text-holder {
-            font-size: 1.5rem;
-            line-height: 1.8rem;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
           }
         }
       }
@@ -231,14 +233,13 @@
   .about-us-container {
     height: 80rem;
     .box-section {
-      width: 22rem;
-      height: 22rem;
+      width: 21rem;
+      height: 21rem;
     }
     .header-about-us {
       .second-box {
-        font-size: 1.2rem;
-        line-height: 1.3rem;
-        text-align: left;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
       }
       .letter-section {
         .letter-holder {
@@ -267,7 +268,7 @@
     .slogan-container {
       font-size: 2.5rem;
       h1 {
-        padding-left: 1rem;
+        padding-left: 4.5rem;
       }
     }
     .about-us-content {
@@ -299,22 +300,22 @@
         line-height: 1rem;
         text-align: left;
       }
-      .letter-section {
-        .letter-holder {
-          width: 15rem;
-          height: 4rem;
-        }
-      }
+      // .letter-section {
+      //   .letter-holder {
+      //     width: 15rem;
+      //     height: 4rem;
+      //   }
+      // }
       .btn-section {
-        position: absolute;
+        // position: absolute;
         top: 11rem;
         left: 2.5rem;
-        display: none;
+        // display: none;
       }
     }
     .first-box:hover {
       .letter-section {
-        top: -3rem;
+        // top: -3rem;
         .first-a {
           @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
         }
@@ -323,17 +324,11 @@
         }
       }
     }
-    .slogan-container {
-      font-size: 2.5rem;
-      h1 {
-        padding-left: 1rem;
-      }
-    }
     .about-us-content {
       .content-box {
         .text-box {
           .text-holder {
-            transform: scaleY(1);
+            // transform: scaleY(1);
             p {
               font-size: 1rem;
               line-height: 1.5rem;
@@ -355,33 +350,33 @@
     .header-about-us {
       .second-box {
         font-size: 0.7rem;
-        line-height: 1rem;
+        // line-height: 1rem;
         text-align: left;
       }
       .letter-section {
         .letter-holder {
           width: 12rem;
-          height: 4rem;
+          // height: 4rem;
         }
       }
       .btn-section {
-        position: absolute;
+        // position: absolute;
         top: 8rem;
         left: 0.5rem;
-        display: none;
+        // display: none;
       }
     }
-    .first-box:hover {
-      .letter-section {
-        top: -3rem;
-        .first-a {
-          @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
-        }
-        .first-b {
-          @include letterMove(1.5s, 0, 9.5rem, 0, 1);
-        }
-      }
-    }
+    // .first-box:hover {
+    //   .letter-section {
+    //     top: -3rem;
+    //     .first-a {
+    //       @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
+    //     }
+    //     .first-b {
+    //       @include letterMove(1.5s, 0, 9.5rem, 0, 1);
+    //     }
+    //   }
+    // }
     .slogan-container {
       font-size: 2.5rem;
       h1 {
@@ -392,7 +387,7 @@
       .content-box {
         .text-box {
           .text-holder {
-            transform: scaleY(1);
+            // transform: scaleY(1);
             p {
               font-size: 1rem;
               line-height: 1.5rem;
@@ -407,22 +402,28 @@
 @include mobile {
   .about-us-container {
     height: 70rem;
-    padding-top: 4rem;
-    .third-box {
-      display: none;
-    }
-    .slogan-container {
-      font-size: 1.1rem;
-      h1 {
-        padding-left: 1rem;
+    // padding-top: 4rem;
+    .main-section {
+      padding: 0;
+      .box-section {
+        width: 12rem;
+        height: 12rem;
+      }
+      // .third-box {
+      //   display: none;
+      // }
+      .slogan-container {
+        font-size: 1.1rem;
+        h1 {
+          padding-left: 1rem;
+        }
       }
     }
   }
 }
-
 @include mobileMin {
   .about-us-container {
-    height: 190em;
+    height: 120em;
     .box-section {
       width: 20rem;
       height: 20rem;

@@ -32,7 +32,7 @@ const HeaderAboutUs = ({
         </div>
       </div>
       <div className='box-section second-box'>{aboutUsText}</div>
-      <div className='box-section third-box' />
+      {/* <div className='box-section third-box' /> */}
     </div>
   );
 };

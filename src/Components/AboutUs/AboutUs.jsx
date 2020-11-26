@@ -7,8 +7,9 @@ const aboutUsText = (
   <p>
     MPR to profesjonalne podejście do marketingu bezpośredniego. {<br />}
     Dotarcie do klientów B2B lub B2C? Outsourcing sprzedaży? Promocja produktów
-    i usług? {<br />}Właśnie tym się zajmujemy! {<br />}Świadczymy usługi
-    marketingu bezpośredniego dla firm z różnych sektorów rynku.{<br />}
+    i usług? {<br />}
+    {<br />}Właśnie tym się zajmujemy! {<br />}Świadczymy usługi marketingu
+    bezpośredniego dla firm z różnych sektorów rynku.{<br />}
     Jesteśmy najlepszym rozwiązaniem dla przedsiębiorstw, których specyfika
     wymaga zastosowania indywidualnego podejścia.{<br />} Dysponujemy
     profesjonalnymi grupami sprzedażowymi, dzięki którym zwiększysz swoją
@@ -43,7 +44,7 @@ const Aboutus = ({ setTitle }) => {
       <div className='slogan-container'>
         <h1>Co robimy?</h1>
       </div>
-      <BodyAboutUs />
+      <BodyAboutUs setTitle={setTitle} />
     </div>
   );
 };
