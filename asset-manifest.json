@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Mpr/static/css/main.592315a9.chunk.css",
+    "main.css": "/Mpr/static/css/main.91060fbf.chunk.css",
     "main.js": "/Mpr/static/js/main.c14746fd.chunk.js",
     "main.js.map": "/Mpr/static/js/main.c14746fd.chunk.js.map",
     "runtime-main.js": "/Mpr/static/js/runtime-main.f631d68c.js",
@@ -8,9 +8,9 @@
     "static/js/2.a06e532b.chunk.js": "/Mpr/static/js/2.a06e532b.chunk.js",
     "static/js/2.a06e532b.chunk.js.map": "/Mpr/static/js/2.a06e532b.chunk.js.map",
     "index.html": "/Mpr/index.html",
-    "precache-manifest.eebfe457ca2806f9b15c94726f429a0c.js": "/Mpr/precache-manifest.eebfe457ca2806f9b15c94726f429a0c.js",
+    "precache-manifest.a46f1d36aa9c54ed99229063697ba328.js": "/Mpr/precache-manifest.a46f1d36aa9c54ed99229063697ba328.js",
     "service-worker.js": "/Mpr/service-worker.js",
-    "static/css/main.592315a9.chunk.css.map": "/Mpr/static/css/main.592315a9.chunk.css.map",
+    "static/css/main.91060fbf.chunk.css.map": "/Mpr/static/css/main.91060fbf.chunk.css.map",
     "static/js/2.a06e532b.chunk.js.LICENSE.txt": "/Mpr/static/js/2.a06e532b.chunk.js.LICENSE.txt",
     "static/media/10.svg": "/Mpr/static/media/10.0c9395aa.svg",
     "static/media/200.svg": "/Mpr/static/media/200.ce041234.svg",
@@ -57,7 +57,7 @@
   "entrypoints": [
     "static/js/runtime-main.f631d68c.js",
     "static/js/2.a06e532b.chunk.js",
-    "static/css/main.592315a9.chunk.css",
+    "static/css/main.91060fbf.chunk.css",
     "static/js/main.c14746fd.chunk.js"
   ]
 }
