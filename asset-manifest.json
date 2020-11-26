@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mpr/static/css/main.de28ceff.chunk.css",
-    "main.js": "/Mpr/static/js/main.7b7a88e3.chunk.js",
-    "main.js.map": "/Mpr/static/js/main.7b7a88e3.chunk.js.map",
+    "main.css": "/Mpr/static/css/main.592315a9.chunk.css",
+    "main.js": "/Mpr/static/js/main.c14746fd.chunk.js",
+    "main.js.map": "/Mpr/static/js/main.c14746fd.chunk.js.map",
     "runtime-main.js": "/Mpr/static/js/runtime-main.f631d68c.js",
     "runtime-main.js.map": "/Mpr/static/js/runtime-main.f631d68c.js.map",
-    "static/js/2.27c0160d.chunk.js": "/Mpr/static/js/2.27c0160d.chunk.js",
-    "static/js/2.27c0160d.chunk.js.map": "/Mpr/static/js/2.27c0160d.chunk.js.map",
+    "static/js/2.a06e532b.chunk.js": "/Mpr/static/js/2.a06e532b.chunk.js",
+    "static/js/2.a06e532b.chunk.js.map": "/Mpr/static/js/2.a06e532b.chunk.js.map",
     "index.html": "/Mpr/index.html",
-    "precache-manifest.33a2d7ad8beacda503d0e26c74a4c78e.js": "/Mpr/precache-manifest.33a2d7ad8beacda503d0e26c74a4c78e.js",
+    "precache-manifest.eebfe457ca2806f9b15c94726f429a0c.js": "/Mpr/precache-manifest.eebfe457ca2806f9b15c94726f429a0c.js",
     "service-worker.js": "/Mpr/service-worker.js",
-    "static/css/main.de28ceff.chunk.css.map": "/Mpr/static/css/main.de28ceff.chunk.css.map",
-    "static/js/2.27c0160d.chunk.js.LICENSE.txt": "/Mpr/static/js/2.27c0160d.chunk.js.LICENSE.txt",
+    "static/css/main.592315a9.chunk.css.map": "/Mpr/static/css/main.592315a9.chunk.css.map",
+    "static/js/2.a06e532b.chunk.js.LICENSE.txt": "/Mpr/static/js/2.a06e532b.chunk.js.LICENSE.txt",
     "static/media/10.svg": "/Mpr/static/media/10.0c9395aa.svg",
     "static/media/200.svg": "/Mpr/static/media/200.ce041234.svg",
     "static/media/32000.svg": "/Mpr/static/media/32000.ec629f29.svg",
@@ -35,6 +35,8 @@
     "static/media/Home.scss": "/Mpr/static/media/rLetterG.b4ad2f74.svg",
     "static/media/interactiveBg.jpg": "/Mpr/static/media/interactiveBg.bfa8da22.jpg",
     "static/media/interactiveMpr.jpg": "/Mpr/static/media/interactiveMpr.d6dddfa1.jpg",
+    "static/media/logoDom.svg": "/Mpr/static/media/logoDom.9a98e5ee.svg",
+    "static/media/logoRak.svg": "/Mpr/static/media/logoRak.11c2b4be.svg",
     "static/media/mprLogo.svg": "/Mpr/static/media/mprLogo.85286d4c.svg",
     "static/media/photovoltaicsBg.jpg": "/Mpr/static/media/photovoltaicsBg.d21a15b8.jpg",
     "static/media/photovoltaicsMpr.jpg": "/Mpr/static/media/photovoltaicsMpr.ba5cd695.jpg",
@@ -54,8 +56,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f631d68c.js",
-    "static/js/2.27c0160d.chunk.js",
-    "static/css/main.de28ceff.chunk.css",
-    "static/js/main.7b7a88e3.chunk.js"
+    "static/js/2.a06e532b.chunk.js",
+    "static/css/main.592315a9.chunk.css",
+    "static/js/main.c14746fd.chunk.js"
   ]
 }
