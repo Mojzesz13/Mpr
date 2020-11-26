@@ -3,7 +3,7 @@ import './Contact.scss';
 import FormContact from '../../common/form/form';
 import RodoPolicy from '../../common/form/rodoPolicy';
 
-const Contact = () => {
+const Contact = ({ setTitle }) => {
   const [openPolicy, setOpenPolicy] = useState(false);
 
   const handleOpenPolicy = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
       id='contact'
       className={openPolicy ? 'contact-container active' : 'contact-container '}
     >
-      <FormContact handleOpenPolicy={handleOpenPolicy} />
+      <FormContact handleOpenPolicy={handleOpenPolicy} setTitle={setTitle} />
       <RodoPolicy visibleCondition={openPolicy} />
     </div>
   );

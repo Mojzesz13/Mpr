@@ -43,7 +43,7 @@ const Division = ({
   } else {
     logoCondition = (
       <div className='bottom-button-holder'>
-        <Button path='/contact' text='Kontakt' />
+        <Button path='/contact' text='Kontakt' setTitle={setTitle} />
       </div>
     );
   }
@@ -58,7 +58,7 @@ const Division = ({
               <p>{bottomText}</p>
             </div>
             <div className='top-button-holder'>
-              <Button path='/' text='POWRÓT' setTitle={setTitle} />
+              <Button path='/' text='STRONA GŁÓWNA' setTitle={setTitle} />
             </div>
           </div>
         </div>

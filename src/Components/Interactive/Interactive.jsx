@@ -8,13 +8,14 @@ const mprDivision =
 const interactiveDivision =
   'W swoim portfelu firm posiadamy również agencję marketingu internetowego. Zajmujemy się tworzeniem i optymalizacją stron internetowych, spacerami wirtualnymi, prowadzeniem mediów społecznościowych, tworzeniem kampanii Facebook Ads oraz tworzeniem identyfikacji wizualnej.';
 
-const Interactive = () => {
+const Interactive = ({ setTitle }) => {
   return (
     <Division
       imgOne={interactiveMpr}
       imgTwo={interactiveBg}
       topText={mprDivision}
       bottomText={interactiveDivision}
+      setTitle={setTitle}
     />
   );
 };

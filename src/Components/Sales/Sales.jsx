@@ -8,13 +8,14 @@ const mprDivision =
 const saleDivision =
   'Jako grupa MPR świadczymy również profesjonalne usługi szkoleniowe dla przedstawicieli handlowych, których już zatrudniasz w swojej firmie. Skontaktuj się z nami, a przedstawimy Ci najlepszą ofertę.';
 
-const Sales = () => {
+const Sales = ({setTitle}) => {
   return (
     <Division
       imgTwo={salesBg}
       topText={mprDivision}
       bottomText={saleDivision}
       imgOne={salesMpr}
+      setTitle={setTitle}
     />
   );
 };
