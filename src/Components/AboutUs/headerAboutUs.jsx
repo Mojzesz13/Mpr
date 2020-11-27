@@ -25,14 +25,13 @@ const HeaderAboutUs = ({
         <div className='btn-section'>
           <Button
             path='/'
-            text='Strona główna '
+            text='STONA GŁÓWNA'
             width='12rem'
             setTitle={setTitle}
           />
         </div>
       </div>
       <div className='box-section second-box'>{aboutUsText}</div>
-      {/* <div className='box-section third-box' /> */}
     </div>
   );
 };

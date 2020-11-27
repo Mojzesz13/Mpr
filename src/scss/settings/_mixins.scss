@@ -96,28 +96,3 @@
     rgba(255, 255, 255, 0) 95%
   );
 }
-
-// @mixin movingBackground() {
-//   position: absolute;
-//   content: '';
-//   top: calc(-1 * 3px);
-//   left: calc(-1 * 3px);
-//   z-index: 1;
-//   width: calc(100% + 6px);
-//   height: calc(100% + 6px);
-//   background: linear-gradient(
-//     60deg,
-//     hsl(0, 0%, 100%),
-//     hsl(49, 89%, 50%),
-//     hsl(0, 0%, 100%),
-//     hsl(49, 89%, 50%)
-//   );
-//   background-size: 300% 300%;
-//   background-position: 0 50%;
-//   animation: moveGradient 4s alternate infinite;
-// }
-// @keyframes moveGradient {
-//   50% {
-//     background-position: 100% 50%;
-//   }
-// }
