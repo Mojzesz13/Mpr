@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Mpr/static/css/main.91060fbf.chunk.css",
-    "main.js": "/Mpr/static/js/main.c14746fd.chunk.js",
-    "main.js.map": "/Mpr/static/js/main.c14746fd.chunk.js.map",
+    "main.css": "/Mpr/static/css/main.024a5f30.chunk.css",
+    "main.js": "/Mpr/static/js/main.2c968d2c.chunk.js",
+    "main.js.map": "/Mpr/static/js/main.2c968d2c.chunk.js.map",
     "runtime-main.js": "/Mpr/static/js/runtime-main.f631d68c.js",
     "runtime-main.js.map": "/Mpr/static/js/runtime-main.f631d68c.js.map",
     "static/js/2.a06e532b.chunk.js": "/Mpr/static/js/2.a06e532b.chunk.js",
     "static/js/2.a06e532b.chunk.js.map": "/Mpr/static/js/2.a06e532b.chunk.js.map",
     "index.html": "/Mpr/index.html",
-    "precache-manifest.a46f1d36aa9c54ed99229063697ba328.js": "/Mpr/precache-manifest.a46f1d36aa9c54ed99229063697ba328.js",
+    "precache-manifest.a978e12785d43d5c6d9b712daa74fe37.js": "/Mpr/precache-manifest.a978e12785d43d5c6d9b712daa74fe37.js",
     "service-worker.js": "/Mpr/service-worker.js",
-    "static/css/main.91060fbf.chunk.css.map": "/Mpr/static/css/main.91060fbf.chunk.css.map",
+    "static/css/main.024a5f30.chunk.css.map": "/Mpr/static/css/main.024a5f30.chunk.css.map",
     "static/js/2.a06e532b.chunk.js.LICENSE.txt": "/Mpr/static/js/2.a06e532b.chunk.js.LICENSE.txt",
     "static/media/10.svg": "/Mpr/static/media/10.0c9395aa.svg",
     "static/media/200.svg": "/Mpr/static/media/200.ce041234.svg",
@@ -23,9 +23,9 @@
     "static/media/aboutUsFirstA.jpg": "/Mpr/static/media/aboutUsFirstA.a1b0c699.jpg",
     "static/media/aboutUsFirstB.jpg": "/Mpr/static/media/aboutUsFirstB.645c9b33.jpg",
     "static/media/aboutUsFourth.jpg": "/Mpr/static/media/aboutUsFourth.da734069.jpg",
-    "static/media/AboutUs.scss": "/Mpr/static/media/aboutUsTextB.e8f9967f.png",
     "static/media/aboutUsSeventh.jpg": "/Mpr/static/media/aboutUsSeventh.d9f24085.jpg",
     "static/media/aboutUsSix.jpg": "/Mpr/static/media/aboutUsSix.a93e0ea0.jpg",
+    "static/media/AboutUs.scss": "/Mpr/static/media/aboutUsTextB.e8f9967f.png",
     "static/media/aboutUsThird.jpg": "/Mpr/static/media/aboutUsThird.41042ddb.jpg",
     "static/media/charityBg.jpg": "/Mpr/static/media/charityBg.e70c52d5.jpg",
     "static/media/charityMpr.jpg": "/Mpr/static/media/charityMpr.8916c729.jpg",
@@ -57,7 +57,7 @@
   "entrypoints": [
     "static/js/runtime-main.f631d68c.js",
     "static/js/2.a06e532b.chunk.js",
-    "static/css/main.91060fbf.chunk.css",
-    "static/js/main.c14746fd.chunk.js"
+    "static/css/main.024a5f30.chunk.css",
+    "static/js/main.2c968d2c.chunk.js"
   ]
 }
