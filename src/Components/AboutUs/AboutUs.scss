@@ -81,7 +81,7 @@
       .first-a {
         background-image: url('../../assets/aboutUsTextA.png');
         opacity: 0;
-        @include letterMove(1.5s, 0rem, 24rem, 1, 0);
+        @include letterMove(1.5s, 0, 24rem, 1, 0);
       }
       .first-b {
         background-image: url('../../assets/aboutUsTextB.png');
@@ -180,274 +180,80 @@
 }
 
 @include desktopTwo {
-  // .about-us-container {
-  //   height: 100rem;
-  //   .main-section {
-  //     padding: 2rem 0 0 2rem;
-  //     .box-section {
-  //       width: 27rem;
-  //       height: 27rem;
-  //     }
-  //     .letter-section {
-  //       .letter-holder {
-  //         width: 15rem;
-  //         height: 4rem;
-  //       }
-  //     }
-  //     .first-box:hover {
-  //       .letter-section {
-  //         .first-a {
-  //           @include letterMove(1.5s, 0rem, 27rem, 1, 0);
-  //         }
-  //         .first-b {
-  //           @include letterMove(1.5s, 0, 27rem, 0, 1);
-  //         }
-  //       }
-  //     }
-  //     .about-us-content {
-  //       .content-box {
-  //         .text-box {
-  //           .text-holder {
-  //             font-size: 1.4rem;
-  //             line-height: 1.6rem;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .header-about-us {
-  //     .second-box {
-  //       line-height: 2.2rem;
-  //       font-size: 1.4rem;
-  //     }
-  //     .btn-section {
-  //       left: 5rem;
-  //     }
-  //   }
-  //   .slogan-container {
-  //     h1 {
-  //       padding-left: 3rem;
-  //     }
-  //   }
-  // }
-}
-
-@include desktopThree {
-//   .about-us-container {
-//     height: 80rem;
-//     .main-section {
-//       .box-section {
-//         width: 21rem;
-//         height: 21rem;
-      }
-
-//       .first-box:hover {
-//         .letter-section {
-//           top: -3rem;
-//           .first-a {
-//             @include letterMove(1.5s, 0rem, 15rem, 1, 0);
-//           }
-//           .first-b {
-//             @include letterMove(1.5s, 0, 15rem, 0, 1);
-//           }
-//         }
-//       }
-//       .slogan-container {
-//         font-size: 2.5rem;
-//         h1 {
-//           padding-left: 4.5rem;
-//         }
-//       }
-//       .about-us-content {
-//         .content-box {
-//           .text-box {
-//             .text-holder {
-//               p {
-//                 font-size: 1.5rem;
-//                 line-height: 1.8rem;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .header-about-us {
-//       .second-box {
-//         font-size: 1.1rem;
-//         line-height: 1.8rem;
-//       }
-//       .letter-section {
-//         .letter-holder {
-//           width: 15rem;
-//           height: 4rem;
-//         }
-//       }
-//       .btn-section {
-//         display: none;
-//         position: absolute;
-//         top: 15rem;
-//         left: 3.5rem;
-//       }
-//     }
-//   }
-// }
-
-// @include tabletMax {
-//   .about-us-container {
-//     height: 65rem;
-//     padding-top: 3rem;
-//     .main-section {
-//       padding: 0;
-//       .box-section {
-//         width: 16.5rem;
-//         height: 16.5rem;
-//       }
-
-//       .first-box:hover {
-//         .letter-section {
-//           .first-a {
-//             @include letterMove(1.5s, 0rem, 9.5rem, 1, 0);
-//           }
-//           .first-b {
-//             @include letterMove(1.5s, 0, 9.5rem, 0, 1);
-//           }
-//         }
-//       }
-//       .about-us-content {
-//         .content-box {
-//           .text-box {
-//             .text-holder {
-//               p {
-//                 font-size: 1rem;
-//                 line-height: 1.5rem;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .header-about-us {
-//       .second-box {
-//         font-size: 1rem;
-//         line-height: 1.2rem;
-//         text-align: left;
-//       }
-//       .btn-section {
-//         top: 11rem;
-//         left: 2.5rem;
-//       }
-//     }
-//     .slogan-container {
-//       h1 {
-//         padding-left: 1.5rem;
-//       }
-//     }
-//   }
-// }
-
-@include tabletMin {
-  // .about-us-container {
-  //   height: 55rem;
-  //   .main-section {
-  //     .box-section {
-  //       width: 13rem;
-  //       height: 13rem;
-  //     }
-
-  //     .slogan-container {
-  //       font-size: 2.5rem;
-  //       h1 {
-  //         padding-left: 1rem;
-  //       }
-  //     }
-  //     .about-us-content {
-  //       .content-box {
-  //         .text-box {
-  //           .text-holder {
-  //             p {
-  //               font-size: 1rem;
-  //               line-height: 1.5rem;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .header-about-us {
-  //     .second-box {
-  //       font-size: 0.65rem;
-  //       text-align: left;
-  //     }
-  //     .letter-section {
-  //       .letter-holder {
-  //         width: 12rem;
-  //       }
-  //     }
-  //     .btn-section {
-  //       top: 8rem;
-  //       left: 0.5rem;
-  //     }
-  //   }
-  //   .slogan-container {
-  //     h1 {
-  //       padding-left: 2rem;
-  //     }
-  //   }
-  // }
-}
-
-@include mobile {
   .about-us-container {
+    height: 92rem;
+    padding-top: 1rem;
     .main-section {
       padding: 0;
     }
     .box-section {
-      width: 31rem;
-      height: 31rem;
-      img {
-    
-      }
+      width: 27rem;
+      height: 27rem;
     }
     .header-about-us {
       .letter-section {
-
         .letter-holder {
-  
-        }
-        .first-a {
-  
-        }
-        .first-b {
-
+          width: 15rem;
+          height: 4rem;
         }
       }
       .btn-section {
-   
+        left: 7.5rem;
       }
       .second-box {
-
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        p {
+          width: 95%;
+        }
       }
     }
     .first-box:hover {
-      .btn-section {
-     
-      }
       .letter-section {
-
+        .first-a {
+          @include letterMove(1.5s, 0, 23rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 23rem, 0, 1);
+        }
       }
     }
     .slogan-container {
- 
       h1 {
-     
+        padding-left: 1.5rem;
       }
+    }
+  }
+}
+@include desktopThree {
+  .about-us-container {
+    height: 73rem;
+    .box-section {
+      width: 21rem;
+      height: 21rem;
+    }
+    .header-about-us {
+      .letter-section {
+        @include letterMove(1.5s, 0, 17rem, 1, 0);
+      }
+      .first-b {
+        @include letterMove(1.5s, 0, 17rem, 0, 1);
+      }
+      .second-box {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+    .slogan-container {
+      font-size: 2.5rem;
     }
     .about-us-content {
       .content-box {
-     
         .text-box {
           .text-holder {
             p {
+              font-size: 1.5rem;
+              line-height: 1.8rem;
             }
           }
         }
@@ -456,75 +262,151 @@
   }
 }
 
-// @include mobile {
-//   .about-us-container {
-//     height: 185em;
+@include tabletMin {
+  .about-us-container {
+    height: 55rem;
+    .box-section {
+      width: 13rem;
+      height: 13rem;
+    }
+    .header-about-us {
+      .letter-section {
+        .letter-holder {
+          width: 12rem;
+          height: 4rem;
+        }
+      }
+      .letter-section {
+        @include letterMove(1.5s, 0, 9rem, 1, 0);
+      }
+      .first-b {
+        @include letterMove(1.5s, 0, 9rem, 0, 1);
+      }
+      .second-box {
+        font-size: 0.7rem;
+        line-height: 1.1rem;
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        .first-a {
+          @include letterMove(1.5s, 0, 9rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 9rem, 0, 1);
+        }
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-//     .header-about-us {
-//       &:nth-child(1) {
-//         flex-direction: column;
-//         .header-about-us {
-//           left: 25%;
-//         }
-//       }
-//       .box-section {
-//         width: 23rem;
-//         height: 23rem;
-//       }
+@include mobile {
+  .about-us-container {
+    height: 265rem;
+    .box-section {
+      width: 30rem;
+      height: 30rem;
+      margin: 0 auto;
+    }
+    .first-box {
+      margin-top: 3rem;
+    }
 
-//       .slogan-container {
-//         font-size: 1.1rem;
-//         h1 {
-//           padding-left: 1rem;
-//         }
-//       }
-//     }
-//   }
-// }
-// @include mobileMin {
-//   .about-us-container {
-//     height: 210em;
-//     .main-section {
-//       .box-section {
-//         width: 23rem;
-//         height: 23rem;
-//       }
-//       .second-box {
-//         height: 25rem;
-//         background-color: khaki;
-//       }
-//       .first-box {
-//         margin-bottom: 1rem;
-//       }
-//       .slogan-container {
-//         margin: 1rem 0;
-//       }
-//       .about-us-content {
-//         .content-box {
-//           .text-box {
-//             .text-holder {
-//               p {
-//                 font-size: 1.5rem;
-//                 line-height: 1.5rem;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     .header-about-us {
-//       .letter-section {
-//         .letter-holder {
-//           width: 12rem;
-//         }
-//       }
-//       .btn-section {
-//         left: 0.6rem;
-//       }
-//       .second-box {
-//         font-size: 1rem;
-//         line-height: 1.3rem;
-//       }
-//     }
-//   }
-// }
+    .header-about-us {
+      &:nth-child(1) {
+        flex-direction: column;
+        .letter-section {
+          .letter-holder {
+            width: 25rem;
+            height: 6rem;
+          }
+        }
+        .btn-section {
+          left: 10rem;
+        }
+        .second-box {
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          p {
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        .first-a {
+          @include letterMove(1.5s, 0, 24rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 24rem, 0, 1);
+        }
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            p {
+              font-size: 2rem;
+              line-height: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobileMin {
+  .about-us-container {
+    height: 265rem;
+    .box-section {
+      width: 17rem;
+      height: 30rem;
+    }
+
+    .header-about-us {
+      &:nth-child(1) {
+        flex-direction: column;
+        .letter-section {
+          .letter-holder {
+            width: 10rem;
+            height: 3rem;
+          }
+        }
+        .btn-section {
+          left: 2.5rem;
+        }
+        .second-box {
+          font-size: 1rem;
+          line-height: 1.3rem;
+          p {
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        .first-a {
+          @include letterMove(1.5s, 0, 27rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 27rem, 0, 1);
+        }
+      }
+    }
+  }
+}

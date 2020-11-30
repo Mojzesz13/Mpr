@@ -17,7 +17,7 @@ const BodyAboutUs = ({ setTitle }) => {
       text: (
         <p>
           Organizacja sieci sprzedaży dla dostawców usług i klientów
-          korporacyjnych'
+          korporacyjnych
         </p>
       ),
       text2: 'test1',
@@ -46,7 +46,7 @@ const BodyAboutUs = ({ setTitle }) => {
       text: (
         <p>
           Działania związane z budowaniem marki oraz rozwojem Twojej firmy w
-          Internecie.'
+          Internecie.
         </p>
       ),
       text2: 'test4',
@@ -58,7 +58,7 @@ const BodyAboutUs = ({ setTitle }) => {
       text: (
         <p>
           Dostarczanie Twoich produktów lub usług do wybranej przez Ciebie grupy
-          docelowej.'
+          docelowej.
         </p>
       ),
       text2: 'test5',
