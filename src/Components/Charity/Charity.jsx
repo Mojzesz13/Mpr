@@ -10,7 +10,7 @@ const mprDivision =
 const fundraisinDivision =
   'Bez nowych darczyńców nie będziesz mógł zwiększać przychodów, ani rozwijać swojej fundacji, więc niezależnie od tego czy chcesz pozyskać darczyńców indywidualnych czy biznesowych, możesz liczyć na naszą pomoc w tej kwestii.';
 
-const Charity = ({ setTitle }) => {
+const Charity = ({ setTitle, isTablet }) => {
   return (
     <Division
       imgOne={charityMpr}
@@ -18,10 +18,11 @@ const Charity = ({ setTitle }) => {
       topText={mprDivision}
       bottomText={fundraisinDivision}
       setTitle={setTitle}
+      isTablet={isTablet}
       logo={logoRak}
       logo2={logoDom}
-      linkTo='http://www.dbamyomlodych.pl/'
-      linkTo2='http://wzzr.pl/'
+      linkTo='http://wzzr.pl/'
+      linkTo2='http://www.dbamyomlodych.pl/'
     />
   );
 };

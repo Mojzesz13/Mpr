@@ -12,6 +12,7 @@ const Division = ({
   bottomText,
   linkTo,
   setTitle,
+  isTablet,
 }) => {
   const handleOnHover = () => {
     let parent = document.querySelector('.splitview'),
@@ -30,7 +31,11 @@ const Division = ({
   };
 
   return (
-    <div className='division-container' onMouseEnter={handleOnHover}>
+    <div
+      className='division-container'
+      onMouseEnter={isTablet ? null : handleOnHover}
+      style={isTablet ? { backgroundImage: `url(${imgTwo})` } : null}
+    >
       <div className='splitview skewed'>
         <div className='panel bottom'>
           <div className='content'>
@@ -51,7 +56,9 @@ const Division = ({
         </div>
         <div className='panel top'>
           <div className='content'>
-            <img className='bg-img' src={imgTwo} alt='partnerBg' />
+            {isTablet ? null : (
+              <img className='bg-img' src={imgTwo} alt='partnerBg' />
+            )}
             <div className='text-holder'>
               <p>{topText}</p>
             </div>
@@ -65,7 +72,9 @@ const Division = ({
               />
             </div>
           </div>
-        </div>
+       
+       
+       </div>
         <div className='handle' />
       </div>
     </div>

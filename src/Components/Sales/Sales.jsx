@@ -1,5 +1,5 @@
 import React from 'react';
-import Division from '../../common/division';
+import Division2 from '../../common/division2';
 import salesBg from '../../assets/saleBg.jpg';
 import salesMpr from '../../assets/saleMpr.jpg';
 
@@ -8,14 +8,15 @@ const mprDivision =
 const saleDivision =
   'Jako grupa MPR świadczymy również profesjonalne usługi szkoleniowe dla przedstawicieli handlowych, których już zatrudniasz w swojej firmie. Skontaktuj się z nami, a przedstawimy Ci najlepszą ofertę.';
 
-const Sales = ({setTitle}) => {
+const Sales = ({ setTitle, isTablet }) => {
   return (
-    <Division
+    <Division2
       imgTwo={salesBg}
       topText={mprDivision}
       bottomText={saleDivision}
       imgOne={salesMpr}
       setTitle={setTitle}
+      isTablet={isTablet}
     />
   );
 };

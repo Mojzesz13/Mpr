@@ -62,10 +62,10 @@ const Main = () => {
               <Contact setTitle={setTitle} />
             </Route>
             <Route path='/sales'>
-              <Sales setTitle={setTitle} />
+              <Sales setTitle={setTitle} isTablet={isTablet} />
             </Route>
             <Route path='/interactive'>
-              <Interactive setTitle={setTitle} />
+              <Interactive setTitle={setTitle} isTablet={isTablet} />
             </Route>
             <Route path='/energetic'>
               <Energetic setTitle={setTitle} />
@@ -74,7 +74,7 @@ const Main = () => {
               <Photovoltaics setTitle={setTitle} />
             </Route>
             <Route path='/charity'>
-              <Charity setTitle={setTitle} />
+              <Charity setTitle={setTitle} isTablet={isTablet} />
             </Route>
             <Route path='/testimonial'>
               <Testimonial />
