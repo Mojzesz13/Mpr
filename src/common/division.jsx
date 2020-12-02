@@ -34,7 +34,6 @@ const Division = ({
     <div
       className='division-container'
       onMouseEnter={isTablet ? null : handleOnHover}
-      style={isTablet ? { backgroundImage: `url(${imgTwo})` } : null}
     >
       <div className='splitview skewed'>
         <div className='panel bottom'>
@@ -56,9 +55,7 @@ const Division = ({
         </div>
         <div className='panel top'>
           <div className='content'>
-            {isTablet ? null : (
-              <img className='bg-img' src={imgTwo} alt='partnerBg' />
-            )}
+            <img className='bg-img' src={imgTwo} alt='partnerBg' />
             <div className='text-holder'>
               <p>{topText}</p>
             </div>
@@ -72,9 +69,7 @@ const Division = ({
               />
             </div>
           </div>
-       
-       
-       </div>
+        </div>
         <div className='handle' />
       </div>
     </div>

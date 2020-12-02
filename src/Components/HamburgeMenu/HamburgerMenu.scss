@@ -81,6 +81,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
   &:hover {
     color: $hoverColor;
+    text-decoration: none;
   }
 }
 
@@ -108,6 +109,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     text-transform: capitalize;
     &:hover {
       color: $hoverColor;
+      text-decoration: none;
     }
   }
 }
