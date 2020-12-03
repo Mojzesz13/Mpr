@@ -31,10 +31,15 @@
 
 @include mobile {
   .footer-conainer {
-    height: 20rem;
+    height: 25rem;
+    padding-top: 1rem;
     flex-direction: column;
-    .column {
+    z-index: 100;
+    .footer-column {
       width: 100%;
+      p {
+        width: 100%;
+      }
     }
   }
 }

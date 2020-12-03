@@ -5,20 +5,20 @@
   .dropdown-menu {
     width: 13rem;
     position: absolute;
-    top: 3rem;
+    top: 2.5rem;
+    left: 16rem;
     display: inline-block;
     list-style: none;
     text-align: start;
     z-index: 200;
+    background-color: black;
     .dropdown-link {
       width: 100%;
       padding: 1.5rem;
       display: block;
-      background-color: black;
       color: $fontColor;
       z-index: 300;
       text-decoration: none;
-      text-transform: capitalize;
       &:hover {
         color: $hoverColor;
       }
