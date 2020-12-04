@@ -218,3 +218,17 @@
     }
   }
 }
+
+@include mobile {
+  .division-container {
+    .splitview {
+      .panel {
+        .content {
+          .text-holder {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}

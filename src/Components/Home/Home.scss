@@ -356,7 +356,7 @@
 
 @include mobile {
   .home-container {
-    height: 120rem;
+    height: 140rem;
     flex-direction: column;
     .main-section {
       width: 100%;
@@ -381,11 +381,11 @@
 
 @include mobileMin {
   .home-container {
-    margin-top: 4.5rem;
     .main-section {
       .text-section {
         p {
           padding: 0 2rem;
+          font-size: 1.05rem;
         }
       }
     }

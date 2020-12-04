@@ -14,7 +14,6 @@ const Division2 = ({
   bottomText,
   linkTo,
   setTitle,
-  isTablet,
 }) => {
   return (
     <Carousel>

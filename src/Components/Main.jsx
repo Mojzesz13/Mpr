@@ -41,8 +41,8 @@ const Main = () => {
       ) : (
         <HamburgerMenu setTitle={setTitle} />
       )}
+      <Logo title={title} isTablet={isTablet} setTitle={setTitle} />
       <div id='outer-container'>
-        <Logo title={title} setTitle={setTitle} />
         <div id='page-wrap'>
           <Switch>
             <Route exact path='/'>

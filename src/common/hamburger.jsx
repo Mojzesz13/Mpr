@@ -3,7 +3,7 @@ import './hamburger.scss';
 
 const Hamburger = ({ click }) => {
   return (
-    <div className={click ? 'hamburger-menu open' : 'hamburger-menu '}>
+    <div className={click ? 'hamburger-menu open' : 'hamburger-menu'}>
       <div className='burger-btn' />
     </div>
   );

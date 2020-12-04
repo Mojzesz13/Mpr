@@ -68,3 +68,42 @@
     top: -35rem;
   }
 }
+
+@include tabletMax {
+  .img-holder {
+    height: 70rem;
+    img {
+    }
+  }
+}
+@include tabletMin {
+  .img-holder {
+    height: 75rem;
+  }
+  .carousel-caption {
+    .text-holder {
+      left: 10%;
+      width: 80%;
+    }
+  }
+}
+
+@include mobile {
+  .img-holder {
+    height: 80rem;
+  }
+  .carousel-caption {
+    .text-holder {
+      animation: moveUpMobile 3s forwards;
+    }
+  }
+}
+
+@keyframes moveUpMobile {
+  0% {
+    top: -30rem;
+  }
+  100% {
+    top: -50rem;
+  }
+}
