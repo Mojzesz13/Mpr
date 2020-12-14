@@ -70,6 +70,7 @@ const HamburgerMenu = ({ setTitle }) => {
                 className={item.cName}
                 to={item.path}
                 onClick={() => handleSetTitle(item.title)}
+                // data-heading={item.title}
               >
                 {item.title}
               </Link>

@@ -1,5 +1,5 @@
 @import '../../scss/settings/colors';
-// @import '../../scss/settings/font';
+@import '../../scss/settings/mixins';
 
 .bm-burger-button {
   width: 2rem;
@@ -14,22 +14,17 @@
     overflow: hidden;
   }
 }
-
 .bm-burger-button:hover {
   span {
     background-color: $hoverColor;
   }
 }
-
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   width: 3rem !important;
   height: 2rem !important;
   right: 0.1rem !important;
   top: 0.05 !important;
 }
-
-/* Color/shape of close button cross */
 .bm-cross {
   background-color: $decorationColor;
   width: 2.2rem !important;
@@ -37,38 +32,23 @@
   top: 0.5rem;
   height: 0.1rem !important;
 }
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
 }
-
-/* General sidebar styles */
 .bm-menu {
   background: black;
   padding: 2.5em 1.5em 0;
-  // font-size: 0.6rem;
   overflow: hidden !important;
-  // display: flex !important;
-  // justify-content: flex-end !important;
 }
-
-/* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
 }
-
-/* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
   text-transform: uppercase;
 }
-/* Individual item */
 .bm-item {
   display: inline-block;
   text-align: right;
@@ -80,17 +60,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
     outline: 0;
   }
   &:hover {
+    // @include goldHover();
     color: $hoverColor;
     text-decoration: none;
   }
 }
-
-/* Styling of overlay */
 .bm-overlay {
   background: rgba(50, 89, 62, 0.8);
   cursor: url('../../assets/tap.png'), auto;
 }
-
 .division-list {
   width: 15rem;
   height: 15rem;

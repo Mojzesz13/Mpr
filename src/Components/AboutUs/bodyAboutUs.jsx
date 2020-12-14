@@ -23,6 +23,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test1',
       src: ThirdImg,
       alt: 'MprDivisionImg',
+      path: '/sales',
+      buttonText: 'Sprzedażowa',
     },
     {
       id: 2,
@@ -32,6 +34,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test2',
       src: FourthImg,
       alt: 'MprDivisionImg',
+      path: '/charity',
+      buttonText: 'Charytatywna',
     },
 
     {
@@ -40,6 +44,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test3',
       src: FifthImg,
       alt: 'MprDivisionImg',
+      path: '/interactive',
+      buttonText: 'Interaktywna',
     },
     {
       id: 4,
@@ -52,6 +58,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test4',
       src: SixImg,
       alt: 'MprDivisionImg',
+      path: '/interactive',
+      buttonText: 'Interaktywna',
     },
     {
       id: 5,
@@ -64,6 +72,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test5',
       src: SeventhImg,
       alt: 'MprDivisionImg',
+      path: '/sales',
+      buttonText: 'Sprzedażowa',
     },
     {
       id: 6,
@@ -76,6 +86,8 @@ const BodyAboutUs = ({ setTitle }) => {
       text2: 'test6',
       src: EightImg,
       alt: 'MprDivisionImg',
+      path: '/constact',
+      buttonText: 'Kontakt',
     },
   ];
 
@@ -94,7 +106,18 @@ const BodyAboutUs = ({ setTitle }) => {
           <img src={obj.src} alt={obj.alt} />
           <div className='text-box'>
             <div className={click ? 'text-holder activeText' : 'text-holder'}>
-              {click ? <p className='secondText'>{obj.text2}</p> : obj.text}
+              {click ? (
+                <div className='secondText'>
+                  <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>
+                  <Button
+                    text={obj.buttonText}
+                    path={obj.path}
+                    setTitle={setTitle}
+                  />
+                </div>
+              ) : (
+                obj.text
+              )}
             </div>
           </div>
         </div>

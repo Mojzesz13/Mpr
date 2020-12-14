@@ -1,8 +1,10 @@
 import React from 'react';
 import './division.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
 import ButtonDivision from './buttonDivision';
 
-const Division = ({
+const Division2 = ({
   imgOne,
   imgTwo,
   logo,
@@ -12,68 +14,51 @@ const Division = ({
   bottomText,
   linkTo,
   setTitle,
-  isTablet,
 }) => {
-  const handleOnHover = () => {
-    let parent = document.querySelector('.splitview'),
-      topPanel = parent.querySelector('.top'),
-      handle = parent.querySelector('.handle'),
-      skewHack = 0,
-      delta = 0;
-    if (parent.className.indexOf('skewed') !== -1) {
-      skewHack = 1000;
-    }
-    parent.addEventListener('mousemove', function (event) {
-      delta = (event.clientX - window.innerWidth / 2) * 1.3;
-      handle.style.left = event.clientX + delta + 'px';
-      topPanel.style.width = event.clientX + skewHack + delta + 'px';
-    });
-  };
-
   return (
-    <div
-      className='division-container'
-      onMouseEnter={isTablet ? null : handleOnHover}
-    >
-      <div className='splitview skewed'>
-        <div className='panel bottom'>
-          <div className='content'>
-            <img className='bg-img' src={imgOne} alt='mprBg' />
-            <div className='text-holder'>
-              <p>{bottomText}</p>
-            </div>
-            <div className='top-btn'>
-              <ButtonDivision
-                logo={logo2}
-                linkTo={linkTo2}
-                path='/'
-                text='STRONA GŁÓWNA'
-                setTitle={setTitle}
-              />
-            </div>
-          </div>
+    <Carousel>
+      <Carousel.Item interval={5000}>
+        <div className='img-holder'>
+          <img className='d-block w-100' src={imgOne} alt='First slide' />
         </div>
-        <div className='panel top'>
-          <div className='content'>
-            <img className='bg-img' src={imgTwo} alt='partnerBg' />
-            <div className='text-holder'>
-              <p>{topText}</p>
-            </div>
-            <div className='bottom-btn'>
-              <ButtonDivision
-                logo={logo}
-                linkTo={linkTo}
-                path='/contact'
-                text='Kontakt'
-                setTitle={setTitle}
-              />
-            </div>
+        <Carousel.Caption>
+          <div className='text-holder'>
+            <p>{bottomText}</p>
           </div>
+          <div className='top-btn'>
+            <ButtonDivision
+              logo={logo}
+              linkTo={linkTo}
+              path='/contact'
+              text='KONTAKT'
+              setTitle={setTitle}
+              width='15rem'
+            />
+          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={5000}>
+        <div className='img-holder'>
+          <img className='d-block w-100' src={imgTwo} alt='First slide' />
         </div>
-        <div className='handle' />
-      </div>
-    </div>
+        <Carousel.Caption>
+          <div className='text-holder'>
+            <p>{topText}</p>
+          </div>
+          <div className='top-btn'>
+            <ButtonDivision
+              logo={logo2}
+              linkTo={linkTo2}
+              path='/'
+              text='STRONA GŁÓWNA'
+              setTitle={setTitle}
+              width='15rem'
+            />
+          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 };
 
-export default Division;
+export default Division2;

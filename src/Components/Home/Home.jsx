@@ -86,8 +86,8 @@ const Home = ({ setTitle, isTablet }) => {
       srcB: thirdSectionImgB,
       alt: 'thirdSectionImg',
       text:
-        '  Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie wspierają naszych klientów w osiąganiu celów i każdego dnia z entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.',
-      buttonTitle: 'Testimoniale',
+        '  Nasz zespół tworzą wyspecjalizowani doradcy. To oni skutecznie wspierają klientów w osiąganiu celów i każdego dnia z entuzjazmem i pełnym zaangażowaniem podejmują biznesowe wyzwania.',
+      buttonTitle: 'Liczby',
       path: '/testimonial',
       cNameA: 'letter-holder third-a',
       cNameB: 'letter-holder third-b',

@@ -27,7 +27,7 @@
         width: 23rem;
         height: 23rem;
         position: absolute;
-        left: 13rem;
+        left: 17rem;
         top: 28rem;
         background-size: contain;
         background-repeat: no-repeat;
@@ -59,16 +59,16 @@
         opacity: 0;
       }
       .forth-a {
-        width: 20rem;
+        width: 90%;
         height: 6rem;
         top: 45rem;
-        left: 5rem;
+        left: 20%;
         background-image: url('../../assets/groupTextG.svg');
       }
       .forth-b {
-        width: 20rem;
+        width: 90%;
         height: 6rem;
-        left: 5rem;
+        left: 20%;
         background-image: url('../../assets/groupText.svg');
         opacity: 0;
       }
@@ -98,7 +98,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 15%;
+      bottom: 10%;
       opacity: 0;
     }
     &:hover {

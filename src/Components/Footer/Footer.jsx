@@ -14,9 +14,9 @@ class Footer extends Component {
           {/* <a href='https://www.facebook.com/pracowniamodyslubnejiwieczorowej'>
             <i className='fab fa-facebook-square fa-2x' />
           </a> */}
-          <p>tel. 111-222-555</p>
+          <p>tel. 575-009-210</p>
           <p>
-            <a href='mailto:mpr@gmail.com'>mpr@gmail.com</a>
+            <a href='mailto:biuro@mpr.com'>biuro@mpril.com</a>
           </p>
           <p>NIP: 8971811099</p>
         </div>

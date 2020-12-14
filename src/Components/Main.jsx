@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import './Main.scss';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import HamburgerMenu from './HamburgeMenu/HamburgerMenu';
+import Logo from './Logo/Logo';
+import Navbar from './Navigation/Navbar';
+import Footer from './Footer/Footer';
+import Contact from './Contact/Contact';
 import AboutUs from './AboutUs/AboutUs';
 import Sales from './Sales/Sales';
 import Charity from './Charity/Charity';
-import Energetic from './Energetic/Energetic';
-import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
-import Logo from './Logo/Logo';
 import Photovoltaics from './Photovoltaics/Photovoltaics';
 import Interactive from './Interactive/Interactive';
 import Tablet from './TabletView/Tablet';
 import Divisions from './Divisions/Divisions';
-import Navbar from './Navigation/Navbar';
 import Testimonial from './Testimonial/Testimonial';
 
 const Main = () => {
@@ -34,23 +32,36 @@ const Main = () => {
     return window.removeEventListener('resize', resize.bind(this));
   });
 
+  const isTabletConfig = {
+    tablet: {
+      navbar: <Navbar isTablet={isTablet} />,
+      homePath: <Tablet isTablet={isTablet} />,
+    },
+    desktop: {
+      navbar: <HamburgerMenu setTitle={setTitle} />,
+      homePath: <Home setTitle={setTitle} />,
+    },
+  };
+
+  const viewCondition = (condition) => {
+    if (condition) {
+      return 'tablet';
+    } else {
+      return 'desktop';
+    }
+  };
+
+  const { navbar, homePath } = isTabletConfig[viewCondition(isTablet)];
+
   return (
     <Router>
-      {isTablet ? (
-        <Navbar isTablet={isTablet} />
-      ) : (
-        <HamburgerMenu setTitle={setTitle} />
-      )}
+      {navbar}
       <Logo title={title} isTablet={isTablet} setTitle={setTitle} />
       <div id='outer-container'>
         <div id='page-wrap'>
           <Switch>
             <Route exact path='/'>
-              {isTablet ? (
-                <Tablet isTablet={isTablet} />
-              ) : (
-                <Home setTitle={setTitle} />
-              )}
+              {homePath}
             </Route>
             <Route path='/divisions'>
               <Divisions setTitle={setTitle} />
@@ -67,9 +78,9 @@ const Main = () => {
             <Route path='/interactive'>
               <Interactive setTitle={setTitle} isTablet={isTablet} />
             </Route>
-            <Route path='/energetic'>
+            {/* <Route path='/energetic'>
               <Energetic setTitle={setTitle} />
-            </Route>
+            </Route> */}
             <Route path='/photovoltaics'>
               <Photovoltaics setTitle={setTitle} />
             </Route>
