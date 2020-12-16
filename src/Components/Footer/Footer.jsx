@@ -16,7 +16,7 @@ class Footer extends Component {
           </a> */}
           <p>tel. 575-009-210</p>
           <p>
-            <a href='mailto:biuro@mpr.com'>biuro@mpril.com</a>
+            <a href='mailto:biuro@mpr.com'>biuro@mprgroup.com</a>
           </p>
           <p>NIP: 8971811099</p>
         </div>

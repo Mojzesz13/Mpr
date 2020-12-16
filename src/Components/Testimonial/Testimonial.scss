@@ -9,22 +9,16 @@
   background-repeat: no-repeat;
   .numbers-content {
     width: 100%;
-    padding-top: 10%;
+    padding-top: 5%;
     color: black;
     .numbers-holder {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       padding-top: 2rem;
-      align-items: flex-end;
-
-      img {
-        height: 3rem;
-        flex: 1;
-      }
+      align-items: center;
       .number {
         flex: 1;
-        font-size: 3rem;
         justify-self: flex-end;
         display: flex;
         justify-content: flex-end;
@@ -35,6 +29,36 @@
         align-items: center;
         margin-left: 2rem;
         font-size: 2rem;
+      }
+    }
+  }
+}
+
+@include tabletMax {
+  .testimonial-container {
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    .numbers-content {
+      padding-top: 0;
+      .numbers-holder {
+        .text {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .testimonial-container {
+    .numbers-content {
+      padding-top: 0;
+      .numbers-holder {
+        .text {
+          font-size: 1rem;
+        }
       }
     }
   }

@@ -1,0 +1,28 @@
+@import '../scss/settings/mixins';
+
+.flip-container {
+  width: 15rem;
+  height: 6rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .digit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include mobile {
+  .flip-container {
+    width: 5rem;
+    height: 3rem;
+    font-size: 2rem;
+    .digit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -9,7 +9,6 @@ import Contact from './Contact/Contact';
 import AboutUs from './AboutUs/AboutUs';
 import Sales from './Sales/Sales';
 import Charity from './Charity/Charity';
-import Photovoltaics from './Photovoltaics/Photovoltaics';
 import Interactive from './Interactive/Interactive';
 import Tablet from './TabletView/Tablet';
 import Divisions from './Divisions/Divisions';
@@ -77,9 +76,6 @@ const Main = () => {
             </Route>
             <Route path='/interactive'>
               <Interactive setTitle={setTitle} isTablet={isTablet} />
-            </Route>
-            <Route path='/photovoltaics'>
-              <Photovoltaics setTitle={setTitle} />
             </Route>
             <Route path='/charity'>
               <Charity setTitle={setTitle} isTablet={isTablet} />
