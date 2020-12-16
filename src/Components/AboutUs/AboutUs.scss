@@ -25,7 +25,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 2s;
+      transition: transform 6s;
     }
   }
   .header-about-us {
@@ -108,10 +108,15 @@
     .content-box {
       margin-bottom: 3rem;
       position: relative;
-      img {
-        opacity: 1;
+      border: 5px solid transparent;
+      &:hover {
+        @include goldHover;
       }
       .text-box {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 3s;
         .text-holder {
           width: 95%;
           height: 95%;
@@ -120,36 +125,64 @@
           left: 2.5%;
           display: flex;
           justify-content: center;
-          background-color: rgba(0, 0, 0, 0.8);
+          flex-direction: column;
           text-align: center;
           line-height: 2.5rem;
           align-items: center;
-          transform: scaleY(0);
-          transition: transform 0.5s;
-          z-index: 2;
-          cursor: pointer;
+          opacity: 0;
           p {
             width: 80%;
-            font-size: 2rem;
+            font-size: 1.5rem;
+            font-weight: 400;
             color: $fontColor;
           }
         }
       }
       &:hover {
-        img {
-          transform: scale(1.2);
-        }
         .text-box {
+          transform: scale(1.2);
           .text-holder {
-            transform: scaleY(1);
-            transition: 0.6s;
+            opacity: 1;
+            @include animationAppearing(0.8s);
+            animation-delay: 0;
+            background: rgba(10, 32, 12, 0.3);
           }
-          .activeText {
-            transform: rotateY(180deg);
-            .secondText {
-              transform: rotateY(-180deg);
-            }
-          }
+        }
+      }
+      .first {
+        background-image: url('../../assets/aboutUsSecond.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsSecondB.jpg');
+        }
+      }
+      .second {
+        background-image: url('../../assets/aboutUsFourth.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsFourthB.jpg');
+        }
+      }
+      .third {
+        background-image: url('../../assets/aboutUsFifth.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsFifthB.jpg');
+        }
+      }
+      .foruth {
+        background-image: url('../../assets/aboutUsSix.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsSixB.jpg');
+        }
+      }
+      .fifth {
+        background-image: url('../../assets/aboutUsSeventh.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsSeventhB.jpg');
+        }
+      }
+      .six {
+        background-image: url('../../assets/aboutUsThird.jpg');
+        &:hover {
+          background-image: url('../../assets/aboutUsThirdB.jpg');
         }
       }
     }

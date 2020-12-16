@@ -98,30 +98,28 @@
 }
 
 @mixin goldHover() {
-  text-decoration: none;
   background: linear-gradient(
-    to bottom,
-    #cfc09f 22%,
-    #634f2c 24%,
-    #cfc09f 26%,
-    #cfc09f 27%,
-    #ffecb3 40%,
-    #3a2c0f 78%
+    -45deg,
+    #f4eaca,
+    #cfc09f,
+    #e4cc7d,
+    #d1c953,
+    #887022,
+    #292109
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #fff;
-  text-transform: uppercase;
-  &:after {
-    background: none;
-    content: attr(data-heading);
-    left: 0;
-    top: 0;
-    z-index: -1;
-    text-decoration: none;
-    position: absolute;
-    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
-      5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 10% 40%;
+  }
+  50% {
+    background-position: 90% 40%;
+  }
+  100% {
+    background-position: 10% 40%;
   }
 }
 

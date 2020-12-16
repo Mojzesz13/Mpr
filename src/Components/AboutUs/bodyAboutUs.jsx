@@ -1,10 +1,4 @@
 import React from 'react';
-import ThirdImg from '../../assets/aboutUsThird.jpg';
-import FourthImg from '../../assets/aboutUsFourth.jpg';
-import FifthImg from '../../assets/aboutUsFifth.jpg';
-import SixImg from '../../assets/aboutUsSix.jpg';
-import SeventhImg from '../../assets/aboutUsSeventh.jpg';
-import EightImg from '../../assets/aboutUsThird.jpg';
 import { useState } from 'react';
 import Button from '../../common/button';
 
@@ -20,32 +14,28 @@ const BodyAboutUs = ({ setTitle }) => {
           korporacyjnych
         </p>
       ),
-      text2: 'test1',
-      src: ThirdImg,
-      alt: 'MprDivisionImg',
+
       path: '/sales',
       buttonText: 'Sprzedażowa',
+      cName: 'text-box first',
     },
     {
       id: 2,
       text: (
         <p>Fundraising {<br />} dla fundacji i organizacji pozarządowych'</p>
       ),
-      text2: 'test2',
-      src: FourthImg,
-      alt: 'MprDivisionImg',
+
       path: '/charity',
       buttonText: 'Charytatywna',
+      cName: 'text-box second',
     },
 
     {
       id: 3,
       text: <p>Kreowanie wizerunku i tworzenie materiałów promocyjnych',</p>,
-      text2: 'test3',
-      src: FifthImg,
-      alt: 'MprDivisionImg',
       path: '/interactive',
       buttonText: 'Interaktywna',
+      cName: 'text-box third',
     },
     {
       id: 4,
@@ -55,11 +45,10 @@ const BodyAboutUs = ({ setTitle }) => {
           Internecie.
         </p>
       ),
-      text2: 'test4',
-      src: SixImg,
-      alt: 'MprDivisionImg',
+
       path: '/interactive',
       buttonText: 'Interaktywna',
+      cName: 'text-box foruth',
     },
     {
       id: 5,
@@ -69,25 +58,20 @@ const BodyAboutUs = ({ setTitle }) => {
           docelowej.
         </p>
       ),
-      text2: 'test5',
-      src: SeventhImg,
-      alt: 'MprDivisionImg',
       path: '/sales',
       buttonText: 'Sprzedażowa',
+      cName: 'text-box fifth',
     },
     {
       id: 6,
       text: (
         <div>
-          <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>
-          <Button text='KONTAKT' path='/contact' setTitle={setTitle} />
+          <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>s
         </div>
       ),
-      text2: 'test6',
-      src: EightImg,
-      alt: 'MprDivisionImg',
       path: '/constact',
       buttonText: 'Kontakt',
+      cName: 'text-box six',
     },
   ];
 
@@ -101,23 +85,16 @@ const BodyAboutUs = ({ setTitle }) => {
         <div
           key={obj.id}
           onClick={() => handleClick()}
-          className='content-box box-section'
+          className='content-box box-section '
         >
-          <img src={obj.src} alt={obj.alt} />
-          <div className='text-box'>
-            <div className={click ? 'text-holder activeText' : 'text-holder'}>
-              {click ? (
-                <div className='secondText'>
-                  <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>
-                  <Button
-                    text={obj.buttonText}
-                    path={obj.path}
-                    setTitle={setTitle}
-                  />
-                </div>
-              ) : (
-                obj.text
-              )}
+          <div className={obj.cName}>
+            <div className='text-holder'>
+              {obj.text}
+              <Button
+                text={obj.buttonText}
+                path={obj.path}
+                setTitle={setTitle}
+              />
             </div>
           </div>
         </div>
@@ -127,3 +104,31 @@ const BodyAboutUs = ({ setTitle }) => {
 };
 
 export default BodyAboutUs;
+
+//  <div className='about-us-content main-section'>
+//    {dataSection.map((obj) => (
+//      <div
+//        key={obj.id}
+//        onClick={() => handleClick()}
+//        className='content-box box-section'
+//      >
+//        <img src={obj.src} alt={obj.alt} />
+//        <div className='text-box'>
+//          <div className={click ? 'text-holder activeText' : 'text-holder'}>
+//            {click ? (
+//              <div className='secondText'>
+//                <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>
+//                <Button
+//                  text={obj.buttonText}
+//                  path={obj.path}
+//                  setTitle={setTitle}
+//                />
+//              </div>
+//            ) : (
+//              obj.text
+//            )}
+//          </div>
+//        </div>
+//      </div>
+//    ))}
+//  </div>;

@@ -1,11 +1,11 @@
 import React from 'react';
 import './main.scss';
 import Main from './Components/Main';
-import Counter from './common/counter';
+// import Counter2 from './common/counter2';
 
 function App() {
-  // return <Main />;
-  return <Counter />;
+  // return <Counter2 />;
+  return <Main />;
 }
 
 export default App;

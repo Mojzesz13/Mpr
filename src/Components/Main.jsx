@@ -78,9 +78,6 @@ const Main = () => {
             <Route path='/interactive'>
               <Interactive setTitle={setTitle} isTablet={isTablet} />
             </Route>
-            {/* <Route path='/energetic'>
-              <Energetic setTitle={setTitle} />
-            </Route> */}
             <Route path='/photovoltaics'>
               <Photovoltaics setTitle={setTitle} />
             </Route>
