@@ -295,12 +295,58 @@
   }
 }
 
+@include tabletMax {
+  .about-us-container {
+    height: 115rem;
+    .box-section {
+      width: 25rem;
+      height: 25rem;
+    }
+    .header-about-us {
+      .letter-section {
+        @include letterMove(1.5s, 0, 21rem, 1, 0);
+      }
+      .first-b {
+        @include letterMove(1.5s, 0, 21rem, 0, 1);
+      }
+      .second-box {
+        font-size: 1rem;
+      }
+      .btn-section {
+        left: 6.5rem;
+        top: 15rem;
+      }
+    }
+    .first-box:hover {
+      .letter-section {
+        .first-a {
+          @include letterMove(1.5s, 0, 21rem, 1, 0);
+        }
+        .first-b {
+          @include letterMove(1.5s, 0, 21rem, 0, 1);
+        }
+      }
+    }
+    .about-us-content {
+      .content-box {
+        .text-box {
+          .text-holder {
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @include tabletMin {
   .about-us-container {
-    height: 55rem;
+    height: 95rem;
     .box-section {
-      width: 13rem;
-      height: 13rem;
+      width: 20rem;
+      height: 20rem;
     }
     .header-about-us {
       .letter-section {
@@ -310,23 +356,27 @@
         }
       }
       .letter-section {
-        @include letterMove(1.5s, 0, 9rem, 1, 0);
+        @include letterMove(1.5s, 0, 16rem, 1, 0);
       }
       .first-b {
-        @include letterMove(1.5s, 0, 9rem, 0, 1);
+        @include letterMove(1.5s, 0, 16rem, 0, 1);
       }
       .second-box {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         line-height: 1.1rem;
+      }
+      .btn-section {
+        left: 4rem;
+        top: 12rem;
       }
     }
     .first-box:hover {
       .letter-section {
         .first-a {
-          @include letterMove(1.5s, 0, 9rem, 1, 0);
+          @include letterMove(1.5s, 0, 16rem, 1, 0);
         }
         .first-b {
-          @include letterMove(1.5s, 0, 9rem, 0, 1);
+          @include letterMove(1.5s, 0, 16rem, 0, 1);
         }
       }
     }
