@@ -69,7 +69,7 @@ const BodyAboutUs = ({ setTitle }) => {
           <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>s
         </div>
       ),
-      path: '/constact',
+      path: '/contact',
       buttonText: 'Kontakt',
       cName: 'text-box six',
     },

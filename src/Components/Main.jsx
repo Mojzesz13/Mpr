@@ -10,7 +10,6 @@ import AboutUs from './AboutUs/AboutUs';
 import Sales from './Sales/Sales';
 import Charity from './Charity/Charity';
 import Interactive from './Interactive/Interactive';
-import Tablet from './TabletView/Tablet';
 import Divisions from './Divisions/Divisions';
 import Testimonial from './Testimonial/Testimonial';
 
@@ -34,11 +33,9 @@ const Main = () => {
   const isTabletConfig = {
     tablet: {
       navbar: <Navbar isTablet={isTablet} />,
-      homePath: <Tablet isTablet={isTablet} />,
     },
     desktop: {
       navbar: <HamburgerMenu setTitle={setTitle} />,
-      homePath: <Home setTitle={setTitle} />,
     },
   };
 
@@ -50,7 +47,7 @@ const Main = () => {
     }
   };
 
-  const { navbar, homePath } = isTabletConfig[viewCondition(isTablet)];
+  const { navbar } = isTabletConfig[viewCondition(isTablet)];
 
   return (
     <Router>
@@ -60,7 +57,7 @@ const Main = () => {
         <div id='page-wrap'>
           <Switch>
             <Route exact path='/'>
-              {homePath}
+              <Home setTitle={setTitle} isTablet={isTablet} />
             </Route>
             <Route path='/divisions'>
               <Divisions setTitle={setTitle} />
