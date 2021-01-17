@@ -108,7 +108,7 @@
     .content-box {
       margin-bottom: 3rem;
       position: relative;
-      border: 5px solid transparent;
+      border: 4px solid transparent;
       &:hover {
         @include goldHover;
       }
@@ -132,7 +132,7 @@
           opacity: 0;
           p {
             width: 80%;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
             color: $fontColor;
           }
@@ -423,6 +423,7 @@
           line-height: 1.7rem;
           p {
             padding-top: 1rem;
+            font-size: 1rem;
           }
         }
       }
@@ -442,8 +443,8 @@
         .text-box {
           .text-holder {
             p {
-              font-size: 2rem;
-              line-height: 2.5rem;
+              font-size: 1rem;
+              line-height: 1.5rem;
             }
           }
         }

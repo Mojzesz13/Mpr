@@ -62,13 +62,13 @@
         width: 90%;
         height: 6rem;
         top: 45rem;
-        left: 20%;
+        left: 15%;
         background-image: url('../../assets/groupTextG.svg');
       }
       .forth-b {
         width: 90%;
         height: 6rem;
-        left: 20%;
+        left: 15%;
         background-image: url('../../assets/groupText.svg');
         opacity: 0;
       }
@@ -101,6 +101,11 @@
       bottom: 10%;
       opacity: 0;
     }
+
+    &:nth-child(4) {
+      overflow: hidden;
+    }
+
     &:hover {
       .btn-section,
       & .text-section {

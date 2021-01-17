@@ -43,4 +43,5 @@ const Logo = ({ title, setTitle }) => {
     </div>
   );
 };
+
 export default Logo;

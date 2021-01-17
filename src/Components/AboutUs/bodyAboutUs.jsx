@@ -104,31 +104,3 @@ const BodyAboutUs = ({ setTitle }) => {
 };
 
 export default BodyAboutUs;
-
-//  <div className='about-us-content main-section'>
-//    {dataSection.map((obj) => (
-//      <div
-//        key={obj.id}
-//        onClick={() => handleClick()}
-//        className='content-box box-section'
-//      >
-//        <img src={obj.src} alt={obj.alt} />
-//        <div className='text-box'>
-//          <div className={click ? 'text-holder activeText' : 'text-holder'}>
-//            {click ? (
-//              <div className='secondText'>
-//                <p style={{ margin: '0 auto' }}>Skontaktuj się z nami.</p>
-//                <Button
-//                  text={obj.buttonText}
-//                  path={obj.path}
-//                  setTitle={setTitle}
-//                />
-//              </div>
-//            ) : (
-//              obj.text
-//            )}
-//          </div>
-//        </div>
-//      </div>
-//    ))}
-//  </div>;
