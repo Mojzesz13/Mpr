@@ -1,10 +1,10 @@
-Mpr group 
+Raiden
 =======
 
 Introduction
 -----------
 
-Mpr  is web application which represents business image of company and also the scope of activities on the market.
+Raiden is web application which represents business image of company and also the scope of activities on the market.
 
 
 Technologies
@@ -12,13 +12,15 @@ Technologies
 
 * ReactJS
 * SASS
-* Styled-components
+* Material-UI
 * Formik
 * React Bootstra
+* Yoi
+* Yup
 * RWD
 
 
 DEMO
 --------------
  
-[Mpr_group](https://mojzesz13.github.io/Mpr/#/)
+[Raiden](http://raiden.pl/#/)
