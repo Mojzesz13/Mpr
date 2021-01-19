@@ -1,26 +1,34 @@
-Raiden
-=======
-
-Introduction
------------
-
-Raiden is web application which represents business image of company and also the scope of activities on the market.
+Mpr group 	Raiden
+=======	=======
 
 
-Technologies
------------
+Introduction	Introduction
+-----------	-----------
 
-* ReactJS
-* SASS
-* Material-UI
-* Formik
-* React Bootstra
+
+Mpr  is web application which represents business image of company and also the scope of activities on the market.	Raiden is web application which represents business image of company and also the scope of activities on the market.
+
+
+
+
+Technologies	Technologies
+-----------	-----------
+
+
+* ReactJS	* ReactJS
+* SASS	* SASS
+* Styled-components	* Material-UI
+* Formik	* Formik
+* React Bootstra	* React Bootstra
 * Yoi
 * Yup
-* RWD
+* RWD	* RWD
 
 
-DEMO
---------------
- 
-[Raiden](http://raiden.pl/#/)
+
+
+DEMO	DEMO
+--------------	--------------
+
+
+[Mpr_group](https://mojzesz13.github.io/Mpr/#/)
